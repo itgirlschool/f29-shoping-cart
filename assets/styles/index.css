@@ -1,1 +1,72 @@
-/*# sourceMappingURL=index.css.map */
+/*padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}*/
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(117, 226, 243);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#flowersContainer {
+  width: 99vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  padding-bottom: 0px;
+  border: 2px solid bisque;
+  border-radius: 10px;
+}
+
+.flowers {
+  padding: 10px;
+  padding-bottom: 20px;
+  border: 2px solid bisque;
+  border-radius: 10px;
+  text-align: center;
+  background-color: blanchedalmond;
+  margin: 10px 20px 10px 20px;
+  align-items: center;
+  width: 92%;
+  font-size: medium;
+  position: relative;
+}
+
+.header {
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  width: 3vw;
+  height: 1.5vw;
+}
+
+button {
+  width: 6vw;
+  height: 2vw;
+  background-color: rgb(7, 97, 111);
+  color: white;
+}/*# sourceMappingURL=index.css.map */
