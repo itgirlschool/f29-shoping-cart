@@ -1,37 +1,37 @@
 let json = `[{
     
-    "name": "Корзина нежных роз",
-    "photo": "././assets/images/beautiful-flower-bouquets-35.jpg",
-    "price": "50$",
-    "description": "Кустовые розы белого и светло-розового цвета",
-    "design": "Плетеная корзина"  
+    "name": "Красочный микс-букет",
+    "photo": "././assets/images/beautiful-flower-bouquets-82.jpg",
+    "price": "30$",
+    "description": "Лилии, герберы, ...",
+    "design": "Лента, упаковочная плёнка"  
 },
     
     
 {
-    "name": "Ярко-розовые розы",
-    "photo": "././assets/images/beautiful-flower-bouquets-37.jpg",
+    "name": "Композиция из оранжевых роз и мягких кактусов",
+    "photo": "././assets/images/beautiful-flower-bouquets-85.jpg",
     "price": "35$",
-    "description": "Классический букет розовых роз",
-    "design": "Лента, упаковочная бумага"  
+    "description": "Нежно-оранжевые розы, мини-кактусы с мягкими иголками, зелень",
+    "design": "Лента, упаковочная плёнка"  
 },
 
 {
    
-    "name": "Яркий ароматный букет",
+    "name": "Ароматный микс-букет с бутонами лилий",
     "photo": "././assets/images/beautiful-flower-bouquets-46.jpg",
     "price": "25$",
     "description": "Композиция гербер, роз, лилий и белых ....",
-    "design": "Лента, упаковочная бумага"  
+    "design": "Лента, упаковочная плёнка"  
 },
 
 
 {  
-    "name": "Чувственная композиция в ярких розово-фиолетовых тонах",
+    "name": "Чувственная композиция в розово-фиолетовых тонах",
     "photo": "././assets/images/beautiful-flower-bouquets-47.jpg",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
-    "design": "Лента, упаковочная бумага" 
+    "design": "Лента, упаковочная плёнка" 
 
 
 }]`;
@@ -43,15 +43,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let flowersContent = "";
     
     for (let flower of flowers) {
-        flowersContent +=`<div class='flowers'>
-        <img src="${flower.photo}"/>
+        flowersContent +=`<div class="flowers">
+        <div class="flowers_photo_container">
+        <img class="flowers_photo" src="${flower.photo}"/>
+        </div>
+        
+        <div class="flowers_name_container">
         <h2>${flower.name}</h2>
-        <div class='header'><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
-        <div class='header'><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
-        <div class='header'> <span style = "color: rgb(7, 97, 111); font-weight:bold;"> Декор: </span>${flower.design}</div>
-       
+        </div>
+
+        <div class="flowers_describe_container">
+        <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
+        <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
+        <div> <span style = "color: rgb(7, 97, 111); font-weight:bold;"> Декор: </span>${flower.design}</div>
+        </div>
         <br>
-        <button>В корзину</button>
+        <div class="button_basket_container">
+        <button class="button_basket">Добавить в корзину</button>
+        </div>
         <br>
         <br>
         </div>`; 
