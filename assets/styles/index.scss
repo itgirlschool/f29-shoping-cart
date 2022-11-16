@@ -25,11 +25,11 @@
 }
 
 
-//html,
-//body {
-    //height: 100vh;
+html,
+body {
+    height: 100vh;
     //background-color: $color-main;
-//}
+}
 
 body {
     margin: 0;
@@ -42,26 +42,26 @@ body {
 /* styles for бургер-меню START*/
 
  /*скрываем чекбокс*/
- #burger-menu__toggle {
-    opacity: 0;
+ //#burger-menu__toggle {
+ //   opacity: 0;
 
-}
+//}
 
 /*стилизуем кнопку*/
-.burger-menu__btn {
+/*.burger-menu__btn {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 40px;
-    left: 20px;
+    top: 60px;
+    left: 30px;
     width: 56px;
     height: 36px;
     cursor: pointer;
     z-index: 1;
-}
+}*/
 
 /*добавляем гамбургер*/
-.burger-menu {
+/*.burger-menu {
 
     &__btn>span,
     &__btn>span::before,
@@ -103,7 +103,6 @@ body {
         display: block;
         padding: 10px 20px;
         color: rgb(22, 21, 21);
-        @include font($fs-medium, $lh-medium, $fw-meduim);
         text-decoration: none;
     }
 
@@ -115,7 +114,6 @@ body {
         display: block;
         padding: 10px 20px;
         color: rgb(22, 21, 21);
-        @include font(1.5rem, $lh-medium, $fw-meduim);
         text-decoration: underline;
     }
 
@@ -128,7 +126,6 @@ body {
         display: block;
         padding: 10px 20px;
         color: rgb(22, 21, 21);
-        @include font(1.5rem, $lh-medium, $fw-meduim);
         text-decoration: underline;
     }
 
@@ -136,10 +133,10 @@ body {
         background-color: #f2eded;
 
     }
-}
+}*/
 
 
-#burger-menu__toggle:checked~.burger-menu__btn>span {
+/*#burger-menu__toggle:checked~.burger-menu__btn>span {
     transform: rotate(45deg);
 }
 
@@ -175,7 +172,7 @@ body {
         transition-duration: .25s;
     }
 
-}
+}*/
 
 /* styles for бургер-меню END*/
 
@@ -241,18 +238,59 @@ body {
         border-radius: 5px;
         padding: 10px 15px;
         text-align: center;
+}}
 
+.servis {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(3, 76, 87);
+    text-align: start;
+}
+.catalog {
+    width: 94vw;
+    background: rgb(250, 212, 189);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+   
+   
+
+    &__ready-bouquet,
+    &__single-flower,
+    &__cards,
+    &__presents {
+        width: 12vw;
+        height: 5vh;
+        border-radius: 16px;
+        border: 1px solid white;
+        margin-top: 1rem;
+        background: white;
+        font-family: 'Prata', normal;
+        font-size: large;
+        font-weight: 600;
+        color: rgb(3, 76, 87); 
+        cursor: pointer; 
+       }
+
+    &__ready-bouquet:hover,
+    &__single-flower:hover,
+    &__cards:hover,
+    &__presents:hover {
+           background: rgb(245, 194, 164);
+       }
 }
 
-    &__item_contact1 {
-        font-size: small;
-        text-decoration: none;
-        color: black;
-    }
-
-
-
-
+.flowersContainer {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
 }
 
 #flowersContainer {
@@ -312,10 +350,12 @@ body {
 }
 
 .button_basket {
-    width: 10vw;
+    width: 14vw;
     height: 3vw;
     background-color: rgb(7, 97, 111);
     color: white;
+    border-radius: 6px;
+    border: 1px solid rgb(7, 97, 111);
    
     //position: absolute;
     //bottom: 20px;
