@@ -19,6 +19,11 @@
   font-weight: 400;
   src: local(""), url("../../fonts/Pacifico-Regular.ttf") format("ttf");
 }
+html,
+body {
+  height: 100vh;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -26,10 +31,136 @@ body {
   background: rgb(250, 212, 189);
 }
 
+/* styles for бургер-меню START*/
+/*скрываем чекбокс*/
+/*стилизуем кнопку*/
+/*.burger-menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    width: 56px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 1;
+}*/
+/*добавляем гамбургер*/
+/*.burger-menu {
+
+    &__btn>span,
+    &__btn>span::before,
+    &__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #8c8c88;
+    }
+
+    &__btn>span::before {
+        content: '';
+        top: -11px;
+    }
+
+    &__btn>span::after {
+        content: '';
+        top: 11px;
+    }
+
+    &__box {
+        display: block;
+        position: absolute;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        margin: 0;
+        padding: 90px 0 30px 0;
+        list-style: none;
+        text-align: center;
+        background-color: #d4d4d2;
+        box-shadow: 2px 0px 6px rgba(0, 0, 0, .2);
+        border-radius: 0 6px 6px 0;
+
+    }
+
+    &__item {
+        display: block;
+        padding: 10px 20px;
+        color: rgb(22, 21, 21);
+        text-decoration: none;
+    }
+
+    &__item:hover {
+        background-color: #f2eded;
+    }
+
+    &__contact {
+        display: block;
+        padding: 10px 20px;
+        color: rgb(22, 21, 21);
+        text-decoration: underline;
+    }
+
+    &__contact:hover {
+        background-color: #f2eded;
+
+    }
+
+    &__delivery {
+        display: block;
+        padding: 10px 20px;
+        color: rgb(22, 21, 21);
+        text-decoration: underline;
+    }
+
+    &__delivery:hover {
+        background-color: #f2eded;
+
+    }
+}*/
+/*#burger-menu__toggle:checked~.burger-menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#burger-menu__toggle:checked~.burger-menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+
+#burger-menu__toggle:checked~.burger-menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#burger-menu__toggle:checked~.burger-menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.burger-menu {
+
+    &__btn>span,
+    &__btn>span::before,
+    &__btn>span::after {
+        transition-duration: .25s;
+    }
+
+    &__box {
+        transition-duration: .25s;
+    }
+
+    &__item {
+        transition-duration: .25s;
+    }
+
+}*/
+/* styles for бургер-меню END*/
 /* styles for блок-хедер START*/
 .header {
   max-width: 100%;
-  height: 150px;
+  height: 180px;
   background: white;
   color: black;
   display: flex;
@@ -74,9 +205,48 @@ body {
   padding: 10px 15px;
   text-align: center;
 }
-.header__item_contact1 {
-  font-size: small;
-  text-decoration: none;
+
+.servis {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(3, 76, 87);
+  text-align: start;
+}
+
+.catalog {
+  width: 94vw;
+  background: rgb(250, 212, 189);
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 4px solid white;
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.catalog__ready-bouquet, .catalog__single-flower, .catalog__cards, .catalog__presents {
+  width: 12vw;
+  height: 5vh;
+  border-radius: 16px;
+  border: 1px solid white;
+  margin-top: 1rem;
+  background: white;
+  font-family: "Prata", normal;
+  font-size: large;
+  font-weight: 600;
+  color: rgb(3, 76, 87);
+  cursor: pointer;
+}
+.catalog__ready-bouquet:hover, .catalog__single-flower:hover, .catalog__cards:hover, .catalog__presents:hover {
+  background: rgb(245, 194, 164);
+}
+
+.flowersContainer {
+  font-family: "Pacifico", cursive;
+  font-size: 1.8rem;
+  font-weight: 600;
   color: black;
 }
 
@@ -125,8 +295,10 @@ body {
 }
 
 .button_basket {
-  width: 10vw;
+  width: 14vw;
   height: 3vw;
   background-color: rgb(7, 97, 111);
   color: white;
+  border-radius: 6px;
+  border: 1px solid rgb(7, 97, 111);
 }/*# sourceMappingURL=index.css.map */
