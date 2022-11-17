@@ -1,10 +1,10 @@
 let json = `[{
     
     "name": "Красочный микс-букет",
-    "photo": "././assets/images/beautiful-flower-bouquets-82.jpg",
+    "photo": "././assets/images/1.webp",
     "price": "30$",
     "description": "Лилии, герберы, ...",
-    "design": "Лента, упаковочная плёнка"  
+    "category": "bouquet" 
 },
     
     
@@ -13,28 +13,173 @@ let json = `[{
     "photo": "././assets/images/beautiful-flower-bouquets-85.jpg",
     "price": "35$",
     "description": "Нежно-оранжевые розы, мини-кактусы с мягкими иголками, зелень",
-    "design": "Лента, упаковочная плёнка"  
+    "category": "bouquet" 
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/18.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "roses" 
+
 },
 
 {
    
     "name": "Ароматный микс-букет с бутонами лилий",
-    "photo": "././assets/images/beautiful-flower-bouquets-46.jpg",
+    "photo": "././assets/images/14.jpeg",
     "price": "25$",
     "description": "Композиция гербер, роз, лилий и белых ....",
-    "design": "Лента, упаковочная плёнка"  
+    "category": "basket" 
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/19.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "roses" 
+
 },
 
 
 {  
-    "name": "Чувственная композиция в розово-фиолетовых тонах",
-    "photo": "././assets/images/beautiful-flower-bouquets-47.jpg",
+    "name": "Цветы",
+    "photo": "././assets/images/20.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
-    "design": "Лента, упаковочная плёнка" 
+    "category": "bouquet" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/2.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "bouquet" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/13.jpeg",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/14.jpeg",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/3.jpeg",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+
+},
 
 
-}]`;
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/6.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "bouquet" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/7.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "roses" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/17.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "roses" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/5.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "bouquet" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/8.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/9.jpeg",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+
+},
+
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/16.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "roses" 
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/11.jpeg",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+},
+
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/13.jpeg",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "basket" 
+
+},
+
+{  
+    "name": "Цветы",
+    "photo": "././assets/images/15.webp",
+    "price": "35$",
+    "description": "Розы, фиалки, каллы и белые....",
+    "category": "roses" 
+
+}
+]`;
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -55,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <div class="flowers_describe_container">
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
-        <div> <span style = "color: rgb(7, 97, 111); font-weight:bold;"> Декор: </span>${flower.design}</div>
+        <div style = "color: pink"> <span > Категория: </span>${flower.category}</div>
         </div>
         <br>
         <div class="button_basket_container">

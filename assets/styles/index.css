@@ -252,7 +252,9 @@ body {
 
 #flowersContainer {
   width: 100vw;
-  display: flex;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
 }
 
 .flowers_photo_container {
@@ -276,7 +278,7 @@ body {
   background-color: white;
   margin: 20px 20px 10px 20px;
   align-items: center;
-  width: 50%;
+  width: 20vw;
   font-family: "Prata", normal;
   font-size: medium;
   position: relative;
@@ -295,7 +297,7 @@ body {
 }
 
 .button_basket {
-  width: 14vw;
+  width: 80%;
   height: 3vw;
   background-color: rgb(7, 97, 111);
   color: white;
