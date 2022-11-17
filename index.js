@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 
-let cart = {
+/*let cart = {
     tovar1: {
         quantity: 5,
         price: 1000
@@ -143,7 +143,9 @@ const countPrice = (objCart) => {
 
     totalPrice.innerHTML = `Итого: ${result}`;
 }
-console.log(typeof totalPrice.innerHTML);
+console.log(typeof totalPrice.innerHTML);*/
+
+
 
 
 //https://thypix.com/ru/kartinki-krasivyh-buketov-tsvetov/
