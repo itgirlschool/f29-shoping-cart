@@ -72,4 +72,78 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 
+let cart = {
+    tovar1: {
+        quantity: 5,
+        price: 1000
+    },
+
+    tovar2: {
+        quantity: 0,
+        price: 300
+    },
+
+    tovar3: {
+        quantity: 0,
+        price: 1
+    }
+}
+
+
+document.onclick = event => {
+    // console.log(event.target.classList);
+    if (event.target.classList.contains('plus')) {
+        plusFunction(event.target.dataset.id);
+        countPrice(cart)
+    }
+    if (event.target.classList.contains('minus')) {
+        minusFunction(event.target.dataset.id);
+        countPrice(cart)
+    }
+
+}
+// увеличение количества товаров
+const plusFunction = id => {
+    cart[id].quantity++;
+    // calcResult(cart[id].quantity * cart[id].price);
+
+    renderCart();
+}
+// уменьшение количества товаров
+const minusFunction = id => {
+    if (cart[id].quantity <= 0) {
+        renderCart(id);
+        return true;
+    }
+    cart[id].quantity--;
+    renderCart();
+}
+
+// сделать кнопку Удалить товары
+// удаление товаров из коризины
+// const deleteFunction = id => {
+//     delete cart[id];
+//     renderCart();
+// }
+
+const renderCart = () => {
+    console.log(cart);
+}
+renderCart();
+// переписать, чтобы количество товаров было неограниченно
+
+let totalPrice = document.querySelector('.total-price');
+
+const countPrice = (objCart) => {
+    let result = 0;
+    Object.values(objCart).map((tovar) => {
+        result += tovar.price * tovar.quantity;
+    });
+    console.log(result);
+
+    totalPrice.innerHTML = `Итого: ${result}`;
+}
+console.log(typeof totalPrice.innerHTML);
+
+
 //https://thypix.com/ru/kartinki-krasivyh-buketov-tsvetov/
