@@ -1,36 +1,75 @@
-<style>
-</style>
-<form class="form_registration-form">
-    <h2>Оформление заказа</h2>
-    <div>
-        <label for="input_name">Имя</label>
-        <input id="input_name" type="text" placeholder="Введите ваше имя" required>
-        <div class="registration-form_div-with-error" id=""></div>
-    </div>
-    <div>
-        <label for="input_tel">Телефон</label>
-        <input id="input_tel" type="tel" placeholder="Введите ваш телефон" required>
-        <div class="registration-form_div-with-error" id=""></div>
-    </div>
-    <div>
-        <label for="input_email">Почта</label>
-        <input id="input_email" type="email" placeholder="Введите вашу почту" required>
-        <div class="registration-form_div-with-error" id=""></div>
-    </div>
-    <div>
-        <label for="input_adress">Адрес</label>
-        <input id="input_adress" type="text" placeholder="" required>
-        <div class="registration-form_div-with-error" id=""></div>
-    </div>
-    <div>
-        <label for="textarea_text">Надпись на открытке</label>
-        <textarea id="textarea_text" type="text" placeholder="Напишите тект поздравления для открытки"></textarea>
-        <div class="registration-form_div-with-error" id=""></div>
-    </div>
-    <div>
-        <label for="textarea_comment">Комментарий к заказу</label>
-        <textarea id="textarea_comment" type="text"
-            placeholder="Есть ли у вас дополнительные пожелания к заказу?"></textarea>
-        <div class="registration-form_div-with-error" id=""></div>
-    </div>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/main-styles.css">
+    <!--Стили "слить" с общим файлом-->
+    <style>
+        .h {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form_registration-form">
+        <h2 class="h">Оформление заказа</h2>
+        <div>
+            <label for="input_name">Имя:<span class="red">*</span></label>
+            <p><input id="input_name" type="text" placeholder="Введите ваше имя" required></p>
+            <div class="registration-form_div-with-error" id=""></div>
+        </div>
+        <div>
+            <label for="input_tel">Телефон:<span class="red">*</span></label>
+            <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон" required></p>
+            <div class="registration-form_div-with-error" id=""></div>
+        </div>
+        <div>
+            <label for="input_email">Почта:<span class="red">*</span></label>
+            <p><input id="input_email" type="email" placeholder="Введите вашу почту" required></p>
+            <div class="registration-form_div-with-error" id=""></div>
+        </div>
+        <div>
+            <label for="input_adress">Адрес:<span class="red">*</span></label>
+            <p><input id="input_adress" type="text" placeholder="Улица" required></p>
+            <p><input id="input_adress" type="text" placeholder="Дом" required></p>
+            <p><input id="input_adress" type="text" placeholder="Корпус" required></p>
+            <p><input id="input_adress" type="text" placeholder="Квартира" required></p>
+            </label>
+            <div class="registration-form_div-with-error" id=""></div>
+        </div>
+        <div>
+            <label for="textarea_text">Надпись на открытке:</label>
+            <p><textarea id="textarea_text" type="text"
+                    placeholder="Напишите тект поздравления для открытки"></textarea>
+            </p>
+            <div class="registration-form_div-with-error" id=""></div>
+        </div>
+        <div>
+            <label for="textarea_comment">Комментарий к заказу:</label>
+            <p><textarea id="textarea_comment" type="text"
+                    placeholder="Есть ли у вас дополнительные пожелания к заказу?"></textarea></p>
+            <div class="registration-form_div-with-error" id=""></div>
+        </div>
+        <div>
+            <label>Способ оплаты:<span class="red">*</span>
+                <p><input type="radio" name="payment" value="1">Банковская карта</p>
+                <p><input type="radio" name="payment" value="2">Наличный расчет</p>
+                <div class="registration-form_div-with-error" id=""></div>
+            </label>
+        </div>
+        <div>
+            <input id="input_registration-form" type="button" value="Оформить заказ">
+        </div>
+    </form>
+</body>
+
+</html>
