@@ -1,6 +1,6 @@
 let json = `[{
     
-    "name": "Красочный микс-букет",
+    "name": "Цветы",
     "photo": "././assets/images/1.webp",
     "price": "30$",
     "description": "Лилии, герберы, ...",
@@ -9,7 +9,7 @@ let json = `[{
     
     
 {
-    "name": "Композиция из оранжевых роз и мягких кактусов",
+    "name": "Цветы",
     "photo": "././assets/images/beautiful-flower-bouquets-85.jpg",
     "price": "35$",
     "description": "Нежно-оранжевые розы, мини-кактусы с мягкими иголками, зелень",
@@ -27,7 +27,7 @@ let json = `[{
 
 {
    
-    "name": "Ароматный микс-букет с бутонами лилий",
+    "name": "Цветы",
     "photo": "././assets/images/14.jpeg",
     "price": "25$",
     "description": "Композиция гербер, роз, лилий и белых ....",
@@ -188,15 +188,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let flowersContent = "";
     
     for (let flower of flowers) {
-        flowersContent +=`<div class="flowers">
+        flowersContent +=`<div class="flowers_card">
         <div class="flowers_photo_container">
         <img class="flowers_photo" src="${flower.photo}"/>
         </div>
-        
         <div class="flowers_name_container">
         <h2>${flower.name}</h2>
         </div>
-
         <div class="flowers_describe_container">
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
@@ -206,15 +204,82 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <div class="button_basket_container">
         <button class="button_basket">Добавить в корзину</button>
         </div>
+        <div class="${flower.category}"></div>
         <br>
         <br>
         </div>`; 
 
         document.getElementById("flowersContainer").innerHTML = flowersContent;
-
     }
 
-});
+})
+
+
+
+
+function app() {
+    const buttons = document.querySelectorAll('.button_')
+    const cards = document.querySelectorAll('.flowers_cards')
+
+//делаем функцию, котрая проверить, какую кнопку нажали. 
+//Затем пробежит по карточкам и поищет карточки с той же категорией.
+//когда функция найдет карточки с той же категорией, она их оставит. Остальные карточки - скроет
+
+function filter (category, items) {
+    items.forEach((item) => {
+        const isItemFiltered = !item.classList.contains(category)
+        if(isItemFiltered) {
+            item.classList.add('hide')
+        }
+
+    })
+}
+
+
+//получаем доступ к дата-фильтрам
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const currentCategory = button.dataset.filter
+            filter(currentCategory, cards)
+            //console.log(button.dataset.filter)
+            console.log(currentCategory);
+        })
+    })
+
+        }
+
+
+
+    /*const currentCategory = button.dataset.filter
+   
+
+    filter(currentCategory, cards)
+    
+  
+   
+    console.log(buttons);
+    console.log(cards);
+    
+    function filter (category, items) {
+        items.forEach((item) => {
+            const isItemFiltered = !item.classList.contains(category)
+            const isShowAll=category.toLowerCase() === 'all'
+            if(isItemFiltered && !isShowAll) {
+                item.classList.add('hide')
+            }
+            else  item.classList.remove('hide')
+        })
+    
+    }}
+    
+  
+    
+ 
+    })*/
+    
+    app();
+   
+    
 
 
 /*let cart = {
