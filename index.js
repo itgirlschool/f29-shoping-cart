@@ -176,7 +176,7 @@ let json = `[{
     "photo": "././assets/images/15.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
-    "category": "roses" 
+    "category": "roses"
 
 }
 ]`;
@@ -185,9 +185,11 @@ let json = `[{
 document.addEventListener("DOMContentLoaded", function (event) {
     let flowers = JSON.parse(json); 
     console.log(flowers);
+
     let flowersContent = "";
     
     for (let flower of flowers) {
+        // когда вписываем в    const cards = document.querySelectorAll('.flowers_card') - ничего не работает
         flowersContent +=`<div class="flowers_card">
         <div class="flowers_photo_container">
         <img class="flowers_photo" src="${flower.photo}"/>
@@ -198,13 +200,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <div class="flowers_describe_container">
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
-        <div style = "color: pink"> <span > Категория: </span>${flower.category}</div>
+        <div class="${flower.category}" style = "color: pink"> <span > Категория: </span>${flower.category}</div>
         </div>
         <br>
         <div class="button_basket_container">
         <button class="button_basket">Добавить в корзину</button>
         </div>
-        <div class="${flower.category}"></div>
+    
         <br>
         <br>
         </div>`; 
@@ -212,29 +214,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
         document.getElementById("flowersContainer").innerHTML = flowersContent;
     }
 
-})
-
-
+});
 
 
 function app() {
     const buttons = document.querySelectorAll('.button_')
+    // когда вписываем в    const cards название класса тренировочных карточек  - код работает
     const cards = document.querySelectorAll('.flowers_cards')
+    console.log(cards);
 
-//делаем функцию, котрая проверить, какую кнопку нажали. 
+//делаем функцию, которая проверит, какую кнопку нажали. 
 //Затем пробежит по карточкам и поищет карточки с той же категорией.
 //когда функция найдет карточки с той же категорией, она их оставит. Остальные карточки - скроет
 
 function filter (category, items) {
     items.forEach((item) => {
         const isItemFiltered = !item.classList.contains(category)
-        if(isItemFiltered) {
+        const isShowAll = category.toLowerCase() === 'all-flowers'
+        if(isItemFiltered && !isShowAll) {
             item.classList.add('hide')
         }
+        else {item.classList.remove('hide')}
 
     })
 }
-
 
 //получаем доступ к дата-фильтрам
     buttons.forEach((button) => {
@@ -247,35 +250,6 @@ function filter (category, items) {
     })
 
         }
-
-
-
-    /*const currentCategory = button.dataset.filter
-   
-
-    filter(currentCategory, cards)
-    
-  
-   
-    console.log(buttons);
-    console.log(cards);
-    
-    function filter (category, items) {
-        items.forEach((item) => {
-            const isItemFiltered = !item.classList.contains(category)
-            const isShowAll=category.toLowerCase() === 'all'
-            if(isItemFiltered && !isShowAll) {
-                item.classList.add('hide')
-            }
-            else  item.classList.remove('hide')
-        })
-    
-    }}
-    
-  
-    
- 
-    })*/
     
     app();
    
