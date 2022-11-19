@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     
     for (let flower of flowers) {
         // когда вписываем в    const cards = document.querySelectorAll('.flowers_card') - ничего не работает
-        flowersContent +=`<div class="flowers_card">
+        flowersContent +=`<div class="flowers_card ${flower.category}">
         <div class="flowers_photo_container">
         <img class="flowers_photo" src="${flower.photo}"/>
         </div>
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <div class="flowers_describe_container">
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
         <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
-        <div class="${flower.category}" style = "color: pink"> <span > Категория: </span>${flower.category}</div>
+        <div><span style = "color: pink"> <span > Категория: </span>${flower.category}</div>
         </div>
         <br>
         <div class="button_basket_container">
@@ -212,16 +212,51 @@ document.addEventListener("DOMContentLoaded", function (event) {
         </div>`; 
 
         document.getElementById("flowersContainer").innerHTML = flowersContent;
-    }
-
-});
+    }});
 
 
-function app() {
+//получаем доступ к дата-фильтрам
+    const buttons = document.querySelectorAll('.button_')
+    buttons.forEach((button) => {
+        
+        button.addEventListener('click', () => {
+            const currentCategory = button.dataset.filter
+            console.log(currentCategory);
+
+            const cards = document.querySelectorAll('flowers_card')
+            console.log(cards);
+
+            filter(currentCategory, cards)
+        })
+    }) 
+//делаем функцию, которая проверит, какую кнопку нажали. 
+//Затем пробежит по карточкам и поищет карточки с той же категорией.
+//когда функция найдет карточки с той же категорией, она их оставит. Остальные карточки - скроет
+
+function filter (category, items) {
+    items.forEach((item) => {
+        const isItemFiltered = !item.classList.contains(category)
+        const isShowAll = category.toLowerCase() === 'all-flowers'
+        if(isItemFiltered && !isShowAll) {
+            item.classList.add('hide')
+        }
+        else {item.classList.remove('hide')}
+    })}
+ 
+   
+
+
+
+
+
+
+
+
+/*function app() {
     const buttons = document.querySelectorAll('.button_')
     // когда вписываем в    const cards название класса тренировочных карточек  - код работает
-    const cards = document.querySelectorAll('.flowers_cards')
-    console.log(cards);
+    //const cards = document.querySelectorAll('flowers_card')
+    //console.log(cards);
 
 //делаем функцию, которая проверит, какую кнопку нажали. 
 //Затем пробежит по карточкам и поищет карточки с той же категорией.
@@ -243,6 +278,7 @@ function filter (category, items) {
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
             const currentCategory = button.dataset.filter
+    //console.log(cards);
             filter(currentCategory, cards)
             //console.log(button.dataset.filter)
             console.log(currentCategory);
@@ -251,7 +287,7 @@ function filter (category, items) {
 
         }
     
-    app();
+    app();*/
    
     
 
