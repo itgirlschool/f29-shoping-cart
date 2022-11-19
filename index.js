@@ -181,7 +181,6 @@ let json = `[{
 }
 ]`;
 
-
 document.addEventListener("DOMContentLoaded", function (event) {
     let flowers = JSON.parse(json); 
     console.log(flowers);
@@ -212,44 +211,40 @@ document.addEventListener("DOMContentLoaded", function (event) {
         </div>`; 
 
         document.getElementById("flowersContainer").innerHTML = flowersContent;
-    }});
-
-
+    }
 //получаем доступ к дата-фильтрам
-    const buttons = document.querySelectorAll('.button_')
-    buttons.forEach((button) => {
-        
-        button.addEventListener('click', () => {
-            const currentCategory = button.dataset.filter
-            console.log(currentCategory);
+const buttons = document.querySelectorAll('.button_')
+buttons.forEach((button) => {
+    
+    button.addEventListener('click', () => {
+        const currentCategory = button.dataset.filter
+        console.log(currentCategory);
 
-            const cards = document.querySelectorAll('flowers_card')
-            console.log(cards);
+        const cards = document.querySelectorAll('.flowers_card')
+        console.log(cards);
 
-            filter(currentCategory, cards)
-        })
-    }) 
+        filter(currentCategory, cards)
+    })
+}) 
 //делаем функцию, которая проверит, какую кнопку нажали. 
 //Затем пробежит по карточкам и поищет карточки с той же категорией.
 //когда функция найдет карточки с той же категорией, она их оставит. Остальные карточки - скроет
 
 function filter (category, items) {
-    items.forEach((item) => {
-        const isItemFiltered = !item.classList.contains(category)
-        const isShowAll = category.toLowerCase() === 'all-flowers'
-        if(isItemFiltered && !isShowAll) {
-            item.classList.add('hide')
-        }
-        else {item.classList.remove('hide')}
-    })}
- 
+items.forEach((item) => {
+    const isItemFiltered = !item.classList.contains(category)
+    const isShowAll = category.toLowerCase() === 'all-flowers'
+    if(isItemFiltered && !isShowAll) {
+        item.classList.add('hide')
+    }
+    else {item.classList.remove('hide')}
+})}
+
+});
+
+
+
    
-
-
-
-
-
-
 
 
 /*function app() {
@@ -271,9 +266,7 @@ function filter (category, items) {
         }
         else {item.classList.remove('hide')}
 
-    })
-}
-
+    })}
 //получаем доступ к дата-фильтрам
     buttons.forEach((button) => {
         button.addEventListener('click', () => {
@@ -283,14 +276,14 @@ function filter (category, items) {
             //console.log(button.dataset.filter)
             console.log(currentCategory);
         })
-    })
-
-        }
+    })}
     
     app();*/
    
     
+    
 
+    
 
 /*let cart = {
     tovar1: {
