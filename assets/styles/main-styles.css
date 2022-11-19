@@ -196,4 +196,15 @@ body {
 
 .button_basket:active {
   bottom: -2px;
+}
+
+.hide {
+  display: none;
+}
+
+.help {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 3px solid red;
 }/*# sourceMappingURL=main-styles.css.map */
