@@ -7,13 +7,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформление заказа</title>
     <link rel="stylesheet" href="./assets/styles/normalize.css">
-    <link rel="stylesheet" href="./assets/styles/main-styles.css">
+    <!--<link rel="stylesheet" href="./assets/styles/main-styles.css">-->
+
     <!--Стили "слить" с общим файлом-->
     <style>
+        body {
+            background-color: rgb(245, 194, 164);
+        }
+
         .h {
             font-family: 'Pacifico', cursive;
             font-size: 1.8rem;
             font-weight: 600;
+            color: black;
+        }
+
+        .red {
+            color: red;
+        }
+
+        form {
+            color: black;
+            font-family: "Prata", normal;
+            font-size: larger;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: 60vw;
+            padding: 1em 5em;
+            margin: 3em auto;
+            background-color: white;
+            text-align: center;
+
+
+        }
+
+        #input_registration-form {
+            border: 2px solid rgb(245, 194, 164);
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px 15px;
+            text-align: center;
+        }
+
+        input {
+            text-indent: 5px;
+        }
+
+        ::-webkit-input-placeholder {
+            /* WebKit browsers */
+            color: black;
+        }
+
+        :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: black;
+        }
+
+        ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: black;
+        }
+
+        :-ms-input-placeholder {
+            /* Internet Explorer 10+ */
             color: black;
         }
     </style>
@@ -42,17 +98,18 @@
             <p><input id="input_adress" type="text" placeholder="Улица" required></p>
             <p><input id="input_adress" type="text" placeholder="Дом" required></p>
             <p><input id="input_adress" type="text" placeholder="Корпус" required></p>
-            <p><input id="input_adress" type="text" placeholder="Квартира" required>g</p>
+            <p><input id="input_adress" type="text" placeholder="Квартира" required></p>
             </label>
             <div class="registration-form_div-with-error" id=""></div>
         </div>
-        <div>
+        <!--<div>
             <label for="textarea_text">Надпись на открытке:</label>
             <p><textarea id="textarea_text" type="text"
                     placeholder="Напишите тект поздравления для открытки"></textarea>
             </p>
             <div class="registration-form_div-with-error" id=""></div>
         </div>
+        -->
         <div>
             <label for="textarea_comment">Комментарий к заказу:</label>
             <p><textarea id="textarea_comment" type="text"
@@ -69,7 +126,10 @@
         <div>
             <input id="input_registration-form" type="button" value="Оформить заказ">
         </div>
+
     </form>
+
+
 </body>
 
 </html>
