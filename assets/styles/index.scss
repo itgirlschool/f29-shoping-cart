@@ -44,38 +44,31 @@ body {
  .header {
     max-width: 100%;
     height: 180px;
-    background: white;
+    background: rgb(255, 255, 255);
     color: black;
     display: flex;
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 20px;
-
-    &__logo-img {
-        width: 140px;
-        //position: absolute;
-        //right: 10px;
-       // top: 10px;
-    }
-
-    &__phrase {
-        font-family: 'Pacifico', cursive;
-        padding-left: 30px;
-        font-size: 3rem;    
-    }
-
-    &__items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 50vw;
-        font-family: 'Prata', normal;
-        font-size: medium;
-        color: black;
-    }
-
+ 
+  &__logo-img {
+    width: 110px;
+  }
+  &__phrase {
+    font-family: "Pacifico", cursive;
+    padding-left: 30px;
+    font-size: 3rem;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    font-family: "Prata", normal;
+    font-size: medium;
+    color: black;
+  }
     &__item_delivery,
     &__item_payment,
     &__item_contact,
@@ -100,17 +93,16 @@ body {
         
         border: 2px solid rgb(245, 194, 164);
         border-radius: 5px;
-        padding: 10px 15px;
-        text-align: center;
-}}
-
-.servis {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5em;
-    font-weight: 600;
-    color: rgb(3, 76, 87);
-    text-align: start;
+        padding: 8px 12px;
+        text-align: start;       
 }
+     &__item_logo-basket{
+        width: 25px;
+        height:20px;
+        }
+    
+}
+
 .catalog {
     width: 94vw;
     background: rgb(250, 212, 189);
@@ -122,6 +114,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+    padding-top: 16px;
    
    
 
@@ -129,8 +122,9 @@ body {
     &__bouquets,
     &__baskets,
     &__roses {
-        width: 12vw;
-        height: 5vh;
+        display: flex;
+        width: 15vw;
+        height: 8vh;
         border-radius: 16px;
         border: 1px solid white;
         margin-top: 1rem;
@@ -138,6 +132,8 @@ body {
         font-family: 'Prata', normal;
         font-size: large;
         font-weight: 600;
+        justify-content: center;
+        align-items: center;
         color: rgb(3, 76, 87); 
         cursor: pointer; 
        }
@@ -148,7 +144,12 @@ body {
     &__presents:hover {
            background: rgb(245, 194, 164);
        }
-}
+    }
+       .button__logo-img{
+        width: 50px;
+        height: 45px;
+       }
+
 
 .flowersContainer {
     font-family: 'Pacifico', cursive;
@@ -249,10 +250,41 @@ body {
     display: none
 }
 
-.help {
+
+
+/* styles for блок-футер START*/
+.footer {
+    background:  rgb(250, 212, 189);
+    max-width: 100%;
+    height: 160px;
+    color: black;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    border: 3px solid red;
-    font-size: medium;
+    flex-wrap: wrap;
+    font-family: "Prata", normal;
+    font-size: larger;
+  
+  &__logo,
+  &__menu,
+  &__contact,
+  &__social
+   {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    background: white;
+  }
+  &__logo_img {
+    width: 100px;
+  }
+  &__menu {
+    cursor:pointer;
+  }
+  &__social-img{
+    width:30px;
+    height: 30px;
+  }
 }
+

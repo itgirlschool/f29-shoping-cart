@@ -35,17 +35,16 @@ body {
 .header {
   max-width: 100%;
   height: 180px;
-  background: white;
+  background: rgb(255, 255, 255);
   color: black;
   display: flex;
   position: relative;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 20px;
 }
 .header__logo-img {
-  width: 140px;
+  width: 110px;
 }
 .header__phrase {
   font-family: "Pacifico", cursive;
@@ -76,16 +75,12 @@ body {
 .header__item_basket {
   border: 2px solid rgb(245, 194, 164);
   border-radius: 5px;
-  padding: 10px 15px;
-  text-align: center;
-}
-
-.servis {
-  font-family: "Pacifico", cursive;
-  font-size: 1.5em;
-  font-weight: 600;
-  color: rgb(3, 76, 87);
+  padding: 8px 12px;
   text-align: start;
+}
+.header__item_logo-basket {
+  width: 25px;
+  height: 20px;
 }
 
 .catalog {
@@ -99,10 +94,12 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  padding-top: 16px;
 }
 .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
-  width: 12vw;
-  height: 5vh;
+  display: flex;
+  width: 15vw;
+  height: 8vh;
   border-radius: 16px;
   border: 1px solid white;
   margin-top: 1rem;
@@ -110,11 +107,18 @@ body {
   font-family: "Prata", normal;
   font-size: large;
   font-weight: 600;
+  justify-content: center;
+  align-items: center;
   color: rgb(3, 76, 87);
   cursor: pointer;
 }
 .catalog__ready-bouquet:hover, .catalog__single-flower:hover, .catalog__cards:hover, .catalog__presents:hover {
   background: rgb(245, 194, 164);
+}
+
+.button__logo-img {
+  width: 50px;
+  height: 45px;
 }
 
 .flowersContainer {
@@ -202,10 +206,35 @@ body {
   display: none;
 }
 
-.help {
+
+/* styles for блок-футер START*/
+.footer {
+  background: rgb(250, 212, 189);
+  max-width: 100%;
+  height: 160px;
+  color: black;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  border: 3px solid red;
-  font-size: medium;
-}/*# sourceMappingURL=index.css.map */
+  flex-wrap: wrap;
+  font-family: "Prata", normal;
+  font-size: larger;
+}
+.footer__logo, .footer__menu, .footer__contact, .footer__social {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-self: center;
+  height: 100%;
+  background: white;
+}
+.footer__logo_img {
+  width: 100px;
+}
+.footer__menu {
+  cursor: pointer;
+}
+.footer__social-img {
+  width: 30px;
+  height: 30px;
+
+
