@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower shop</title>
     <link rel="stylesheet" href="./assets/styles/normalize.css">
-    <link rel="stylesheet" href="./assets/styles/main-styles.css">
+    <link rel="stylesheet" href="./assets/styles/index.css">
     
     
 </head>
@@ -14,126 +14,44 @@
       <!--блок-хедер START-->
      
     
-      <header class="header" id="top">
 
-        <p class="header__phrase">Букеты на любой вкус</p>
-    
-        <div class="header__items">
-          <a class="header__item_delivery" href="#delivery">Доставка</a>
-          <a class="header__item_payment" href="#payment">Оплата</a>
-          <a class="header__item_contact" href="#contact">Контакты</a>
-          <a class="header__item_basket" href="#basket">Корзина
-          <img class="header__item_logo-basket" src="assets/images/basket.png" alt="logo"/></a>
-          </div>
-    
-          <div class="header__logo">
-            <img class="header__logo-img" src="assets/images/logobutterfly.png" alt="logo"/>
-            <img class="header__logo-img" src="assets/images/Flower Shop.png" alt="logo"/>
-        </div>
-    
-   
-     </header>
+  <header>
+  </header>
+
        <!--блок-хедер END-->
 
 
      <main>
 
 
-      <div class = "catalog">
-      
-        
-        <button class = "button_  catalog__all-flowers" data-filter="all-flowers">Каталог
-        
-        <button class = "button_  catalog__bouquets" data-filter="bouquets">Букеты 
-          <img class="button__logo-img" src="assets/images/buket.png" alt="logo"/></button>
-       
-        <button class = "button_  catalog__baskets" data-filter="baskets">Корзины с цветами
-          <img class="button__logo-img" src="assets/images/korzinochka.png" alt="logo"/></button>
-        
-        <button class = "button_  catalog__roses" data-filter="roses">Розы
-          <img class="button__logo-img" src="assets/images/rose.png" alt="logo"/> </button>
-
      <div class = "catalog">
-
+        <button class = "button_  catalog__all-flowers" data-filter="all-flowers" value = "Все цветы">Все цветы</button>
+        <button class = "button_  catalog__bouquets" data-filter="bouquet" value = "Букеты">Букеты</button>
+        <button class = "button_  catalog__baskets" data-filter="basket" value = "Корзины с цветами">Корзины с цветами</button>
+        <button class = "button_  catalog__roses" data-filter="roses" value = "Розы">Розы</button>
       </div>
 
+      <!--блок-каталог START-->
+
         <section>
-          <p class = "flowersContainer">КАТАЛОГ</p>
-      
+          <div class="categoryNameContainer">
+          <div id="category_name"></div>
+        </div>
           <div id = "flowersContainer"></div>
-         
         </section>
 
-
-  <!--блок-корзина START-->
-      <!--  <section>
-          <div>Корзина</div>
-    <div class="tovar1">Товар 1
-        <div> <button class="tovar1 plus" data-id="tovar1">+</button> </div>
-        <div><button class="tovar1 minus" data-id="tovar1">-</button></div>
-        <div class="price1">1000</div>
-    </div>
-    <div class="tovar2">Товар 2
-        <div> <button class="tovar1 plus" data-id="tovar2">+</button> </div>
-        <div><button class="tovar1 minus" data-id="tovar2">-</button></div>
-        <div class="price2">300</div>
-    </div>
-
-    <div class="tovar3">Товар 3
-        <div> <button class="tovar3 plus" data-id="tovar3">+</button> </div>
-        <div><button class="tovar3 minus" data-id="tovar3">-</button></div>
-        <div class="price3">1</div>
-    </div>
-
-    <div class="total-price"></div>-->
- <!--блок-корзина END-->
-  
-</body>
-        </section>
+      <!--блок-каталог END-->
 
      </main>
 
+
+
+
+
     <!--блок-футер START-->
+     <footer>
     
-    <footer>
-  
-      <div class="footer" id="end">
-  
-       <div class="footer__logo">
-        <div><img class="footer__logo_img" src="assets/images/logobutterfly.png" alt="logo"/> </div>
-        <div><img class="footer__logo_img" src="assets/images/Flower Shop.png" alt="logo"/></div>
-        
-      </div>
-  
-      <div class="footer__menu" >
-        <div class="footer__menu_name">Меню </div><br>
-      <div class="footer__menu_buketi" href="#buketi">Букеты</div>
-      <div class="footer__menu_korzini" href="#korzini">Корзины с цветами</div> 
-      <div class="footer__menu_rosi" href="#rosi">Розы</div> 
-      <div class="footer__menu_oplata" href="#oplata">Оплата</div> 
-      <div class="footer__menu_dostavka" href="#dostavka">Доставка</div>
-     </div> <br>
-  
-      <div class="footer__contact">
-      <div class="footer__contact_name" href="#contact">Контакты</div><br>
-      <div class="footer__contact_adres">Адрес:г.Прага,ул.Центральная,64</div>
-      <div class="footer__contact_time">Время работы: пн.-вс. с 9.00 до 18.00</div> <br>
-      <div class="footer__contact_tel">Телефон:+42 5845050</div>
-      <div class="footer__contact_email">email:flowershop@gmail.com</div> 
-     </div><br>
-  
-      <div class="footer__social">
-      <div class="footer__social_tofind">Можете нас найти</div><br>
-     <div> <img class="footer__social-img" src="assets/images/iconinstagram.png" alt="logo"/>
-    <img class="footer__social-img" src="assets/images/iconfacebook.png" alt="logo"/>
-     <img class="footer__social-img" src="assets/images/iconswhatsapp.png" alt="logo"/>
-    <img class="footer__social-img" src="assets/images/iconviber.png" alt="logo"/> </div><br> 
-  
-     <div class="footer__copyright"> Copyright &copy; 2022 Flower Shop - All rights reserved</div> </div>
-  
-  </div> 
-  
-       </footer>
+     </footer>
   
       <!--блок-футер END-->
 
