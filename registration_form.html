@@ -33,25 +33,48 @@
             border: 1px solid black;
             border-radius: 5px;
             width: 60vw;
-            padding: 1em 5em;
+            padding: 3em 5em;
             margin: 3em auto;
             background-color: white;
             text-align: center;
-
+            display: grid;
+            grid-template-areas:
+                "top top"
+                "left right"
+                "bottom bottom";
+            grid-column-gap: 60px;
+            grid-row-gap: 30px;
 
         }
 
         #input_registration-form {
-            border: 2px solid rgb(245, 194, 164);
-            background-color: white;
+            border: none;
+            background-color: rgb(255, 0, 76);
             border-radius: 5px;
             padding: 10px 15px;
+            width: 30vw;
+            height: 9vh;
             text-align: center;
+        }
+
+        #input_registration-form:hover {
+            background-color: white;
+            border: 2px solid rgb(245, 194, 164);
         }
 
         input {
             text-indent: 5px;
+            font-family: inherit;
+            border: 2px solid rgb(245, 194, 164);
         }
+
+        input:hover {
+            border-color: black;
+        }
+
+        /* input:valid {
+            border-color: green;
+        }*/
 
         ::-webkit-input-placeholder {
             /* WebKit browsers */
@@ -72,36 +95,104 @@
             /* Internet Explorer 10+ */
             color: black;
         }
+
+        #textarea_comment {
+            resize: none;
+            overflow: auto;
+            text-indent: 5px;
+            width: 25vw;
+            height: 25vh;
+            font-family: inherit;
+            border: 2px solid rgb(245, 194, 164);
+        }
+
+        #textarea_comment:hover {
+            border-color: black;
+        }
+
+        #registration-form_grid_1 {
+            grid-area: top;
+
+        }
+
+        #registration-form_grid_2 {
+            grid-area: left;
+
+        }
+
+        #registration-form_grid_3 {
+            grid-area: right;
+        }
+
+        #registration-form_grid_4 {
+            grid-area: bottom;
+        }
+
+        .registration-form_div-with-error {
+            color: red;
+            margin: 1em;
+        }
     </style>
 </head>
 
 <body>
     <form class="form_registration-form">
-        <h2 class="h">Оформление заказа</h2>
-        <div>
-            <label for="input_name">Имя:<span class="red">*</span></label>
-            <p><input id="input_name" type="text" placeholder="Введите ваше имя" required></p>
-            <div class="registration-form_div-with-error" id=""></div>
+        <div id="registration-form_grid_1">
+            <h2 class="h">Оформление заказа</h2>
         </div>
-        <div>
-            <label for="input_tel">Телефон:<span class="red">*</span></label>
-            <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон" required></p>
-            <div class="registration-form_div-with-error" id=""></div>
+        <div id="registration-form_grid_2">
+            <div>
+                <label for="input_name">Имя:<span class="red">*</span></label>
+                <p><input id="input_name" type="text" placeholder="Введите ваше имя" required></p>
+                <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
+                    данные.
+                    содержать цифры</div>
+            </div>
+            <div>
+                <label for="input_tel">Телефон:<span class="red">*</span></label>
+                <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон" required></p>
+                <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
+                    данные.</div>
+            </div>
+            <div>
+                <label for="input_email">Почта:<span class="red">*</span></label>
+                <p><input id="input_email" type="email" placeholder="Введите вашу почту" required></p>
+                <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
+                    данные.</div>
+            </div>
+            <div>
+                <label for="input_adress">Адрес:<span class="red">*</span></label>
+                <p><input id="input_adress" type="text" placeholder="Улица" required></p>
+                <p><input id="input_adress" type="text" placeholder="Дом" required></p>
+                <p><input id="input_adress" type="text" placeholder="Корпус" required></p>
+                <p><input id="input_adress" type="text" placeholder="Квартира" required></p>
+                </label>
+                <div class="registration-form_div-with-error" id="">Пожалуйста, впишите адрес доставки, указав
+                    корректные
+                    данные.</div>
+            </div>
         </div>
-        <div>
-            <label for="input_email">Почта:<span class="red">*</span></label>
-            <p><input id="input_email" type="email" placeholder="Введите вашу почту" required></p>
-            <div class="registration-form_div-with-error" id=""></div>
+        <div id="registration-form_grid_3">
+            <div>
+                <label for="textarea_comment">Комментарий к заказу:</label>
+                <p><textarea id="textarea_comment" type="text" placeholder="Есть ли комментарии к заказу?"></textarea>
+                </p>
+            </div>
+            <div>
+                <label>Способ оплаты:<span class="red">*</span>
+                    <p><input class="radio_payment" type="radio" name="payment" value="1"> Банковская карта</p>
+                    <p><input class="radio_payment" type="radio" name="payment" value="2"> Наличный расчет</p>
+                    <div class="registration-form_div-with-error" id="">Пожалуйста, укажите способ оплаты.</div>
+                </label>
+            </div>
         </div>
-        <div>
-            <label for="input_adress">Адрес:<span class="red">*</span></label>
-            <p><input id="input_adress" type="text" placeholder="Улица" required></p>
-            <p><input id="input_adress" type="text" placeholder="Дом" required></p>
-            <p><input id="input_adress" type="text" placeholder="Корпус" required></p>
-            <p><input id="input_adress" type="text" placeholder="Квартира" required></p>
-            </label>
-            <div class="registration-form_div-with-error" id=""></div>
+        <div id="registration-form_grid_4">
+            <div>
+                <input id="input_registration-form" type="submit" value="Оформить заказ">
+            </div>
         </div>
+
+
         <!--<div>
             <label for="textarea_text">Надпись на открытке:</label>
             <p><textarea id="textarea_text" type="text"
@@ -110,22 +201,8 @@
             <div class="registration-form_div-with-error" id=""></div>
         </div>
         -->
-        <div>
-            <label for="textarea_comment">Комментарий к заказу:</label>
-            <p><textarea id="textarea_comment" type="text"
-                    placeholder="Есть ли у вас дополнительные пожелания к заказу?"></textarea></p>
-            <div class="registration-form_div-with-error" id=""></div>
-        </div>
-        <div>
-            <label>Способ оплаты:<span class="red">*</span>
-                <p><input type="radio" name="payment" value="1">Банковская карта</p>
-                <p><input type="radio" name="payment" value="2">Наличный расчет</p>
-                <div class="registration-form_div-with-error" id=""></div>
-            </label>
-        </div>
-        <div>
-            <input id="input_registration-form" type="button" value="Оформить заказ">
-        </div>
+
+
 
     </form>
 
