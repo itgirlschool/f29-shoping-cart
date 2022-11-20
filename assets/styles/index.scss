@@ -24,24 +24,81 @@
       
 }
 
-
-html,
-body {
-    height: 100vh;
-    //background-color: $color-main;
+@font-face {
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../../fonts/Roboto-Regular.ttf') format('ttf');
+      
 }
 
+/*Переменные для всего проекта*/
+
+$grid-breakpoint-xs: 0;
+$grid-breakpoint-sm: 576px;
+$grid-breakpoint-md: 768px;
+$grid-breakpoint-lg: 992px;
+$grid-breakpoint-xl: 1200px;
+$grid-breakpoint-xxl: 1400px;
+
+
+$font-family-serif: 'Prata', serif;
+$font-family-sans-serif: 'Roboto', normal, sans-serif;
+$font-family-titles: 'Pacifico', cursive;
+$font-family-button: 'Prata', normal, serif;
+//$container-max-width: 1296px;
+
+
+$color-main: rgb(243, 220, 206);
+$text-color: black;
+$button-color:  #0093a2;
+
+
+
+$pink-hover: #ff3672;
+$font-size-main: 20px;
+$font-size-button: 18px;
+$font-size-main-mobile: 22px;
+$font-size-footer: 16px;
+$font-size-xxl: 36px;
+$font-size-section-titles: 36px;
+
+
+
+/* Классы и стили, общие для всего проекта */
+
+* html,
 body {
-    margin: 0;
+    height: 100%;
     padding: 0;
-    text-align: center;
-    //background-color: rgb(245, 226, 200);
-    background: rgb(250, 212, 189);
-    
+    margin: 0;
+    font-family: $font-family-sans-serif;
+    background-color: $color-main;   
 }
+
+body {
+    max-width: 1920px;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+header,
+main,
+section,
+footer {
+    //max-width: $container-max-width;
+    margin: 0;
+}
+
 
  /* styles for блок-хедер START*/
- .header {
+ /*.header {
     max-width: 100%;
     height: 180px;
     background: white;
@@ -102,18 +159,14 @@ body {
         border-radius: 5px;
         padding: 10px 15px;
         text-align: center;
-}}
+}}*/
 
-.servis {
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5em;
-    font-weight: 600;
-    color: rgb(3, 76, 87);
-    text-align: start;
-}
+
+ /* styles for каталог START*/
+
 .catalog {
     width: 94vw;
-    background: rgb(250, 212, 189);
+    background-color: $color-main;
     margin: 20px;
     display: flex;
     justify-content: space-between;
@@ -123,8 +176,6 @@ body {
     padding-right: 20px;
     padding-bottom: 20px;
    
-   
-
     &__all-flowers,
     &__bouquets,
     &__baskets,
@@ -135,26 +186,39 @@ body {
         border: 1px solid white;
         margin-top: 1rem;
         background: white;
-        font-family: 'Prata', normal;
+        font-family: $font-family-button;
         font-size: large;
         font-weight: 600;
-        color: rgb(3, 76, 87); 
+        color: $text-color;
         cursor: pointer; 
        }
 
-    &__ready-bouquet:hover,
-    &__single-flower:hover,
-    &__cards:hover,
-    &__presents:hover {
-           background: rgb(245, 194, 164);
+    &__all-flowers:hover,
+    &__bouquets:hover,
+    &__baskets:hover,
+    &__roses:hover {
+           background: $pink-hover;
        }
 }
 
+.categoryNameContainer {
+    width: 100%;
+   margin: 20px;
+   text-align: center;
+  
+}
+
+#category_name {
+    font-size: $font-size-section-titles;
+    font-family: $font-family-titles;
+    font-weight: 800;
+}
+
 .flowersContainer {
-    font-family: 'Pacifico', cursive;
+    font-family: $font-family-titles;
     font-size: 1.8rem;
     font-weight: 600;
-    color: black;
+    color: $text-color;
 }
 
 #flowersContainer {
@@ -162,65 +226,66 @@ body {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto;
-  
-
 }
-
 
 .flowers_photo_container {
    
     align-items: center;
-    height: 28vh;
+    height: auto;
+    overflow: hidden;
   
 }
 
+.flowers_photo_container:hover img {
+    transform: scale(1.4);
+  }
+
 .flowers_photo {
-    width: 96%;
+    width: 98%;
     height: auto;
     border: 2px solid white;
     border-radius: 10px;
+    transition: transform 1s;
    
 }
 
 .flowers_card {
-    padding: 10px;
-    padding-bottom: 20px;
+    padding:10px;
     border: 2px solid white;
     border-radius: 10px;
     text-align: center;
     background-color: white;
-    margin: 20px 20px 10px 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
     align-items: center;
-   width: 20vw;
+    width: 20vw;
     font-family:'Prata', normal;
     font-size: medium;
     position: relative;
-   
-   
+    font-family: $font-family-sans-serif;
+  
 }
 
-.flowers_cards {
-    padding: 10px;
-    padding-bottom: 20px;
-    border: 2px solid white;
-    border-radius: 10px;
-    text-align: center;
-    background-color: white;
-    margin: 20px 20px 10px 20px;
-    align-items: center;
-   width: 10vw;
-    font-family:'Prata', normal;
-    font-size: medium;
 
-}
 
 .flowers_describe_container {
    
-    width: 90%;
+   width: 90%;
    height: auto;
-    margin-top: 2vh;
+   
     //position: relative;
   
+}
+
+.flower_price {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: $font-family-sans-serif;
+}
+
+.flower_description {
+    font-size: 18px;
+    font-family: $font-family-sans-serif;
 }
 
 .button_basket_container {
@@ -230,16 +295,16 @@ body {
 }
 
 .button_basket {
-    width: 80%;
-    height: 16%;
-    background-color: rgb(7, 97, 111);
+    width: 100%;
+    height: 46px;
+    background-color: $button-color;
     color: white;
     border-radius: 6px;
-    border: 1px solid rgb(7, 97, 111);
+    border: 0px;
     position: relative;
-    
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-button;
 }
-
 
 .button_basket:active {
     bottom: -2px;
@@ -249,10 +314,28 @@ body {
     display: none
 }
 
-.help {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border: 3px solid red;
-    font-size: medium;
-}
+
+
+ /* styles for каталог END*/
+
+
+/* <style>
+   .scale {
+    display: inline-block; /* Строчно-блочный элемент */
+ //   overflow: hidden; /* Скрываем всё за контуром */
+  // }
+ //  .scale img {
+//    transition: 1s; /* Время эффекта */
+ //   display: block; /* Убираем небольшой отступ снизу */
+ //  }
+  // .scale img:hover {
+  //  transform: scale(1.2); /* Увеличиваем масштаб */
+  // }
+ /* </style>
+ </head>
+ <body>
+  <div class="scale"><img src="image/meduza1.jpg" alt="" class="scale"></div>
+  <div class="scale"><img src="image/meduza2.jpg" alt="" class="scale"></div>
+  <div class="scale"><img src="image/meduza3.jpg" alt="" class="scale"></div>
+ </body>
+</html>*/

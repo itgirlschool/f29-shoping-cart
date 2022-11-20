@@ -1,6 +1,6 @@
 let json = `[{
     
-    "name": "Цветы",
+    "name": "Букет",
     "photo": "././assets/images/1.webp",
     "price": "30$",
     "description": "Лилии, герберы, ...",
@@ -9,7 +9,7 @@ let json = `[{
     
     
 {
-    "name": "Цветы",
+    "name": "Букет",
     "photo": "././assets/images/beautiful-flower-bouquets-85.jpg",
     "price": "35$",
     "description": "Нежно-оранжевые розы, мини-кактусы с мягкими иголками, зелень",
@@ -17,7 +17,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Розы",
     "photo": "././assets/images/18.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -27,15 +27,15 @@ let json = `[{
 
 {
    
-    "name": "Цветы",
-    "photo": "././assets/images/14.jpeg",
+    "name": "Букет",
+    "photo": "././assets/images/14.webp",
     "price": "25$",
     "description": "Композиция гербер, роз, лилий и белых ....",
-    "category": "basket" 
+    "category": "bouquet" 
 },
 
 {  
-    "name": "Цветы",
+    "name": "Розы",
     "photo": "././assets/images/19.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -45,16 +45,16 @@ let json = `[{
 
 
 {  
-    "name": "Цветы",
+    "name": "Розы",
     "photo": "././assets/images/20.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
-    "category": "bouquet" 
+    "category": "roses" 
 
 },
 
 {  
-    "name": "Цветы",
+    "name": "Букет",
     "photo": "././assets/images/2.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -63,7 +63,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Корзина",
     "photo": "././assets/images/13.jpeg",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -72,8 +72,8 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
-    "photo": "././assets/images/14.jpeg",
+    "name": "Корзина",
+    "photo": "././assets/images/21.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
@@ -81,7 +81,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Корзина",
     "photo": "././assets/images/3.jpeg",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -91,7 +91,7 @@ let json = `[{
 
 
 {  
-    "name": "Цветы",
+    "name": "Букет",
     "photo": "././assets/images/6.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -100,16 +100,16 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
-    "photo": "././assets/images/7.webp",
+    "name": "Корзина",
+    "photo": "././assets/images/22.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
-    "category": "roses" 
+    "category": "basket" 
 
 },
 
 {  
-    "name": "Цветы",
+    "name": "Розы",
     "photo": "././assets/images/17.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -118,7 +118,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Букет",
     "photo": "././assets/images/5.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -127,7 +127,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Корзина",
     "photo": "././assets/images/8.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -136,7 +136,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Корзина",
     "photo": "././assets/images/9.jpeg",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -146,7 +146,7 @@ let json = `[{
 
 
 {  
-    "name": "Цветы",
+    "name": "Розы",
     "photo": "././assets/images/16.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -154,7 +154,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Корзина",
     "photo": "././assets/images/11.jpeg",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -163,8 +163,8 @@ let json = `[{
 
 
 {  
-    "name": "Цветы",
-    "photo": "././assets/images/13.jpeg",
+    "name": "Корзина",
+    "photo": "././assets/images/23.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
@@ -172,7 +172,7 @@ let json = `[{
 },
 
 {  
-    "name": "Цветы",
+    "name": "Розы",
     "photo": "././assets/images/15.webp",
     "price": "35$",
     "description": "Розы, фиалки, каллы и белые....",
@@ -194,12 +194,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <img class="flowers_photo" src="${flower.photo}"/>
         </div>
         <div class="flowers_name_container">
-        <h2>${flower.name}</h2>
+        <h2 class="category_name">${flower.name}</h2>
         </div>
         <div class="flowers_describe_container">
-        <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
-        <div><span style = "color: rgb(7, 97, 111); font-weight:bold;"> Описание: </span>${flower.description}</div>
-        <div><span style = "color: pink"> <span > Категория: </span>${flower.category}</div>
+        <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
+        <div class="flower_description">${flower.description}</div>
+        <div><span style = "color: white"> <span > Категория: </span>${flower.category}</div>
         </div>
         <br>
         <div class="button_basket_container">
@@ -217,6 +217,7 @@ const buttons = document.querySelectorAll('.button_')
 buttons.forEach((button) => {
     
     button.addEventListener('click', () => {
+      
         const currentCategory = button.dataset.filter
         console.log(currentCategory);
 
@@ -224,7 +225,10 @@ buttons.forEach((button) => {
         console.log(cards);
 
         filter(currentCategory, cards)
-    })
+    }
+    
+   
+)
 }) 
 //делаем функцию, которая проверит, какую кнопку нажали. 
 //Затем пробежит по карточкам и поищет карточки с той же категорией.
@@ -243,8 +247,14 @@ items.forEach((item) => {
 });
 
 
-
+const buttons = document.querySelectorAll('.button_')
+buttons.forEach((button) => {
    
+    
+    button.addEventListener('click', () => {
+      
+        document.getElementById("category_name").innerText = button.value; })
+    })
 
 
 /*function app() {
