@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 *:before,
 *:after {
   padding: 0;
@@ -14,94 +13,106 @@
   font-weight: 400;
   src: local(""), url("../../fonts/Prata-Regular.ttf") format("ttf");
 }
-
 @font-face {
   font-family: "Pacifico-Regular";
   font-style: cursive;
   font-weight: 400;
   src: local(""), url("../../fonts/Pacifico-Regular.ttf") format("ttf");
 }
-
-html,
+@font-face {
+  font-family: "Roboto-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../../fonts/Roboto-Regular.ttf") format("ttf");
+}
+/*Переменные для всего проекта*/
+/* Классы и стили, общие для всего проекта */
+* html,
 body {
-  height: 100vh;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", normal, sans-serif;
+  background-color: rgb(243, 220, 206);
 }
 
 body {
+  max-width: 1920px;
   margin: 0;
-  padding: 0;
-  text-align: center;
-  background: rgb(250, 212, 189);
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+main,
+section,
+footer {
+  margin: 0;
 }
 
 /* styles for блок-хедер START*/
-.header {
-  max-width: 100%;
-  height: 180px;
-  background: rgb(255, 255, 255);
-  color: black;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 20px;
-}
+/*.header {
+    max-width: 100%;
+    height: 180px;
+    background: rgb(255, 255, 255);
+    color: black;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
 
-.header__logo-img {
-  width: 110px;
-}
+  &__logo-img {
+    width: 110px;
+  }
+  &__phrase {
+    font-family: "Pacifico", cursive;
+    padding-left: 30px;
+    font-size: 3rem;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    font-family: "Prata", normal;
+    font-size: medium;
+    color: black;
+  }
+    &__item_delivery,
+    &__item_payment,
+    &__item_contact,
+    &__item_basket {
+        color: black;
+       font-family: 'Prata', normal;
+       font-size: larger;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        text-align: center;
+    }
 
-.header__phrase {
-  font-family: "Pacifico", cursive;
-  padding-left: 30px;
-  font-size: 3rem;
-}
+    &__item_delivery:hover,
+    &__item_payment:hover,
+    &__item_contact:hover,
+    &__item_basket:hover {
+        background: rgb(245, 194, 164);
+    }
 
-.header__items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50vw;
-  font-family: "Prata", normal;
-  font-size: medium;
-  color: black;
-}
+    &__item_basket {
 
-.header__item_delivery,
-.header__item_payment,
-.header__item_contact,
-.header__item_basket {
-  color: black;
-  font-family: "Prata", normal;
-  font-size: larger;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 10px 15px;
-  text-align: center;
-}
-
-.header__item_delivery:hover,
-.header__item_payment:hover,
-.header__item_contact:hover,
-.header__item_basket:hover {
-  background: rgb(245, 194, 164);
-}
-
-.header__item_basket {
-  border: 2px solid rgb(245, 194, 164);
-  border-radius: 5px;
-  padding: 8px 12px;
-  text-align: start;
-}
-
-.header__item_logo-basket {
-  width: 25px;
-  height: 20px;
-}
-
+        border: 2px solid rgb(245, 194, 164);
+        border-radius: 5px;
+<<<<<<< HEAD
+        padding: 10px 15px;
+        text-align: center;
+}}*/
+/* styles for каталог START*/
 .catalog {
   width: 94vw;
-  background: rgb(250, 212, 189);
+  background-color: rgb(243, 220, 206);
   margin: 20px;
   display: flex;
   justify-content: space-between;
@@ -112,11 +123,7 @@ body {
   padding-bottom: 20px;
   padding-top: 16px;
 }
-
-.catalog__all-flowers,
-.catalog__bouquets,
-.catalog__baskets,
-.catalog__roses {
+.catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
   display: flex;
   width: 15vw;
   height: 8vh;
@@ -124,25 +131,34 @@ body {
   border: 1px solid white;
   margin-top: 1rem;
   background: white;
-  font-family: "Prata", normal;
+  font-family: "Prata", normal, serif;
   font-size: large;
   font-weight: 600;
+  color: black;
   justify-content: center;
   align-items: center;
   color: rgb(3, 76, 87);
   cursor: pointer;
 }
-
-.catalog__ready-bouquet:hover,
-.catalog__single-flower:hover,
-.catalog__cards:hover,
-.catalog__presents:hover {
-  background: rgb(245, 194, 164);
+.catalog__all-flowers:hover, .catalog__bouquets:hover, .catalog__baskets:hover, .catalog__roses:hover {
+  background: #ff3672;
 }
 
 .button__logo-img {
   width: 50px;
   height: 45px;
+}
+
+.categoryNameContainer {
+  width: 100%;
+  margin: 20px;
+  text-align: center;
+}
+
+#category_name {
+  font-size: 36px;
+  font-family: "Pacifico", cursive;
+  font-weight: 800;
 }
 
 .flowersContainer {
@@ -161,49 +177,52 @@ body {
 
 .flowers_photo_container {
   align-items: center;
-  height: 28vh;
+  height: auto;
+  overflow: hidden;
+}
+
+.flowers_photo_container:hover img {
+  transform: scale(1.4);
 }
 
 .flowers_photo {
-  width: 96%;
+  width: 98%;
   height: auto;
   border: 2px solid white;
   border-radius: 10px;
+  transition: transform 1s;
 }
 
 .flowers_card {
   padding: 10px;
-  padding-bottom: 20px;
   border: 2px solid white;
   border-radius: 10px;
   text-align: center;
   background-color: white;
-  margin: 20px 20px 10px 20px;
+  margin-bottom: 30px;
+  margin-left: 20px;
   align-items: center;
   width: 20vw;
   font-family: "Prata", normal;
   font-size: medium;
   position: relative;
-}
-
-.flowers_cards {
-  padding: 10px;
-  padding-bottom: 20px;
-  border: 2px solid white;
-  border-radius: 10px;
-  text-align: center;
-  background-color: white;
-  margin: 20px 20px 10px 20px;
-  align-items: center;
-  width: 10vw;
-  font-family: "Prata", normal;
-  font-size: medium;
+  font-family: "Roboto", normal, sans-serif;
 }
 
 .flowers_describe_container {
   width: 90%;
   height: auto;
-  margin-top: 2vh;
+}
+
+.flower_price {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: "Roboto", normal, sans-serif;
+}
+
+.flower_description {
+  font-size: 18px;
+  font-family: "Roboto", normal, sans-serif;
 }
 
 .button_basket_container {
@@ -213,13 +232,15 @@ body {
 }
 
 .button_basket {
-  width: 80%;
-  height: 16%;
-  background-color: rgb(7, 97, 111);
+  width: 100%;
+  height: 46px;
+  background-color: #0093a2;
   color: white;
   border-radius: 6px;
-  border: 1px solid rgb(7, 97, 111);
+  border: 0px;
   position: relative;
+  font-family: "Roboto", normal, sans-serif;
+  font-size: 18px;
 }
 
 .button_basket:active {
@@ -230,41 +251,4 @@ body {
   display: none;
 }
 
-
-/* styles for блок-футер START*/
-.footer {
-  background: rgb(250, 212, 189);
-  max-width: 100%;
-  height: 160px;
-  color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-family: "Prata", normal;
-  font-size: larger;
-}
-
-.footer__logo,
-.footer__menu,
-.footer__contact,
-.footer__social {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-self: center;
-  height: 100%;
-  background: white;
-}
-
-.footer__logo_img {
-  width: 100px;
-}
-
-.footer__menu {
-  cursor: pointer;
-}
-
-.footer__social-img {
-  width: 30px;
-  height: 30px;
-}
+/* styles for блок-футер START*//*# sourceMappingURL=index.css.map */
