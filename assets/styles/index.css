@@ -206,6 +206,7 @@ body {
   display: none;
 }
 
+
 /* styles for блок-футер START*/
 .footer {
   background: rgb(250, 212, 189);
@@ -235,4 +236,5 @@ body {
 .footer__social-img {
   width: 30px;
   height: 30px;
-}/*# sourceMappingURL=index.css.map */
+
+
