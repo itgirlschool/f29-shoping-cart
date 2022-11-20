@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flower shop</title>
   <link rel="stylesheet" href="./assets/styles/normalize.css">
-  <link rel="stylesheet" href="./assets/styles/main-styles.css">
+  <link rel="stylesheet" href="./assets/styles/index.css">
 
 
 </head>
@@ -16,94 +16,50 @@
   <!--блок-хедер START-->
 
 
-  <header class="header" id="top">
 
-    <p class="header__phrase">Букеты на любой вкус</p>
-
-    <div class="header__items">
-      <a class="header__item_delivery" href="#delivery">Доставка</a>
-      <a class="header__item_payment" href="#payment">Оплата</a>
-      <a class="header__item_contact" href="#contact">Контакты</a>
-      <a class="header__item_basket" href="#basket">Перейти в корзину</a>
-    </div>
-
-
-    <div class="header__logo">
-      <img class="header__logo-img" src="assets/images/logo.jpeg" alt="logo" />
-    </div>
-
+  <header>
   </header>
+
   <!--блок-хедер END-->
 
 
   <main>
 
+
     <div class="catalog">
-
-      <a class="servis"></p>Мы предлагаем</a>
-
-      <button class="button_  catalog__all-flowers" data-filter="all-flowers">Каталог</button>
-      <button class="button_  catalog__bouquets" data-filter="bouquets">Букеты</button>
-      <button class="button_  catalog__baskets" data-filter="baskets">Корзины с цветами</button>
-      <button class="button_  catalog__roses" data-filter="roses">Розы</button>
+      <button class="button_  catalog__all-flowers" data-filter="all-flowers" value="Все цветы">Все цветы</button>
+      <button class="button_  catalog__bouquets" data-filter="bouquet" value="Букеты">Букеты</button>
+      <button class="button_  catalog__baskets" data-filter="basket" value="Корзины с цветами">Корзины с
+        цветами</button>
+      <button class="button_  catalog__roses" data-filter="roses" value="Розы">Розы</button>
     </div>
 
-    </div>
-
-
-    <!--<div class="flowers_cards bouquets">Bouquets</div>
-      <div class="flowers_cards baskets">Baskets</div>
-      <div class="flowers_cards roses">Roses</div>
-     
-      <div class="flowers_cards bouquets">Bouquets</div>
-      <div class="flowers_cards baskets">Baskets</div>
-      <div class="flowers_cards roses">Roses</div>
-    
-      <div class="flowers_cards bouquets">Bouquets</div>
-      <div class="flowers_cards baskets">Baskets</div>
-      <div class="flowers_cards roses">Roses</div>-->
+    <!--блок-каталог START-->
 
     <section>
-      <p class="flowersContainer">КАТАЛОГ</p>
-
+      <div class="categoryNameContainer">
+        <div id="category_name"></div>
+      </div>
       <div id="flowersContainer"></div>
-
     </section>
-    <!--блок-корзина START-->
-    <!--  <section>
-          <div>Корзина</div>
-    <div class="tovar1">Товар 1
-        <div> <button class="tovar1 plus" data-id="tovar1">+</button> </div>
-        <div><button class="tovar1 minus" data-id="tovar1">-</button></div>
-        <div class="price1">1000</div>
-    </div>
-    <div class="tovar2">Товар 2
-        <div> <button class="tovar1 plus" data-id="tovar2">+</button> </div>
-        <div><button class="tovar1 minus" data-id="tovar2">-</button></div>
-        <div class="price2">300</div>
-    </div>
 
-    <div class="tovar3">Товар 3
-        <div> <button class="tovar3 plus" data-id="tovar3">+</button> </div>
-        <div><button class="tovar3 minus" data-id="tovar3">-</button></div>
-        <div class="price3">1</div>
-    </div>
-    <div class="total-price">
-    </div>-->
-    <!--блок-корзина END-->
+    <!--блок-каталог END-->
 
-</body>
-</section>
-
-</main>
-<!--блок-футер START-->
-<footer>
+  </main>
 
 
-</footer>
-<!--блок-футер END-->
 
-<script src="index.js"></script>
+
+
+  <!--блок-футер START-->
+  <footer>
+
+  </footer>
+
+  <!--блок-футер END-->
+
+  <script src="index.js"></script>
+
 </body>
 
 </html>
