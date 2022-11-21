@@ -111,17 +111,12 @@ footer {
 }}*/
 /* styles for каталог START*/
 .catalog {
-  width: 94vw;
-  background-color: rgb(243, 220, 206);
+  width: 100vw;
+  background: rgb(243, 220, 206);
   margin: 20px;
-  display: flex;
-  justify-content: space-between;
-  border: 4px solid white;
-  border-radius: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  padding-top: 16px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  border-radius: 100%;
 }
 .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
   display: flex;
@@ -131,13 +126,12 @@ footer {
   border: 1px solid white;
   margin-top: 1rem;
   background: white;
-  font-family: "Prata", normal, serif;
-  font-size: large;
+  font-family: "Prata", serif;
+  font-size: 22px;
   font-weight: 600;
-  color: black;
   justify-content: center;
   align-items: center;
-  color: rgb(3, 76, 87);
+  color: black;
   cursor: pointer;
 }
 .catalog__all-flowers:hover, .catalog__bouquets:hover, .catalog__baskets:hover, .catalog__roses:hover {
@@ -145,6 +139,7 @@ footer {
 }
 
 .button__logo-img {
+  margin-left: 5px;
   width: 50px;
   height: 45px;
 }
@@ -173,6 +168,18 @@ footer {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: auto;
+}
+@media screen and (max-width: 768px) {
+  #flowersContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  #flowersContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 .flowers_photo_container {
