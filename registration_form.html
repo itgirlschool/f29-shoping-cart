@@ -11,6 +11,7 @@
 
     <!--Стили "слить" с общим файлом-->
     <style>
+        /*Стили поп-ап окна начало*/
         .popup__bg {
             position: fixed;
             top: 0;
@@ -43,7 +44,9 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-end;
-            padding: 0;
+            padding: 10px;
+            border: 2px solid #0093a2;
+            border-radius: 5px;
         }
 
         .popup.active {
@@ -62,6 +65,7 @@
 
         }
 
+        /*Стили поп-ап окна конец*/
         body {
             background-color: rgb(243, 220, 206);
         }
@@ -256,27 +260,35 @@
 
 
     </form>
-
+    <!--Поп-ап окно начало-->
     <div class="popup__bg">
         <div class="popup">
             <img src="https://cdn-icons-png.flaticon.com/512/66/66847.png" class="close-popup">
-            <p> Ваш заказ оформлен. Мы свяжемся с вами для подтверждения </p>
+            <p> Ваш заказ оформлен. Мы свяжемся с вами для подтверждения. </p>
         </div>
     </div>
+    <!--Поп-ап окно конец-->
     <script>
-        let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+        //Переменные поп-ап окна
+        let popupBg = document.querySelector('.popup__bg'); // Фон поп-ап окна
         let popup = document.querySelector('.popup'); // Само окно
         let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
 
         function CLick() {
-            popupBg.classList.add('active'); // Добавляем класс 'active' для фона
-            popup.classList.add('active'); // И для самого окна
 
+            //открытие поп-ап окна
+            popupBg.classList.add('active');
+            popup.classList.add('active');
         };
 
-        closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
-            popupBg.classList.remove('active'); // Убираем активный класс с фона
-            popup.classList.remove('active'); // И с окна
+        //Закрытие поп-ап окна 
+        closePopupButton.addEventListener('click', () => {
+            popupBg.classList.remove('active');
+            popup.classList.remove('active');
+        });
+        popupBg.addEventListener('click', () => {
+            popupBg.classList.remove('active');
+            popup.classList.remove('active');
         });
     </script>
 </body>
