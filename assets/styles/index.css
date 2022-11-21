@@ -59,6 +59,60 @@ footer {
 }
 
 /* styles for блок-хедер START*/
+.header {
+  max-width: 100%;
+  height: 180px;
+  background: rgb(255, 255, 255);
+  color: black;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.header__logo {
+  display: grid;
+}
+.header__logo-img {
+  width: 110px;
+}
+.header__phrase {
+  font-family: "Pacifico", cursive;
+  padding-left: 30px;
+  font-size: 3rem;
+}
+.header__items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50vw;
+  font-family: "Prata", normal;
+  font-size: medium;
+  color: black;
+}
+.header__item_delivery, .header__item_payment, .header__item_contact, .header__item_basket {
+  color: black;
+  font-family: "Prata", normal;
+  font-size: larger;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-align: center;
+}
+.header__item_delivery:hover, .header__item_payment:hover, .header__item_contact:hover, .header__item_basket:hover {
+  background: rgb(245, 194, 164);
+}
+.header__item_basket {
+  border: 2px solid rgb(245, 194, 164);
+  border-radius: 5px;
+  padding: 8px 12px;
+  text-align: start;
+}
+.header__item_logo-basket {
+  width: 25px;
+  height: 20px;
+}
+
 /*.header {
     max-width: 100%;
     height: 180px;
@@ -130,12 +184,12 @@ footer {
   width: 15vw;
   height: 8vh;
   border-radius: 16px;
-  border: 1px solid white;
+  border: 1px solid rgb(255, 255, 255);
   margin-top: 1rem;
   margin-right: 35px;
-  background: white;
-  font-family: "Pacifico", cursive;
-  font-size: 26px;
+  background: rgb(255, 255, 255);
+  font-family: "Prata", normal, serif;
+  font-size: 22px;
   font-weight: 600;
   justify-content: center;
   align-items: center;
@@ -204,18 +258,18 @@ footer {
 .flowers_photo {
   width: 98%;
   height: auto;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   transition: transform 1s;
 }
 
 .flowers_card {
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 10px;
   text-align: center;
-  background-color: white;
-  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 30px;
   margin-left: 20px;
   align-items: center;
   width: 21vw;
@@ -265,7 +319,7 @@ footer {
   width: 100%;
   height: 46px;
   background-color: #0093a2;
-  color: white;
+  color: rgb(255, 255, 255);
   border-radius: 6px;
   border: 0px;
   position: relative;
@@ -298,10 +352,13 @@ footer {
   flex-direction: column;
   align-self: center;
   height: 100%;
-  background: white;
+  background: rgb(255, 255, 255);
+  padding-top: 20px;
 }
 .footer__logo_img {
   width: 100px;
+  margin-left: 30px;
+  margin-top: 10px;
 }
 .footer__menu {
   cursor: pointer;
