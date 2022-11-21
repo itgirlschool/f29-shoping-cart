@@ -17,13 +17,19 @@
   font-family: "Pacifico-Regular";
   font-style: cursive;
   font-weight: 400;
-  src: local(""), url("../../fonts/Pacifico-Regular.ttf") format("ttf");
+  src: local(""), url("../../fonts/Pacifico.ttf") format("ttf");
 }
 @font-face {
   font-family: "Roboto-Regular";
   font-style: normal;
   font-weight: 400;
   src: local(""), url("../../fonts/Roboto-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../fonts/Caveat.ttf") format("ttf");
 }
 /*Переменные для всего проекта*/
 /* Классы и стили, общие для всего проекта */
@@ -182,7 +188,7 @@ footer {
   margin-top: 1rem;
   margin-right: 35px;
   background: rgb(255, 255, 255);
-  font-family: "Prata", serif;
+  font-family: "Prata", normal, serif;
   font-size: 22px;
   font-weight: 600;
   justify-content: center;
@@ -203,6 +209,7 @@ footer {
 .categoryNameContainer {
   width: 100%;
   margin: 20px;
+  height: 40px;
   text-align: center;
 }
 
@@ -265,11 +272,25 @@ footer {
   margin-bottom: 30px;
   margin-left: 20px;
   align-items: center;
-  width: 20vw;
+  width: 21vw;
   font-family: "Prata", normal;
   font-size: medium;
   position: relative;
   font-family: "Roboto", normal, sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .flowers_card {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 23vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .flowers_card {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 25vw;
+  }
 }
 
 .flowers_describe_container {
