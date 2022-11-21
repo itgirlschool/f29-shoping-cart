@@ -217,11 +217,11 @@
                     данные.</div>
             </div>
             <div>
-                <label for="input_adress">Адрес:<span class="red">*</span></label>
-                <p><input id="input_adress" type="text" placeholder="Улица"></p>
-                <p><input id="input_adress" type="text" placeholder="Дом"></p>
-                <p><input id="input_adress" type="text" placeholder="Корпус"></p>
-                <p><input id="input_adress" type="text" placeholder="Квартира"></p>
+                <label>Адрес:<span class="red">*</span></label>
+                <p><input id="input_street" type="text" placeholder="Улица"></p>
+                <p><input id="input_houseNumber" type="text" placeholder="Дом"></p>
+                <p><input id="input_building" type="text" placeholder="Корпус"></p>
+                <p><input id="input_apartmentNumber" type="text" placeholder="Квартира"></p>
                 </label>
                 <div class="registration-form_div-with-error" id="">Пожалуйста, впишите адрес доставки, указав
                     корректные
@@ -236,8 +236,9 @@
             </div>
             <div>
                 <label>Способ оплаты:<span class="red">*</span>
-                    <p><input class="radio_payment" type="radio" name="payment" value="1"> Банковская карта</p>
-                    <p><input class="radio_payment" type="radio" name="payment" value="2"> Наличный расчет</p>
+                    <p><input id="bankCard" class="radio_payment" type="radio" name="payment" value="1"> Банковская
+                        карта</p>
+                    <p><input id="cash" class="radio_payment" type="radio" name="payment" value="2"> Наличный расчет</p>
                     <div class="registration-form_div-with-error" id="">Пожалуйста, укажите способ оплаты.</div>
                 </label>
             </div>
@@ -263,7 +264,7 @@
     <!--Поп-ап окно начало-->
     <div class="popup__bg">
         <div class="popup">
-            <img src="https://cdn-icons-png.flaticon.com/512/66/66847.png" class="close-popup">
+            <img src="https://cdn-icons-png.flaticon.com/512/8359/8359080.png" class="close-popup">
             <p> Ваш заказ оформлен. Мы свяжемся с вами для подтверждения. </p>
         </div>
     </div>
@@ -274,8 +275,47 @@
         let popup = document.querySelector('.popup'); // Само окно
         let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
 
+        //Класс данных о закакзе из формы
+        class Customer {
+            constructor(name, telephon, email, street, houseNumber, building, apartmentNumber, comment, payment) {
+                this.name = name;
+                this.telephon = telephon;
+                this.email = email;
+                this.street = street;
+                this.houseNumber = houseNumber;
+                this.building = building;
+                this.apartmentNumber = apartmentNumber;
+                this.comment = comment;
+                this.payment = payment;
+                //   this.bankCard = bankCard;
+                //   this.cash = cash;
+            }
+        }
+
         function CLick() {
 
+            //сбор данных из инпутов в переменную
+            let name = document.getElementById('input_name').value;
+            let telephon = document.getElementById('input_tel').value;
+            let email = document.getElementById('input_email').value;
+            let street = document.getElementById('input_street').value;
+            let houseNumber = document.getElementById('input_houseNumber').value;
+            let building = document.getElementById('input_building').value;
+            let apartmentNumber = document.getElementById('input_apartmentNumber').value;
+            let comment = document.getElementById('textarea_comment').value;
+            let payment;
+            if (document.getElementById('bankCard').checked) {
+                payment = "банковская карта"
+            } else {
+                payment = "наличные"
+            };
+            console.log(payment);
+            //  let bankCard = document.getElementById('bankCard').che;
+            // let cash = document.getElementById('cash').value;
+
+            let newCustomer = new Customer(name, telephon, email, street, houseNumber, building, apartmentNumber,
+                comment, payment);
+            console.log(newCustomer);
             //открытие поп-ап окна
             popupBg.classList.add('active');
             popup.classList.add('active');
