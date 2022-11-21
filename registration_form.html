@@ -11,8 +11,59 @@
 
     <!--Стили "слить" с общим файлом-->
     <style>
+        .popup__bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.5s all;
+            text-align: center;
+            font-size: large;
+
+        }
+
+        .popup__bg.active {
+
+            opacity: 1;
+            pointer-events: all;
+            transition: 0.5s all;
+        }
+
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #fff;
+            width: 400px;
+            padding: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        .popup.active {
+
+            transform: translate(-50%, -50%) scale(1);
+            transition: 0.5s all;
+        }
+
+        .close-popup {
+            width: 2em;
+            height: 2em;
+            position: absolute;
+            top: -2.3em;
+            right: -2em;
+            cursor: pointer;
+
+        }
+
         body {
-            background-color: rgb(245, 194, 164);
+            background-color: rgb(243, 220, 206);
         }
 
         .h {
@@ -30,7 +81,7 @@
             color: black;
             font-family: "Prata", normal;
             font-size: larger;
-            border: 1px solid black;
+            border: 1px solid #ff3672;
             border-radius: 5px;
             width: 60vw;
             padding: 3em 5em;
@@ -48,28 +99,29 @@
         }
 
         #input_registration-form {
-            border: none;
-            background-color: rgb(255, 0, 76);
-            border-radius: 5px;
-            padding: 10px 15px;
-            width: 30vw;
-            height: 9vh;
-            text-align: center;
+            width: 100%;
+            height: 46px;
+            background-color: #ff3672;
+            color: white;
+            border-radius: 6px;
+            border: 0px;
+            position: relative;
+            font-family: "Roboto", normal, sans-serif;
+            font-size: 18px;
         }
 
         #input_registration-form:hover {
-            background-color: white;
-            border: 2px solid rgb(245, 194, 164);
+            border: 4px solid #0093a2;
         }
 
         input {
             text-indent: 5px;
             font-family: inherit;
-            border: 2px solid rgb(245, 194, 164);
+            border: 2px solid black;
         }
 
         input:hover {
-            border-color: black;
+            border-color: #ff3672;
         }
 
         /* input:valid {
@@ -103,7 +155,7 @@
             width: 25vw;
             height: 25vh;
             font-family: inherit;
-            border: 2px solid rgb(245, 194, 164);
+            border: 2px solid #ff3672;
         }
 
         #textarea_comment:hover {
@@ -143,29 +195,29 @@
         <div id="registration-form_grid_2">
             <div>
                 <label for="input_name">Имя:<span class="red">*</span></label>
-                <p><input id="input_name" type="text" placeholder="Введите ваше имя" required></p>
+                <p><input id="input_name" type="text" placeholder="Введите ваше имя"></p>
                 <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
                     данные.
                     содержать цифры</div>
             </div>
             <div>
                 <label for="input_tel">Телефон:<span class="red">*</span></label>
-                <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон" required></p>
+                <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон"></p>
                 <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
                     данные.</div>
             </div>
             <div>
                 <label for="input_email">Почта:<span class="red">*</span></label>
-                <p><input id="input_email" type="email" placeholder="Введите вашу почту" required></p>
+                <p><input id="input_email" type="email" placeholder="Введите вашу почту"></p>
                 <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
                     данные.</div>
             </div>
             <div>
                 <label for="input_adress">Адрес:<span class="red">*</span></label>
-                <p><input id="input_adress" type="text" placeholder="Улица" required></p>
-                <p><input id="input_adress" type="text" placeholder="Дом" required></p>
-                <p><input id="input_adress" type="text" placeholder="Корпус" required></p>
-                <p><input id="input_adress" type="text" placeholder="Квартира" required></p>
+                <p><input id="input_adress" type="text" placeholder="Улица"></p>
+                <p><input id="input_adress" type="text" placeholder="Дом"></p>
+                <p><input id="input_adress" type="text" placeholder="Корпус"></p>
+                <p><input id="input_adress" type="text" placeholder="Квартира"></p>
                 </label>
                 <div class="registration-form_div-with-error" id="">Пожалуйста, впишите адрес доставки, указав
                     корректные
@@ -188,10 +240,9 @@
         </div>
         <div id="registration-form_grid_4">
             <div>
-                <input id="input_registration-form" type="submit" value="Оформить заказ">
+                <input id="input_registration-form" type="button" value="Оформить заказ" onclick="CLick()">
             </div>
         </div>
-
 
         <!--<div>
             <label for="textarea_text">Надпись на открытке:</label>
@@ -199,14 +250,35 @@
                     placeholder="Напишите тект поздравления для открытки"></textarea>
             </p>
             <div class="registration-form_div-with-error" id=""></div>
-        </div>
-        -->
+            </div>
+            -->
 
 
 
     </form>
 
+    <div class="popup__bg">
+        <div class="popup">
+            <img src="https://cdn-icons-png.flaticon.com/512/66/66847.png" class="close-popup">
+            <p> Ваш заказ оформлен. Мы свяжемся с вами для подтверждения </p>
+        </div>
+    </div>
+    <script>
+        let popupBg = document.querySelector('.popup__bg'); // Фон попап окна
+        let popup = document.querySelector('.popup'); // Само окно
+        let closePopupButton = document.querySelector('.close-popup'); // Кнопка для скрытия окна
 
+        function CLick() {
+            popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+            popup.classList.add('active'); // И для самого окна
+
+        };
+
+        closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
+            popupBg.classList.remove('active'); // Убираем активный класс с фона
+            popup.classList.remove('active'); // И с окна
+        });
+    </script>
 </body>
 
 </html>
