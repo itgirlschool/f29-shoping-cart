@@ -17,13 +17,19 @@
   font-family: "Pacifico-Regular";
   font-style: cursive;
   font-weight: 400;
-  src: local(""), url("../../fonts/Pacifico-Regular.ttf") format("ttf");
+  src: local(""), url("../../fonts/Pacifico.ttf") format("ttf");
 }
 @font-face {
   font-family: "Roboto-Regular";
   font-style: normal;
   font-weight: 400;
   src: local(""), url("../../fonts/Roboto-Regular.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Caveat", cursive;
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../fonts/Caveat.ttf") format("ttf");
 }
 /*Переменные для всего проекта*/
 /* Классы и стили, общие для всего проекта */
@@ -126,8 +132,8 @@ footer {
   border: 1px solid white;
   margin-top: 1rem;
   background: white;
-  font-family: "Prata", serif;
-  font-size: 22px;
+  font-family: "Pacifico", cursive;
+  font-size: 26px;
   font-weight: 600;
   justify-content: center;
   align-items: center;
@@ -147,6 +153,7 @@ footer {
 .categoryNameContainer {
   width: 100%;
   margin: 20px;
+  height: 40px;
   text-align: center;
 }
 

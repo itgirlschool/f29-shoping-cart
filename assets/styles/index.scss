@@ -20,7 +20,7 @@
     font-style: cursive;
     font-weight: 400;
     src: local(''),
-        url('../../fonts/Pacifico-Regular.ttf') format('ttf');
+        url('../../fonts/Pacifico.ttf') format('ttf');
       
 }
 
@@ -33,6 +33,18 @@
       
 }
 
+
+@font-face {
+    font-family: 'Caveat', cursive;
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../../fonts/Caveat.ttf') format('ttf');
+      
+}
+
+
+
 /*Переменные для всего проекта*/
 
 $grid-breakpoint-xs: 0;
@@ -43,7 +55,7 @@ $grid-breakpoint-xl: 1200px;
 $grid-breakpoint-xxl: 1400px;
 
 
-$font-family-serif: 'Prata', serif;
+$font-family-serif: 'Prata', normal, serif;
 $font-family-sans-serif: 'Roboto', normal, sans-serif;
 $font-family-titles: 'Pacifico', cursive;
 $font-family-button: 'Prata', normal, serif;
@@ -182,8 +194,8 @@ footer {
         border: 1px solid white;
         margin-top: 1rem;
         background: white;
-        font-family: $font-family-serif;
-        font-size: 22px;
+        font-family: 'Pacifico', cursive;;
+        font-size: 26px;
         font-weight: 600;
         justify-content: center;
         align-items: center;
@@ -204,10 +216,10 @@ footer {
         height: 45px;
        }
 
-
 .categoryNameContainer {
    width: 100%;
    margin: 20px;
+   height: 40px;
    text-align: center;
   
 }
