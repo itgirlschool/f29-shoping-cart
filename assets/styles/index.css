@@ -215,14 +215,28 @@ footer {
   border-radius: 10px;
   text-align: center;
   background-color: white;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-left: 20px;
   align-items: center;
-  width: 20vw;
+  width: 21vw;
   font-family: "Prata", normal;
   font-size: medium;
   position: relative;
   font-family: "Roboto", normal, sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .flowers_card {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 23vw;
+  }
+}
+@media screen and (max-width: 576px) {
+  .flowers_card {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 25vw;
+  }
 }
 
 .flowers_describe_container {
