@@ -20,7 +20,7 @@
     font-style: cursive;
     font-weight: 400;
     src: local(''),
-        url('../../fonts/Pacifico-Regular.ttf') format('ttf');
+        url('../../fonts/Pacifico.ttf') format('ttf');
       
 }
 
@@ -33,6 +33,18 @@
       
 }
 
+
+@font-face {
+    font-family: 'Caveat', cursive;
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../../fonts/Caveat.ttf') format('ttf');
+      
+}
+
+
+
 /*Переменные для всего проекта*/
 
 $grid-breakpoint-xs: 0;
@@ -43,7 +55,7 @@ $grid-breakpoint-xl: 1200px;
 $grid-breakpoint-xxl: 1400px;
 
 
-$font-family-serif: 'Prata', serif;
+$font-family-serif: 'Prata', normal, serif;
 $font-family-sans-serif: 'Roboto', normal, sans-serif;
 $font-family-titles: 'Pacifico', cursive;
 $font-family-button: 'Prata', normal, serif;
@@ -230,17 +242,8 @@ footer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-items: center;
-    //margin-bottom: 40px;
-    //justify-content: space-between;
-    //border: 4px solid white;
     border-radius: 100%;
-    //padding-left: 20px;
-   // padding-right: 20px;
-   // padding-bottom: 20px;
-   // padding-top: 16px;
-   
-   
-
+    
     &__all-flowers,
     &__bouquets,
     &__baskets,
@@ -275,10 +278,10 @@ footer {
         height: 45px;
        }
 
-
 .categoryNameContainer {
    width: 100%;
    margin: 20px;
+   height: 40px;
    text-align: center;
   
 }
@@ -315,8 +318,6 @@ footer {
     }
 }
 
-
-
 .flowers_photo_container {
    
     align-items: center;
@@ -347,11 +348,26 @@ footer {
     margin-bottom: 30px;
     margin-left: 20px;
     align-items: center;
-    width: 20vw;
+    width: 21vw;
     font-family:'Prata', normal;
     font-size: medium;
     position: relative;
     font-family: $font-family-sans-serif;
+
+
+
+    @media screen and (max-width: $grid-breakpoint-md) {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 23vw;
+    
+    } 
+
+    @media screen and (max-width: $grid-breakpoint-sm) {
+        margin-bottom: 20px;
+        margin-left: 20px;
+        width: 25vw;
+    }
   
 }
 
