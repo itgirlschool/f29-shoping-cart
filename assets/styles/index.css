@@ -116,6 +116,7 @@ footer {
   margin: 20px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  justify-items: center;
   border-radius: 100%;
 }
 .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
@@ -125,6 +126,7 @@ footer {
   border-radius: 16px;
   border: 1px solid white;
   margin-top: 1rem;
+  margin-right: 35px;
   background: white;
   font-family: "Prata", serif;
   font-size: 22px;
