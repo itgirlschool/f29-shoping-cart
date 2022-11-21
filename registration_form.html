@@ -309,13 +309,10 @@
             } else {
                 payment = "наличные"
             };
-            console.log(payment);
-            //  let bankCard = document.getElementById('bankCard').che;
-            // let cash = document.getElementById('cash').value;
-
             let newCustomer = new Customer(name, telephon, email, street, houseNumber, building, apartmentNumber,
                 comment, payment);
             console.log(newCustomer);
+
             //открытие поп-ап окна
             popupBg.classList.add('active');
             popup.classList.add('active');
