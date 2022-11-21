@@ -160,6 +160,7 @@ footer {
     margin: 20px;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
     //margin-bottom: 40px;
     //justify-content: space-between;
     //border: 4px solid white;
@@ -181,6 +182,7 @@ footer {
         border-radius: 16px;
         border: 1px solid white;
         margin-top: 1rem;
+        margin-right: 35px;
         background: white;
         font-family: $font-family-serif;
         font-size: 22px;
@@ -334,5 +336,37 @@ footer {
 
 
 
-
 /* styles for блок-футер START*/
+.footer {
+    background:$color-main;
+    max-width: 100%;
+    height: 160px;
+    color:$text-color;
+    display: flex;
+    flex-direction: row;
+    font-family: "Prata", normal;
+    font-size: larger;
+  
+  &__logo,
+  &__menu,
+  &__contact,
+  &__social
+   {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    background: white;
+  }
+  &__logo_img {
+    width: 100px;
+  }
+  &__menu {
+    cursor:pointer;
+  }
+  &__social-img{
+    width:30px;
+    height: 30px;
+  }
+}
