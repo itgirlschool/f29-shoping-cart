@@ -30,7 +30,6 @@ let json = `[{
     "name": "Букет",
     "photo": "././assets/images/14.webp",
     "name": "Цветы",
-    "photo": "././assets/images/14.jpeg",
     "price": "25$",
     "description": "Композиция гербер, роз, лилий и белых ....",
     "category": "bouquet" 
