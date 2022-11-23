@@ -1,7 +1,7 @@
 #logo {
     position: relative;
     cursor: pointer;
-    left: 0;
+    left: -10px;
     transition: left 5s ease-out;
 }
 
@@ -13,13 +13,7 @@
     margin-right: 20px;
 }
 
-header,
-footer {
-    height: 20%;
-}
-
 .block_picture {
-    /* width: 50%;*/
     align-self:baseline;
     justify-self: center;
 }
@@ -27,11 +21,6 @@ footer {
 .picture {
     width: 250px;
     margin-top: 40px;
-}
-
-.head {
-    display: flex;
-    justify-content: center;
 }
 
 .block_info {
