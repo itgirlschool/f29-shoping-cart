@@ -251,49 +251,33 @@ items.forEach((item) => {
 const buttons = document.querySelectorAll('.button_')
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-      
         document.getElementById("category_name").innerText = button.value; })
     })
- 
+
 //добавляем товары в корзину
-    
-   window.addEventListener('click', function(event) {
+let cardsArray = [];
+
+window.addEventListener('click', function(event) {
 
         //проверяем, что клик был совершен по кнопке в корзину
         if(event.target.hasAttribute('data-catalog')) {
             //console.log('я из корзины!');
 
-            //находим карточку с товаром, внутри которой был совершен клик
-
-             const card = event.target.closest('.flowers_card');
+        //находим карточку с товаром, внутри которой был совершен клик
+            const card = event.target.closest('.flowers_card');
              //console.log(card);
 
-             //собираем данные с этого товара и записываем их в единый объект choiceInfo:
-
-             const cardInfo = {
-
+        //собираем данные с этого товара и записываем их в единый объект choiceInfo:
+            const cardInfo = {
                 title: card.querySelector('.flower_name').innerText,
                 price: card.querySelector('.flower_price').innerText,
                 imgSrc: card.querySelector('.flowers_photo').getAttribute('src'),
+            };
 
-             };
+            cardsArray.push(cardInfo);
 
-             //console.log(cardInfo);
-
-
-             let cardsArray = [];
-
-             for (i=0; i<1; i++) {
-                cardsArray.push(cardInfo);
-             }
-
-             console.log(cardsArray);
-
-             let a = JSON.stringify(cardsArray);
-
-             localStorage.setItem('name', a);
-
-
+        // запись выбранных букетов в localStorage
+            localStorage.setItem('name', JSON.stringify(cardsArray));
         }
     }) 
 
