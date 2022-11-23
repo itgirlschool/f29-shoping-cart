@@ -40,9 +40,9 @@
 <!--    выбора размера букета    -->
                 <div class="block_bukiet_size">
                     <div class="fonts">Выберите размер букета</div>
-                    <button class="size-button">Стандарт</button>
-                    <button class="size-button">Маленький</button>
-                    <button class="size-button">Большой</button>
+                    <button type="button" id="standard" class="size-button">Стандарт</button>
+                    <button type="button" id="small" class="size-button">Маленький</button>
+                    <button type="button" id="large" class="size-button">Большой</button>
                 </div>
                 
 <!--    добавление упаковки    -->
@@ -63,17 +63,20 @@
                         <input type="checkbox" id="misc" class="add-out"><label for="misc" class="fonts"> Добавить подарок</label>
                     </section>
                     <div class="add-image-out" id="add-image-out"></div>
-                    <div class="block_submit block_total_align">
-                        <span id="total-out"></span>
-                        <button type="button" class="delete_button">Удалить букет</button>
+                    <div class="block_submit">
+                        <div class="block_total_align">
+                            <span class="fonts" id="total-out"></span>
+                                <button type="button" id="delete" class="delete_button">Удалить букет</button>
+                                <div id="delete-info"></div>
+                        </div>
                     </div>
             </div>
         </div>
 <!--  кнопки  -->
         <div class="block_submit">
             <div class="block_submit_align">
-                <button type="button" class="block_submit_button"> &lt;&lt; Вернуться назад</button>
-                <button type="submit" class="block_submit_button">Оформить заказ</button>
+                <button type="button" id="to-main-page" class="block_submit_button"> &larr;&nbsp; Вернуться в каталог</button>
+                <button type="submit" id="to-order-page" class="block_submit_button">Оформить заказ &nbsp;&rarr;</button>
             </div>
         </div>
 
