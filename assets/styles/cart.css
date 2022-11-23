@@ -1,3 +1,10 @@
+#logo {
+    position: relative;
+    cursor: pointer;
+    left: 0;
+    transition: left 5s ease-out;
+}
+
 .base {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -9,7 +16,6 @@
 header,
 footer {
     height: 20%;
-    /*border: 1px solid red;*/
 }
 
 .block_picture {
@@ -101,9 +107,6 @@ footer {
 .item-descript {
     color: #0093A2;
     font-weight: bold;
-}
-#item-name, #item-price {
-    color: black;
 }
 
 #total-out {
