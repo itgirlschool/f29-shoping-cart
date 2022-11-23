@@ -9,7 +9,7 @@
 header,
 footer {
     height: 20%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .block_picture {
@@ -38,7 +38,6 @@ footer {
     /*background-color: rgb(248, 216, 231);*/
 }
 
-.block_bukiet_size,
 .block_pack {
     display: flex;
     flex-direction: row;
@@ -59,26 +58,6 @@ footer {
 
 .block_more-gap {
     margin-left: 25px;
-}
-
-.size-button {
-    min-width: 100px;
-    font-family: inherit;
-    font-size: 1rem;
-    appearance: none;
-    border: 0;
-    border-radius: 5px;
-    background: #4676d7;
-    color: #fff;
-    padding: 8px 16px;
-    cursor: pointer;
-}
-
-.size-button:hover {
-    background: #1d49aa;
-}
-.size-button:active {
-    background: #133174;
 }
 
 .block_submit_button {

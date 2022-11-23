@@ -135,7 +135,7 @@ let request = new XMLHttpRequest();
     }
 
     
-// функция сумма заказа с учетом стоимости букета (без оформления)
+// сумма заказа с учетом стоимости букета (без оформления)
     function sumUp(jsonObj){
         orderSum = +jsonObj[0]["price"];
         document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum;
@@ -152,35 +152,10 @@ let request = new XMLHttpRequest();
         window.location.href = '';
     });
 
-
+/*
+// кнопка удалить букет
     document.getElementById('delete').onclick = deleteItem;
-
     function deleteItem(){
         document.getElementById('delete-info').innerHTML = 'Хотите удалить букет из корзины?';
-        if (document.getElementById('delete').onclick){
-        }
     }
-
-
-/*
-//  выбор размера букета ???
-    document.getElementById('standard').onclick = getStandard;
-    document.getElementById('small').onclick = getSmall;
-    document.getElementById('large').onclick = getLarge;
-
-    function getStandard() {
-        orderSum *= 1;
-        console.log(orderSum);
-        document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
-    };
-    function getSmall() {
-        orderSum = orderSum/2;
-        console.log(orderSum);
-        document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
-    };
-    function getLarge() {
-        orderSum *= 2;
-        console.log(orderSum);
-        document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
-    };
 */
