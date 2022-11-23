@@ -43,23 +43,19 @@
       
 }
 
-
-
 /*Переменные для всего проекта*/
 
-$grid-breakpoint-xs: 0;
+
 $grid-breakpoint-sm: 576px;
 $grid-breakpoint-md: 768px;
 $grid-breakpoint-lg: 992px;
-$grid-breakpoint-xl: 1200px;
-$grid-breakpoint-xxl: 1400px;
 
 
 $font-family-serif: 'Prata', normal, serif;
 $font-family-sans-serif: 'Roboto', normal, sans-serif;
 $font-family-titles: 'Pacifico', cursive;
 $font-family-button: 'Prata', normal, serif;
-//$container-max-width: 1296px;
+
 
 
 $color-main: rgb(243, 220, 206);
@@ -74,6 +70,8 @@ $font-size-main-mobile: 22px;
 $font-size-footer: 16px;
 $font-size-xxl: 36px;
 $font-size-section-titles: 36px;
+
+$container-max-width: 100vw;
 
 /* Классы и стили, общие для всего проекта */
 
@@ -100,7 +98,7 @@ header,
 main,
 section,
 footer {
-    //max-width: $container-max-width;
+    max-width: $container-max-width;
     margin: 0;
 }
 
@@ -170,7 +168,7 @@ footer {
      &__item_logo-basket{
         width: 25px;
         height:20px;
-        }
+}
     
 }
 
@@ -243,7 +241,7 @@ footer {
     grid-template-columns: 25% 25% 25% 25%;
     justify-items: center;
     border-radius: 100%;
-    
+
     &__all-flowers,
     &__bouquets,
     &__baskets,
@@ -269,10 +267,12 @@ footer {
        &__bouquets:hover,
        &__baskets:hover,
        &__roses:hover {
-              background: $pink-hover;
+                background: $pink-hover;
           }
-    }
-       .button__logo-img{
+
+        }
+    
+.button__logo-img{
         margin-left: 5px;
         width: 50px;
         height: 45px;
@@ -281,7 +281,6 @@ footer {
 .categoryNameContainer {
    width: 100%;
    margin: 20px;
-   height: 40px;
    text-align: center;
   
 }
@@ -372,13 +371,10 @@ footer {
 }
 
 
-
 .flowers_describe_container {
    
    width: 90%;
    height: auto;
-   
-    //position: relative;
   
 }
 
@@ -418,7 +414,6 @@ footer {
 .hide {
     display: none
 }
-
 
 
 /* styles for блок-футер START*/
