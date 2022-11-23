@@ -268,7 +268,21 @@ footer {
         align-items: center;
         color: $text-color; 
         cursor: pointer; 
-       }
+
+        @media screen and (max-width: $grid-breakpoint-md) {
+            font-size: 14px;
+            width: 18vw;
+            height: 8vh;
+  
+        }
+  
+          @media screen and (max-width: $grid-breakpoint-sm) {
+              font-size: 13px;
+              width: 18vw;
+              height: 8vh;
+  
+          }
+      }
 
        &__all-flowers:hover,
        &__bouquets:hover,
@@ -283,6 +297,21 @@ footer {
         margin-left: 5px;
         width: 50px;
         height: 45px;
+
+        @media screen and (max-width: $grid-breakpoint-md) {
+            margin-left: 5px;
+            width: 45px;
+            height: 35px;
+    
+          }
+    
+            @media screen and (max-width: $grid-breakpoint-sm) {
+            margin-left: 5px;
+            width: 35px;
+            height: 25px;
+    
+            }
+    
        }
 
 .categoryNameContainer {
