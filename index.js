@@ -197,7 +197,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <h3 class="flower_name">${flower.name}</h3>
         </div>
         <div class="flowers_describe_container">
-        <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> Стоимость: </span> ${flower.price}$</div>
+        <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> 
+        Стоимость: </span> ${flower.price}$</div>
         <div class="flower_description">${flower.description}</div>
         <div><span style = "color: white"> <span > Категория: </span>${flower.category}</div>
         </div>
@@ -255,27 +256,43 @@ buttons.forEach((button) => {
     })
  
 //добавляем товары в корзину
+    
    window.addEventListener('click', function(event) {
 
         //проверяем, что клик был совершен по кнопке в корзину
         if(event.target.hasAttribute('data-catalog')) {
-            console.log('я из корзины!');
+            //console.log('я из корзины!');
 
             //находим карточку с товаром, внутри которой был совершен клик
 
              const card = event.target.closest('.flowers_card');
-             console.log(card);
+             //console.log(card);
 
              //собираем данные с этого товара и записываем их в единый объект choiceInfo:
 
              const cardInfo = {
 
                 title: card.querySelector('.flower_name').innerText,
-                imgSrc: card.querySelector('.flowers_photo').getAttribute('src')
+                price: card.querySelector('.flower_price').innerText,
+                imgSrc: card.querySelector('.flowers_photo').getAttribute('src'),
 
+             };
+
+             //console.log(cardInfo);
+
+
+             let cardsArray = [];
+
+             for (i=0; i<1; i++) {
+                cardsArray.push(cardInfo);
              }
 
-             console.log(cardInfo);
+             console.log(cardsArray);
+
+             let a = JSON.stringify(cardsArray);
+
+             localStorage.setItem('name', a);
+
 
         }
     }) 
