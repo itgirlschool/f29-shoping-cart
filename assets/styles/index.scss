@@ -485,11 +485,55 @@ footer {
     margin-left:30px;
     margin-top: 10px;
   }
-  &__menu {
+  &__menu_name,
+  &__menu_buketi,
+  &__menu_korzini,
+  &__menu_dostavka,
+  &__menu_oplata,
+  &__menu_rosi {
     cursor:pointer;
   }
+
   &__social-img{
     width:30px;
     height: 30px;
+    cursor:pointer;
   }
+  &__social-img:hover {
+    background: $pink-hover;
+}
+
+
+  @media screen and (max-width: $grid-breakpoint-md) {
+    width: 100vw;
+    height: 150px;
+    font-size: 16px;
+    &__menu {
+        display: none;
+    }
+
+    &__logo_img {
+        width: 90px;
+        margin-right:20px;
+        margin-top: 10px;
+      }
+} 
+@media screen and (max-width: $grid-breakpoint-sm) {
+    height: 130px;
+    font-size:small;
+    &__menu {
+        display: none;
+    }
+    &__social-img{
+        width:20px;
+        height: 20px;
+        cursor:pointer;
+      }
+      &__logo_img {
+        width: 60px;
+        margin-right:20px;
+        margin-top: 10px;
+      }
+}
+
 }
