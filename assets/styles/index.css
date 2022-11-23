@@ -113,6 +113,64 @@ footer {
   width: 25px;
   height: 20px;
 }
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: start;
+  }
+  .header__items {
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+    width: 20%;
+    font-size: small;
+  }
+  .header__phrase {
+    width: 80px;
+    font-size: 1.5rem;
+    padding-right: 30px;
+  }
+  .header__logo-img {
+    padding-left: 40px;
+    padding-bottom: 10px;
+    width: 70px;
+  }
+  .header__item_basket {
+    display: flex;
+    direction: row;
+  }
+  .header__item_logo-basket {
+    width: 19px;
+    height: 13px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    width: 100%;
+  }
+  .header__items {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    font-size: small;
+    margin-left: 60px;
+  }
+  .header__phrase {
+    padding-left: 25px;
+    font-size: 1.4rem;
+  }
+  .header__logo-img {
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 50px;
+  }
+  .header__item_logo-basket {
+    width: 15px;
+    height: 10px;
+  }
+}
 
 .catalog {
   width: 100vw;
@@ -140,6 +198,20 @@ footer {
   color: black;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
+    font-size: 14px;
+    width: 18vw;
+    height: 8vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
+    font-size: 13px;
+    width: 18vw;
+    height: 8vh;
+  }
+}
 .catalog__all-flowers:hover, .catalog__bouquets:hover, .catalog__baskets:hover, .catalog__roses:hover {
   background: #ff3672;
 }
@@ -148,6 +220,20 @@ footer {
   margin-left: 5px;
   width: 50px;
   height: 45px;
+}
+@media screen and (max-width: 768px) {
+  .button__logo-img {
+    margin-left: 5px;
+    width: 45px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .button__logo-img {
+    margin-left: 5px;
+    width: 35px;
+    height: 25px;
+  }
 }
 
 .categoryNameContainer {
@@ -307,10 +393,48 @@ footer {
   margin-left: 30px;
   margin-top: 10px;
 }
-.footer__menu {
+.footer__menu_name, .footer__menu_buketi, .footer__menu_korzini, .footer__menu_dostavka, .footer__menu_oplata, .footer__menu_rosi {
   cursor: pointer;
 }
 .footer__social-img {
   width: 30px;
   height: 30px;
+  cursor: pointer;
+}
+.footer__social-img:hover {
+  background: #ff3672;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 100vw;
+    height: 150px;
+    font-size: 16px;
+  }
+  .footer__menu {
+    display: none;
+  }
+  .footer__logo_img {
+    width: 90px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer {
+    height: 130px;
+    font-size: small;
+  }
+  .footer__menu {
+    display: none;
+  }
+  .footer__social-img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .footer__logo_img {
+    width: 60px;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
 }/*# sourceMappingURL=index.css.map */
