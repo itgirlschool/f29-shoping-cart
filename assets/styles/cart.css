@@ -99,8 +99,13 @@ footer {
     margin-left: 15px;
 }
 .item-descript {
+    color: #0093A2;
     font-weight: bold;
 }
+#item-name, #item-price {
+    color: black;
+}
+
 #total-out {
     margin-top: 15px;
     margin-left: 15px;
