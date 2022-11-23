@@ -107,7 +107,8 @@ footer {
  /* styles for блок-хедер START*/
 
  .header {
-    max-width: 100%;
+    //max-width: 100%;
+    width: 100vw;
     height: 180px;
     background:$background-color;
     color:$text-color;
@@ -119,6 +120,7 @@ footer {
 
    &__logo{
    display:grid;
+   margin-right: 30px;
    }
  
   &__logo-img {
@@ -405,11 +407,19 @@ footer {
     @media screen and (max-width: $grid-breakpoint-sm) {
         margin-bottom: 30px;
         margin-left: 30px;
-        width: 88vw;
+        width: 96vw;
     }
   
 }
 
+.flowers_name_container {
+        height: 9vh;
+
+    @media screen and (max-width: $grid-breakpoint-md) {
+        height: 10vh;
+    }
+  
+}
 
 .flowers_describe_container {
    
@@ -459,7 +469,8 @@ footer {
 /* styles for блок-футер START*/
 .footer {
     background:$color-main;
-    max-width: 100%;
+    //max-width: 100%;
+    width: 100vw;
     height: 160px;
     color:$text-color;
     display: flex;
