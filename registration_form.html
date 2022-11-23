@@ -67,6 +67,7 @@
         .registration-form_div-with-error {
             color: red;
             margin: 1em;
+            width: 25vw;
         }
 
         /*Стили кнопки оформления начало*/
@@ -97,10 +98,16 @@
             text-indent: 5px;
             font-family: inherit;
             border: 2px solid black;
+            width: 25vw;
         }
 
         input:hover {
             border-color: #ff3672;
+        }
+
+        input:focus {
+            border-color: #ff3672;
+            outline: 0;
         }
 
         ::-webkit-input-placeholder {
@@ -137,7 +144,141 @@
             border-color: #ff3672;
         }
 
+        #textarea_comment:focus {
+            border-color: #ff3672;
+            outline: 0;
+        }
+
+        .block-with-radio_payment {
+
+            width: 25vw;
+        }
+
+        .radio_payment {
+            width: 2vw;
+        }
+
         /*Стили инпутов конец*/
+
+        /*Медиазапросы начало*/
+        @media screen and (max-width: 576px) {
+            form {
+                font-size: large;
+                border: none;
+                width: 100vw;
+                padding: 2em 0;
+                grid-template-areas:
+                    "top "
+                    "left "
+                    "right"
+                    "bottom ";
+                grid-row-gap: 25px;
+            }
+
+            #textarea_comment {
+                resize: none;
+                overflow: auto;
+                text-indent: 5px;
+                width: 65vw;
+                height: 120px;
+                font-family: inherit;
+                border: 2px solid black;
+            }
+
+            input {
+                width: 65vw;
+                height: 30px;
+                text-indent: 3px;
+                border: 1px solid black;
+            }
+
+            .block-with-radio_payment {
+                margin: 1em auto;
+                width: 65vw;
+            }
+
+            .radio_payment {
+                width: 5vw;
+                height: 18px;
+            }
+
+            #input_registration-form {
+                width: 80%;
+                height: 57px;
+                background-color: #ff3672;
+                color: white;
+                border-radius: 6px;
+                border: 0px;
+                position: relative;
+                font-family: "Roboto", normal, sans-serif;
+                font-size: 18px;
+            }
+
+            .registration-form_div-with-error {
+                width: 65vw;
+                margin: 1.5em auto;
+            }
+        }
+
+        @media screen and (min-width: 577px) and (max-width: 1199px) {
+            form {
+                font-size: larger;
+                border: none;
+                width: 80vw;
+                padding: 2em 2em;
+                grid-template-areas:
+                    "top "
+                    "left "
+                    "right"
+                    "bottom ";
+                grid-row-gap: 25px;
+            }
+
+            #textarea_comment {
+                resize: none;
+                overflow: auto;
+                text-indent: 5px;
+                width: 55vw;
+                height: 160px;
+                font-family: inherit;
+                border: 2px solid black;
+            }
+
+            input {
+                width: 55vw;
+                height: 30px;
+                text-indent: 3px;
+                border: 1px solid black;
+            }
+
+            .block-with-radio_payment {
+                margin: 1em auto;
+                width: 55vw;
+            }
+
+            .radio_payment {
+                width: 5vw;
+                height: 18px;
+            }
+
+            #input_registration-form {
+                width: 80%;
+                height: 57px;
+                background-color: #ff3672;
+                color: white;
+                border-radius: 6px;
+                border: 0px;
+                position: relative;
+                font-family: "Roboto", normal, sans-serif;
+                font-size: 18px;
+            }
+
+            .registration-form_div-with-error {
+                width: 55vw;
+                margin: 2em auto;
+            }
+
+        }
     </style>
 </head>
 
@@ -151,30 +292,30 @@
             <div>
                 <label for="input_name">Имя:<span class="red">*</span></label>
                 <p><input id="input_name" type="text" placeholder="Введите ваше имя"></p>
-                <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
+                <div class="registration-form_div-with-error">Пожалуйста, заполните это поле, указав корректные
                     данные.
                     содержать цифры</div>
             </div>
             <div>
                 <label for="input_tel">Телефон:<span class="red">*</span></label>
                 <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон"></p>
-                <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
+                <div class="registration-form_div-with-error">Пожалуйста, заполните это поле, указав корректные
                     данные.</div>
             </div>
             <div>
                 <label for="input_email">Почта:<span class="red">*</span></label>
                 <p><input id="input_email" type="email" placeholder="Введите вашу почту"></p>
-                <div class="registration-form_div-with-error" id="">Пожалуйста, заполните это поле, указав корректные
+                <div class="registration-form_div-with-error">Пожалуйста, заполните это поле, указав корректные
                     данные.</div>
             </div>
             <div>
-                <label>Адрес:<span class="red">*</span></label>
+                <label for="input_street">Адрес:<span class=" red">*</span></label>
                 <p><input id="input_street" type="text" placeholder="Улица"></p>
                 <p><input id="input_houseNumber" type="text" placeholder="Дом"></p>
                 <p><input id="input_building" type="text" placeholder="Корпус"></p>
                 <p><input id="input_apartmentNumber" type="text" placeholder="Квартира"></p>
-                </label>
-                <div class="registration-form_div-with-error" id="">Пожалуйста, впишите адрес доставки, указав
+
+                <div class="registration-form_div-with-error">Пожалуйста, впишите адрес доставки, указав
                     корректные
                     данные.</div>
             </div>
@@ -182,16 +323,17 @@
         <div id="registration-form_grid_3">
             <div>
                 <label for="textarea_comment">Комментарий к заказу:</label>
-                <p><textarea id="textarea_comment" type="text" placeholder="Есть ли комментарии к заказу?"></textarea>
+                <p><textarea id="textarea_comment" placeholder="Есть ли комментарии к заказу?"></textarea>
                 </p>
             </div>
             <div>
-                <label>Способ оплаты:<span class="red">*</span>
-                    <p><input id="bankCard" class="radio_payment" type="radio" name="payment" value="1"> Банковская
-                        карта</p>
-                    <p><input id="cash" class="radio_payment" type="radio" name="payment" value="2"> Наличный расчет</p>
-                    <div class="registration-form_div-with-error" id="">Пожалуйста, укажите способ оплаты.</div>
-                </label>
+                <p>Способ оплаты:<span class="red">*</span> </p>
+                <p class="block-with-radio_payment"><input id="bankCard" class="radio_payment" type="radio"
+                        name="payment" value="1"> Банковская
+                    карта</p>
+                <p class="block-with-radio_payment"><input id="cash" class="radio_payment" type="radio" name="payment"
+                        value="2"> Наличный расчет</p>
+                <div class="registration-form_div-with-error">Пожалуйста, укажите способ оплаты.</div>
             </div>
         </div>
         <div id="registration-form_grid_4">
