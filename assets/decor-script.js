@@ -159,3 +159,4 @@ let request = new XMLHttpRequest();
         document.getElementById('delete-info').innerHTML = 'Хотите удалить букет из корзины?';
     }
 */
+
