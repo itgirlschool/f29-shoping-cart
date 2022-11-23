@@ -20,6 +20,7 @@ function getOptionCost() {
     orderSum += decorOptionCost;
     //console.log('промежуточная сумма: ' + orderSum);
     document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
+    /*
         if (a.checked) {
             document.getElementById('add-image-out').innerHTML = '';
             showAdd();
@@ -29,6 +30,7 @@ function getOptionCost() {
             console.log('сумма2: ' + orderSum);
         }
         //console.log('getOptionCost: ' + orderSum);
+    */
 };
 
 addOut.addEventListener('click', showAdd); // вывод доп оформления по клику checkbox
@@ -56,6 +58,7 @@ function showAdd(event){
         orderSum -= item;
         item=0;
         document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
+
         document.getElementById('add-image-out').innerHTML = '';
         console.log('after delete decor' + orderSum);
     }
