@@ -61,7 +61,7 @@ footer {
 
 /* styles for блок-хедер START*/
 .header {
-  max-width: 100%;
+  width: 100vw;
   height: 180px;
   background: rgb(255, 255, 255);
   color: black;
@@ -73,6 +73,7 @@ footer {
 }
 .header__logo {
   display: grid;
+  margin-right: 30px;
 }
 .header__logo-img {
   width: 110px;
@@ -322,7 +323,16 @@ footer {
   .flowers_card {
     margin-bottom: 30px;
     margin-left: 30px;
-    width: 88vw;
+    width: 96vw;
+  }
+}
+
+.flowers_name_container {
+  height: 9vh;
+}
+@media screen and (max-width: 768px) {
+  .flowers_name_container {
+    height: 10vh;
   }
 }
 
@@ -371,7 +381,7 @@ footer {
 /* styles for блок-футер START*/
 .footer {
   background: rgb(243, 220, 206);
-  max-width: 100%;
+  width: 100vw;
   height: 160px;
   color: black;
   display: flex;

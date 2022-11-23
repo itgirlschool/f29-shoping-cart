@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <img class="flowers_photo" src="${flower.photo}"/>
         </div>
         <div class="flowers_name_container">
-        <h2 class="flower_name">${flower.name}</h2>
+        <h3 class="flower_name">${flower.name}</h3>
         </div>
         <div class="flowers_describe_container">
         <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> Стоимость: </span> ${flower.price}$</div>
@@ -243,6 +243,7 @@ items.forEach((item) => {
     else {item.classList.remove('hide')}
 })}
 
+
 });
 
 
@@ -252,10 +253,9 @@ buttons.forEach((button) => {
       
         document.getElementById("category_name").innerText = button.value; })
     })
-
-document.getElementById('to-basket').addEventListener('click', () => {window.location.href='cart.html';});
  
-    window.addEventListener('click', function(event) {
+//добавляем товары в корзину
+   window.addEventListener('click', function(event) {
 
         //проверяем, что клик был совершен по кнопке в корзину
         if(event.target.hasAttribute('data-catalog')) {
@@ -263,23 +263,22 @@ document.getElementById('to-basket').addEventListener('click', () => {window.loc
 
             //находим карточку с товаром, внутри которой был совершен клик
 
-             const choice = event.target.closest('.flowers_card');
-             console.log(choice);
+             const card = event.target.closest('.flowers_card');
+             console.log(card);
 
              //собираем данные с этого товара и записываем их в единый объект choiceInfo:
 
-             const choiceInfo = {
+             const cardInfo = {
 
-                title: choice.querySelector('flower_name').innerText,
-                imgSrc: choice.querySelector('.flowers_photo').getAttibute('src')
-               
-             
+                title: card.querySelector('.flower_name').innerText,
+                imgSrc: card.querySelector('.flowers_photo').getAttribute('src')
+
              }
 
-             console.log('choiceInfo');
+             console.log(cardInfo);
 
         }
-    })
+    }) 
 
 
 /*function app() {
@@ -394,6 +393,3 @@ const countPrice = (objCart) => {
 console.log(typeof totalPrice.innerHTML);*/
 
 
-
-
-//https://thypix.com/ru/kartinki-krasivyh-buketov-tsvetov/
