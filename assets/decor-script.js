@@ -1,6 +1,5 @@
 const addOut = document.querySelector('.add-out');
 const addImageOut = document.querySelector('.add-image-out');
-//const totalSum = document.getElementById('sum');
 
 let orderSum; // общая стоимость заказа
 let item=0;
@@ -11,14 +10,11 @@ let addDecorOption = document.getElementById('add-option-list'); // стоимо
 
 addDecorOption.onchange = getOptionCost;   // добавление стоимости упаковки к общей стоимости
 
-
 // функция добавления упаковки
 function getOptionCost() {
     orderSum -= decorOptionCost;
     decorOptionCost = +addDecorOption.value;
-    //console.log('decorOptionCost: ' + decorOptionCost);
     orderSum += decorOptionCost;
-    //console.log('промежуточная сумма: ' + orderSum);
     document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
     /*
         if (a.checked) {
@@ -44,7 +40,7 @@ function showAdd(event){
             let value = dodatki[key]['value'];  // цена выбранного оформления
 
             img.setAttribute('data-key', key);
-            img.title = name + ': ' + value; // назначение атрибута title
+            img.title = name + ': $' + value; // назначение атрибута title
             img.alt = 'Подарок: ' + name + ': ' + value; // назначение атрибута title
             img.src = 'assets/images/' + key + '.png';
             addImageOut.append(img);
@@ -76,15 +72,12 @@ function pickAddImage(event){
             item-=value;
             orderSum -= value;
             document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
-            //console.log('-decor' + orderSum);
         } else {
             event.target.classList.add('active');
             item+=value;
             orderSum += value;
             document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
-            //console.log('+decor' + orderSum);
         }
-        //return orderSum;
 }
 
 /*
@@ -123,16 +116,15 @@ let request = new XMLHttpRequest();
     })
     .catch(error => console.log(error))
 
-// выводим в корзину 0 элемент массива JSON
+// выводим в корзину 0 элемент массива JSON: название, цена, картинка
     function getItem(jsonObj) {
         let itemName = document.createElement('span');
-        itemName.innerHTML = 'Название букета: ' + jsonObj[0]["name"];
+        itemName.innerHTML = `<span class="item-descript">&#10048;&nbsp Название букета: </span>` + jsonObj[0]["name"];
         document.getElementById('item-name').appendChild(itemName);
     
         let itemPrice = document.createElement('span');
-        itemPrice.innerHTML = 'Цена букета: $' + jsonObj[0]["price"];
+        itemPrice.innerHTML = `<span class="item-descript">&#10048;&nbsp Цена букета: $</span>` + jsonObj[0]["price"];
         document.getElementById('item-price').appendChild(itemPrice);
-        //console.log(jsonObj[0]["price"]);
 
         let itemImage = document.createElement('img');
         itemImage.src = jsonObj[0]["photo"];
@@ -143,9 +135,27 @@ let request = new XMLHttpRequest();
     }
 
     
-// функция суммирования всего заказа с учетом стоимости букета
+// сумма заказа с учетом стоимости букета (без оформления)
     function sumUp(jsonObj){
         orderSum = +jsonObj[0]["price"];
         document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum;
         return orderSum;
     }
+
+// переход на страницу каталога при нажатии соответствующей кнопки 
+    document.getElementById('to-main-page').addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+// переход на страницу оформления заказа при нажатии соответствующей кнопки 
+    document.getElementById('to-order-page').addEventListener('click', () => {
+        window.location.href = '';
+    });
+
+/*
+// кнопка удалить букет
+    document.getElementById('delete').onclick = deleteItem;
+    function deleteItem(){
+        document.getElementById('delete-info').innerHTML = 'Хотите удалить букет из корзины?';
+    }
+*/

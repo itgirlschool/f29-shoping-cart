@@ -9,7 +9,7 @@
 header,
 footer {
     height: 20%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .block_picture {
@@ -38,7 +38,6 @@ footer {
     /*background-color: rgb(248, 216, 231);*/
 }
 
-.block_bukiet_size,
 .block_pack {
     display: flex;
     flex-direction: row;
@@ -48,41 +47,17 @@ footer {
 .block_submit {
     display: flex;
     flex-direction: row;
-    gap: 30px;
     margin: 20px 0 20px 0;
 }
 
 .fonts {
     font-size: larger;
-    /*font-style: italic;*/     /* changed */
     color: rgb(2, 101, 106);
     margin-left: 15px;
 }
 
 .block_more-gap {
     margin-left: 25px;
-}
-
-.size-button {
-    min-width: 100px;
-    font-family: inherit;
-    font-size: 1rem;
-    appearance: none;
-    border: 0;
-    border-radius: 5px;
-    background: #4676d7;
-    color: #fff;
-    padding: 8px 16px;
-    cursor: pointer;
-}
-
-.size-button:hover {
-    background: #1d49aa;
-}
-
-.size-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px #cbd6ee;
 }
 
 .block_submit_button {
@@ -93,14 +68,14 @@ footer {
     appearance: none;
     border: 0;
     border-radius: 5px;
-    background: #f10606;
+    background: #0093A2;
     color: #fff;
     padding: 8px 16px;
     cursor: pointer;
 }
 
 .block_submit_button:hover {
-    background: #e94242;
+    background: #017b89;
 }
 
 .block_submit_button:focus {
@@ -123,17 +98,28 @@ footer {
 .add-image-out {
     margin-left: 15px;
 }
+.item-descript {
+    color: #0093A2;
+    font-weight: bold;
+}
+#item-name, #item-price {
+    color: black;
+}
+
 #total-out {
     margin-top: 15px;
     margin-left: 15px;
+    margin-right: 250px;
+    padding: 10px;
     font-weight: bold;
     font-size: 20px;
+    border: 1px dotted blue;
 }
 .block_submit_align {
     margin: auto;
 }
 .block_total_align {
-    gap:150px;
+    margin: auto;
 }
 .delete_button {
     min-width: 80px;
@@ -143,18 +129,21 @@ footer {
     appearance: none;
     border: 0;
     border-radius: 5px;
-    background: #1d49aa;
-    color: #fff;
+    background: #f47da1;
+    color: rgb(243, 220, 206);
     padding: 8px 16px;
     cursor: pointer;
 }
-
+.delete_button:hover {
+    background: #FF3672;
+}
 .add-decore-value {
     text-align: center;
 }
 .add-image-out{
     cursor: pointer;
 }
+
 
 /* customized checkbox */
 .add-out {
