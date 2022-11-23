@@ -1,25 +1,25 @@
 let json = `[{
     
-    "name": "Букет",
+    "name": "Букет красных и кремовых роз с зеленым декором",
     "photo": "././assets/images/1.webp",
-    "price": "30$",
-    "description": "Лилии, герберы, ...",
+    "price": "30",
+    "description": "Розы красные, розы кремовые, листья зелени",
     "category": "bouquet" 
 },
     
     
 {
-    "name": "Букет",
+    "name": "Букет из оранжевых роз и кактусов с бутонами лилий",
     "photo": "././assets/images/beautiful-flower-bouquets-85.jpg",
-    "price": "35$",
+    "price": "35",
     "description": "Нежно-оранжевые розы, мини-кактусы с мягкими иголками, зелень",
     "category": "bouquet" 
 },
 
 {  
-    "name": "Розы",
+    "name": "Розы белых и пастельных оттенков",
     "photo": "././assets/images/18.webp",
-    "price": "35$",
+    "price": "5",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "roses" 
 
@@ -27,17 +27,17 @@ let json = `[{
 
 {
    
-    "name": "Букет",
+    "name": "Букет из малиновых роз и орхидей",
     "photo": "././assets/images/14.webp",
-    "price": "25$",
+    "price": "40",
     "description": "Композиция гербер, роз, лилий и белых ....",
     "category": "bouquet" 
 },
 
 {  
-    "name": "Розы",
+    "name": "Розы белого цвета с сине-фиолетовым декором",
     "photo": "././assets/images/19.webp",
-    "price": "35$",
+    "price": "10",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "roses" 
 
@@ -45,45 +45,45 @@ let json = `[{
 
 
 {  
-    "name": "Розы",
+    "name": "Крупные розы нежных цветов",
     "photo": "././assets/images/20.webp",
-    "price": "35$",
+    "price": "15",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "roses" 
 
 },
 
 {  
-    "name": "Букет",
+    "name": "Букет из роз, гвоздик, пионов и веток акации",
     "photo": "././assets/images/2.webp",
-    "price": "35$",
+    "price": "35",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "bouquet" 
 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Плетеная корзина крупных алых роз",
     "photo": "././assets/images/13.jpeg",
-    "price": "35$",
+    "price": "45",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Корзина хризантем, роз и зеленых веточек",
     "photo": "././assets/images/21.webp",
-    "price": "35$",
+    "price": "40",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Корзина цветов для велосипеда",
     "photo": "././assets/images/3.jpeg",
-    "price": "35$",
+    "price": "35",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
@@ -91,54 +91,54 @@ let json = `[{
 
 
 {  
-    "name": "Букет",
+    "name": "Нежный букет из роз и анемонов",
     "photo": "././assets/images/6.webp",
-    "price": "35$",
+    "price": "50",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "bouquet" 
 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Корзина малиновых роз и белых орхидей",
     "photo": "././assets/images/22.webp",
-    "price": "35$",
+    "price": "55",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
 },
 
 {  
-    "name": "Розы",
+    "name": "Розы кремовых и розовых оттенков",
     "photo": "././assets/images/17.webp",
-    "price": "35$",
+    "price": "15",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "roses" 
 
 },
 
 {  
-    "name": "Букет",
+    "name": "Букет из пионов и астр, декорированный листьями",
     "photo": "././assets/images/5.webp",
-    "price": "35$",
+    "price": "25",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "bouquet" 
 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Корзина с полевыми ромашками",
     "photo": "././assets/images/8.webp",
-    "price": "35$",
+    "price": "30",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Корзина мини-подсолнухов и зеленых веточек",
     "photo": "././assets/images/9.jpeg",
-    "price": "35$",
+    "price": "20",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
@@ -146,35 +146,35 @@ let json = `[{
 
 
 {  
-    "name": "Розы",
+    "name": "Розы нежного розово-молочного цвета",
     "photo": "././assets/images/16.webp",
-    "price": "35$",
+    "price": "5",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "roses" 
 },
 
 {  
-    "name": "Корзина",
+    "name": "Корзина белых и фиолетовых цветов",
     "photo": "././assets/images/11.jpeg",
-    "price": "35$",
+    "price": "30",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 },
 
 
 {  
-    "name": "Корзина",
+    "name": "Корзина розовых орхидей и мини-роз ",
     "photo": "././assets/images/23.webp",
-    "price": "35$",
+    "price": "55",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "basket" 
 
 },
 
 {  
-    "name": "Розы",
+    "name": "Розы насыщенного красного цвета",
     "photo": "././assets/images/15.webp",
-    "price": "35$",
+    "price": "10",
     "description": "Розы, фиалки, каллы и белые....",
     "category": "roses"
 
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let flowersContent = "";
     
     for (let flower of flowers) {
-        // когда вписываем в    const cards = document.querySelectorAll('.flowers_card') - ничего не работает
+      
         flowersContent +=`<div class="flowers_card ${flower.category}">
         <div class="flowers_photo_container">
         <img class="flowers_photo" src="${flower.photo}"/>
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <h2 class="category_name">${flower.name}</h2>
         </div>
         <div class="flowers_describe_container">
-        <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> Стоимость: </span> ${flower.price}</div>
+        <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> Стоимость: </span> ${flower.price}$</div>
         <div class="flower_description">${flower.description}</div>
         <div><span style = "color: white"> <span > Категория: </span>${flower.category}</div>
         </div>
@@ -226,8 +226,7 @@ buttons.forEach((button) => {
 
         filter(currentCategory, cards)
     }
-    
-   
+
 )
 }) 
 //делаем функцию, которая проверит, какую кнопку нажали. 
