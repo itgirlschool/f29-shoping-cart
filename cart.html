@@ -20,7 +20,7 @@
             <a class="header__item_delivery" href="#delivery">Доставка</a>
             <a class="header__item_payment" href="#payment">Оплата</a>
             <a class="header__item_contact" href="#contact">Контакты</a>
-            <a class="header__item_basket" href="#basket">Корзина
+            <a class="header__item_basket" id="to-basket" href="cart.html">Корзина
             <img class="header__item_logo-basket" src="assets/images/basket.png" alt="logo"/></a>
         </div>
         <div class="header__logo">
@@ -37,13 +37,6 @@
                 <div id="item-name" class="fonts"></div>
                 <div id="item-price" class="fonts"></div>
 
-<!--    выбора размера букета    -->
-                <div class="block_bukiet_size">
-                    <div class="fonts">Выберите размер букета</div>
-                    <button class="size-button">Стандарт</button>
-                    <button class="size-button">Маленький</button>
-                    <button class="size-button">Большой</button>
-                </div>
                 
 <!--    добавление упаковки    -->
                 <div class="block_pack">
@@ -63,17 +56,20 @@
                         <input type="checkbox" id="misc" class="add-out"><label for="misc" class="fonts"> Добавить подарок</label>
                     </section>
                     <div class="add-image-out" id="add-image-out"></div>
-                    <div class="block_submit block_total_align">
-                        <span id="total-out"></span>
-                        <button type="button" class="delete_button">Удалить букет</button>
+                    <div class="block_submit">
+                        <div class="block_total_align">
+                            <span class="fonts" id="total-out"></span>
+                                <button type="button" id="delete" class="delete_button">Удалить букет</button>
+                                <div id="delete-info"></div>
+                        </div>
                     </div>
             </div>
         </div>
 <!--  кнопки  -->
         <div class="block_submit">
             <div class="block_submit_align">
-                <button type="button" class="block_submit_button"> &lt;&lt; Вернуться назад</button>
-                <button type="submit" class="block_submit_button">Оформить заказ</button>
+                <button type="button" id="to-main-page" class="block_submit_button"> &larr;&nbsp; Вернуться в каталог</button>
+                <button type="submit" id="to-order-page" class="block_submit_button">Оформить заказ &nbsp;&rarr;</button>
             </div>
         </div>
 
