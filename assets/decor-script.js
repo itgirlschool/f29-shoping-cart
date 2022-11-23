@@ -133,6 +133,13 @@ let request = new XMLHttpRequest();
         itemPrice.innerHTML = 'Цена букета: $' + jsonObj[0]["price"];
         document.getElementById('item-price').appendChild(itemPrice);
         //console.log(jsonObj[0]["price"]);
+
+        let itemImage = document.createElement('img');
+        itemImage.src = jsonObj[0]["photo"];
+        itemImage.width=350;
+
+        console.log(itemImage);
+        document.getElementById('item-image').appendChild(itemImage);
     }
 
     
