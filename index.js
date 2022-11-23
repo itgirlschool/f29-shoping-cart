@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         <img class="flowers_photo" src="${flower.photo}"/>
         </div>
         <div class="flowers_name_container">
-        <h2 class="category_name">${flower.name}</h2>
+        <h2 class="flower_name">${flower.name}</h2>
         </div>
         <div class="flowers_describe_container">
         <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> Стоимость: </span> ${flower.price}$</div>
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         </div>
         <br>
         <div class="button_basket_container">
-        <button class="button_basket">Добавить в корзину</button>
+        <button data-catalog class="button_basket">Добавить в корзину</button>
         </div>
     
         <br>
@@ -248,11 +248,37 @@ items.forEach((item) => {
 
 const buttons = document.querySelectorAll('.button_')
 buttons.forEach((button) => {
-   
-    
     button.addEventListener('click', () => {
       
         document.getElementById("category_name").innerText = button.value; })
+    })
+
+document.getElementById('to-basket').addEventListener('click', () => {window.location.href='cart.html';});
+ 
+    window.addEventListener('click', function(event) {
+
+        //проверяем, что клик был совершен по кнопке в корзину
+        if(event.target.hasAttribute('data-catalog')) {
+            console.log('я из корзины!');
+
+            //находим карточку с товаром, внутри которой был совершен клик
+
+             const choice = event.target.closest('.flowers_card');
+             console.log(choice);
+
+             //собираем данные с этого товара и записываем их в единый объект choiceInfo:
+
+             const choiceInfo = {
+
+                title: choice.querySelector('flower_name').innerText,
+                imgSrc: choice.querySelector('.flowers_photo').getAttibute('src')
+               
+             
+             }
+
+             console.log('choiceInfo');
+
+        }
     })
 
 
