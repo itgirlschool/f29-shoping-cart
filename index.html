@@ -22,16 +22,19 @@
     <p class="header__phrase">Букеты на любой вкус</p>
 
     <div class="header__items">
+
       <a class="header__item_delivery" href="#delivery">Доставка</a>
       <a class="header__item_payment" href="#payment">Оплата</a>
       <a class="header__item_contact" href="#contact">Контакты</a>
-      <a class="header__item_basket" href="#basket">Корзина
+      <a class="header__item_basket" id="to-basket" href="cart.html">Корзина
         <img class="header__item_logo-basket" src="assets/images/basket.png" alt="logo" /></a>
     </div>
+
 
     <div class="header__logo">
       <img class="header__logo-img" src="assets/images/logobutterfly.png" alt="logo" />
       <img class="header__logo-img" src="assets/images/Flower Shop.png" alt="logo" />
+    </div>
     </div>
 
 
@@ -45,15 +48,15 @@
 
     <div class="catalog">
 
-      <button class="button_  catalog__all-flowers" data-filter="all-flowers">Каталог
+      <button class="button_  catalog__all-flowers" data-filter="all-flowers" value="Все цветы">Каталог
 
-        <button class="button_  catalog__bouquets" data-filter="bouquet">Букеты
+        <button class="button_  catalog__bouquets" data-filter="bouquet" value="Букеты">Букеты
           <img class="button__logo-img" src="assets/images/buket.png" alt="logo" /></button>
 
-        <button class="button_  catalog__baskets" data-filter="basket">Корзины с цветами
+        <button class="button_  catalog__baskets" data-filter="basket" value="Корзины с цветами">Корзины с цветами
           <img class="button__logo-img" src="assets/images/korzinochka.png" alt="logo" /></button>
 
-        <button class="button_  catalog__roses" data-filter="roses">Розы
+        <button class="button_  catalog__roses" data-filter="roses" value="Розы">Розы
           <img class="button__logo-img" src="assets/images/rose.png" alt="logo" /> </button>
 
     </div>
@@ -70,7 +73,7 @@
     <!--блок-каталог START-->
 
 
-    <section>
+    <section class="catalogContainer">
 
       <div class="categoryNameContainer">
         <div id="category_name"></div>
@@ -84,6 +87,7 @@
   </main>
 
   <!--блок-футер START-->
+
   <footer>
 
     <div class="footer" id="end">
@@ -95,7 +99,7 @@
       </div>
 
       <div class="footer__menu">
-        <div class="footer__menu_name">Меню </div><br>
+        <div class="footer__menu_name ">Меню </div><br>
         <div class="footer__menu_buketi" href="#buketi">Букеты</div>
         <div class="footer__menu_korzini" href="#korzini">Корзины с цветами</div>
         <div class="footer__menu_rosi" href="#rosi">Розы</div>
