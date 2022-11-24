@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         </div>
         <div class="flowers_describe_container">
         <div class="flower_price"><span style = "color: #0093a2; font-size: 20px; font-weight:bold;"> 
-        Стоимость: </span> ${flower.price}$</div>
+        Стоимость: </span> <span class="price_number"> ${flower.price}</span> $</div>
         <div class="flower_description">${flower.description}</div>
         <div><span style = "color: white"> <span > Категория: </span>${flower.category}</div>
         </div>
@@ -270,16 +270,53 @@ window.addEventListener('click', function(event) {
         //собираем данные с этого товара и записываем их в единый объект choiceInfo:
             const cardInfo = {
                 title: card.querySelector('.flower_name').innerText,
-                price: card.querySelector('.flower_price').innerText,
+                price: card.querySelector('.price_number').innerText,
                 imgSrc: card.querySelector('.flowers_photo').getAttribute('src'),
             };
 
-            cardsArray.push(cardInfo);
 
-        // запись выбранных букетов в localStorage
-            localStorage.setItem('name', JSON.stringify(cardsArray));
+                cardsArray.push(cardInfo);
+                // запись выбранных букетов в localStorage
+                localStorage.setItem('name', JSON.stringify(cardsArray));
+
+
+                 
+                /*let cardsArrayString = JSON.stringify(cardsArray);
+                localStorage.setItem ('name', cardsArrayString);*/
+    
+                //let cartItems = JSON.parse(localStorage.name);
+                //console.log(cartItems);
+                //console.log(cartItems.length);
+                
         }
-    }) 
+    });
+
+
+    // Scroll indicator
+window.onscroll = function() {myFunction()};
+ 
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+    //должен выводиться процент прокрутки
+    element.innerHTML = Math.floor(scrolled)+ '%';
+}
+
+$(function(){
+	$('.repeat').click(function(){
+    	var classes =  $(this).parent().attr('class');
+        $(this).parent().attr('class', 'animate');
+        var indicator = $(this);
+        setTimeout(function(){ 
+        	$(indicator).parent().addClass(classes);
+        }, 20);
+    });
+});
+
+
+
 
 
 /*function app() {

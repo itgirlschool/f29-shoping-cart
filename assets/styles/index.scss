@@ -67,7 +67,6 @@ $pink-hover: #ff3672;
 $button-color-pink: #ff3672;
 $font-size-main: 20px;
 $font-size-button: 18px;
-$font-size-main-mobile: 22px;
 $font-size-footer: 16px;
 $font-size-xxl: 36px;
 $font-size-section-titles: 36px;
@@ -86,7 +85,7 @@ body {
 }
 
 body {
-    max-width: 1920px;
+    //max-width: 1920px;
     margin: 0;
 }
 
@@ -103,6 +102,133 @@ footer {
     margin: 0;
 }
 
+//анимация заголовка START
+.anime_container {
+  grid-row: 1/2;
+	width: 100%;
+	margin-left: 20px;
+	font-weight: 600;
+	//text-transform: uppercase;
+	//text-align: center;
+	//padding: 0 0 100px;
+  font-family: 'Pacifico', cursive;
+	//font-size: 8px;
+	color: $background-color;
+	word-wrap:break-word;
+}
+
+
+.animate {
+	font-size: 3rem;
+  text-align: center;
+	//margin: 100px 0 0;
+	//border-bottom: 2px solid #ccc;
+  @media screen and (max-width: $grid-breakpoint-sm) {
+    font-size: 42px;
+
+}
+
+}
+
+.animate span {
+	display: inline-block;
+}
+
+
+a.repeat:hover {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.animate span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+	animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+	animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+	animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+	animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+	animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+	animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+	animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+	animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+	animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+	animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+	animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+	animation-delay: .95s;
+}
+
+
+.seven span {
+	color: $button-color;
+	opacity: 0;
+	transform: translate(-150px, 0) scale(.3);
+	animation: leftRight .5s forwards;
+}
+
+
+@keyframes leftRight {
+	40% {
+		transform: translate(50px, 0) scale(.7);
+		opacity: 1;
+		color: $button-color;
+	}
+
+	60% {
+		color: #0f40ba;
+	}
+
+	80% {
+		transform: translate(0) scale(2);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+	}
+}
+//анимация заголовка END
 
  /* styles for блок-хедер START*/
 
@@ -112,34 +238,42 @@ footer {
     height: 180px;
     background:$background-color;
     color:$text-color;
-    display: flex;
+    //display: flex;
+    display: grid;
+    grid-template-rows: 50% 50%;
     position: relative;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-right: 20px;
+    font-size: large;
 
    &__logo{
    display:grid;
    margin-right: 30px;
+   margin-bottom: 50px;
    }
  
   &__logo-img {
     width: 110px;
+    margin-bottom: 20px;
    
   }
-  &__phrase {
+  /*&__phrase {
     font-family: "Pacifico", cursive;
     padding-left: 30px;
     font-size: 3rem;
-  }
+    color: #ff3672;
+    font-weight: bolder;
+  }*/
   &__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50vw;
+    width: 96vw;
     font-family: "Prata", normal;
     font-size: medium;
     color: black;
+    margin-bottom: 10px;
   }
     &__item_delivery,
     &__item_payment,
@@ -158,12 +292,12 @@ footer {
     &__item_payment:hover,
     &__item_contact:hover,
     &__item_basket:hover {
-        background: rgb(245, 194, 164);
+        background: $color-main;
     }
 
     &__item_basket {
         
-        border: 2px solid rgb(245, 194, 164);
+        border: 2px solid $color-main;
         border-radius: 5px;
         padding: 8px 12px;
         text-align: start;       
@@ -176,6 +310,7 @@ footer {
 @media screen and (max-width: $grid-breakpoint-md) {
 
     justify-content: start;
+
     &__items {
         display: flex;
         align-items: center;
@@ -214,20 +349,21 @@ footer {
         width: 100%;
         height: 100%;
         flex-direction: column;
-        align-content: center;
+        align-content: space-between;
         flex-wrap: wrap;
        font-size: small;
-       margin-left: 60px;
+      // margin-left: 60px;
         
       }
-      &__phrase {
+      /*&__phrase {
         padding-left: 25px;
         font-size: 1.4rem;
-      }
+      }*/
+
       &__logo-img {
        
-        margin-left: 100px;
-        margin-top: 10px;
+        //margin-left: 100px;
+        //margin-top: 10px;
         width: 50px;
       
       }
@@ -236,10 +372,7 @@ footer {
         width: 15px;
         height:10px;
         }
-}
-
-    
-}
+}}
 
  .catalog {
     //width: 94vw;
@@ -312,13 +445,11 @@ footer {
             width: 35px;
             height: 25px;
     
-            }
-    
-       }     
+            }}     
 
 .categoryNameContainer {
    width: 100%;
-   margin: 20px;
+   margin: 50px;
    text-align: center;
   
 }
@@ -327,6 +458,34 @@ footer {
     font-size: $font-size-section-titles;
     font-family: $font-family-titles;
     font-weight: 800;
+}
+
+.scroll-indicator {
+
+  @media screen and (max-width: $grid-breakpoint-md) {
+    width: 0;
+    height: 4px;
+    background: $button-color;
+    position: fixed;
+    top: 0;
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .3s ease;
+    z-index: 99999;
+
+  }
+
+    @media screen and (max-width: $grid-breakpoint-sm) {
+      width: 0;
+      height: 4px;
+      background: $button-color;
+      position: fixed;
+      top: 0;
+      -webkit-transition: width .6s ease;
+      -o-transition: width .6s ease;
+      transition: width .3s ease;
+      z-index: 99999;
+    }
 }
 
 .flowersContainer {
@@ -421,7 +580,7 @@ footer {
         height: 9vh;
 
     @media screen and (max-width: $grid-breakpoint-md) {
-        height: 10vh;
+        height: 12vh;
     }
   
 }
