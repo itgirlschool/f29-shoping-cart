@@ -276,17 +276,20 @@ window.addEventListener('click', function(event) {
 
 
                 cardsArray.push(cardInfo);
+
+                localStorage.setItem('name', JSON.stringify(cardsArray));
+
+
                  // запись выбранных букетов в localStorage
-                let cardsArrayString = JSON.stringify(cardsArray);
-                localStorage.setItem ('name', cardsArrayString);
-                //localStorage.setItem('name', JSON.stringify(cardsArray));
+                /*let cardsArrayString = JSON.stringify(cardsArray);
+                localStorage.setItem ('name', cardsArrayString);*/
+              
        
 
-                let cartItems = JSON.parse(localStorage.name);
-                console.log(cartItems);
-                console.log(cartItems.length);
+                //let cartItems = JSON.parse(localStorage.name);
+                //console.log(cartItems);
+                //console.log(cartItems.length);
                 
-       
         }
     }) 
 
