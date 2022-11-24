@@ -274,9 +274,8 @@ window.addEventListener('click', function(event) {
                 imgSrc: card.querySelector('.flowers_photo').getAttribute('src'),
             };
 
-            for (let i=0; i<1; i++) {
+         
                 cardsArray.push(cardInfo);
-            }
 
            
 
