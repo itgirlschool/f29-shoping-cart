@@ -1,0 +1,269 @@
+body {
+    background-color: rgb(243, 220, 206);
+}
+
+.h {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: black;
+}
+
+.red {
+    color: red;
+}
+
+form {
+    color: black;
+    font-family: "Prata", normal;
+    font-size: larger;
+    border: 1px solid #ff3672;
+    border-radius: 5px;
+    width: 60vw;
+    padding: 3em 5em;
+    margin: 3em auto;
+    background-color: white;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+        "top top"
+        "left right"
+        "bottom bottom";
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+
+}
+
+#order-form_grid_1 {
+    grid-area: top;
+
+}
+
+#order-form_grid_2 {
+    grid-area: left;
+
+}
+
+#order-form_grid_3 {
+    grid-area: right;
+}
+
+#order-form_grid_4 {
+    grid-area: bottom;
+}
+
+.order-form_div-with-error {
+    color: red;
+    margin: 1em;
+    width: 25vw;
+}
+
+/*Стили кнопки оформления начало*/
+#input_order-form {
+    width: 100%;
+    height: 46px;
+    background-color: #ff3672;
+    color: white;
+    border-radius: 6px;
+    border: 0px;
+    position: relative;
+    font-family: "Roboto", normal, sans-serif;
+    font-size: 18px;
+}
+
+#input_order-form:hover {
+    border: 4px solid #0093a2;
+}
+
+#input_order-form:active {
+    bottom: -2px;
+}
+
+/*Стили кнопки оформления конец*/
+
+/*Стили инпутов начало*/
+input {
+    text-indent: 5px;
+    font-family: inherit;
+    border: 2px solid black;
+    width: 25vw;
+}
+
+input:hover {
+    border-color: #ff3672;
+}
+
+input:focus {
+    border-color: #ff3672;
+    outline: 0;
+}
+
+::-webkit-input-placeholder {
+    /* Цвет плейсхолдера в WebKit browsers */
+    color: black;
+}
+
+:-moz-placeholder {
+    /*Цвет плейсхолдера в Mozilla Firefox 4 to 18 */
+    color: black;
+}
+
+::-moz-placeholder {
+    /*Цвет плейсхолдера в Mozilla Firefox 19+ */
+    color: black;
+}
+
+:-ms-input-placeholder {
+    /*Цвет плейсхолдера в Internet Explorer 10+ */
+    color: black;
+}
+
+#textarea_comment {
+    resize: none;
+    overflow: auto;
+    text-indent: 5px;
+    width: 25vw;
+    height: 25vh;
+    font-family: inherit;
+    border: 2px solid black;
+}
+
+#textarea_comment:hover {
+    border-color: #ff3672;
+}
+
+#textarea_comment:focus {
+    border-color: #ff3672;
+    outline: 0;
+}
+
+.block-with-radio_payment {
+
+    width: 25vw;
+}
+
+.radio_payment {
+    width: 2vw;
+}
+
+/*Стили инпутов конец*/
+
+/*Медиазапросы начало*/
+@media screen and (max-width: 576px) {
+    form {
+        font-size: large;
+        border: none;
+        width: 100vw;
+        padding: 2em 0;
+        grid-template-areas:
+            "top "
+            "left "
+            "right"
+            "bottom ";
+        grid-row-gap: 25px;
+    }
+
+    #textarea_comment {
+        resize: none;
+        overflow: auto;
+        text-indent: 5px;
+        width: 65vw;
+        height: 120px;
+        font-family: inherit;
+        border: 2px solid black;
+    }
+
+    input {
+        width: 65vw;
+        height: 30px;
+        text-indent: 3px;
+        border: 1px solid black;
+    }
+
+    .block-with-radio_payment {
+        margin: 1em auto;
+        width: 65vw;
+    }
+
+    .radio_payment {
+        width: 5vw;
+        height: 18px;
+    }
+
+    #input_order-form {
+        width: 80%;
+        height: 57px;
+        background-color: #ff3672;
+        color: white;
+        border-radius: 6px;
+        border: 0px;
+        position: relative;
+        font-family: "Roboto", normal, sans-serif;
+        font-size: 18px;
+    }
+
+    .order-form_div-with-error {
+        width: 65vw;
+        margin: 1.5em auto;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1199px) {
+    form {
+        font-size: larger;
+        border: none;
+        width: 80vw;
+        padding: 2em 2em;
+        grid-template-areas:
+            "top "
+            "left "
+            "right"
+            "bottom ";
+        grid-row-gap: 25px;
+    }
+
+    #textarea_comment {
+        resize: none;
+        overflow: auto;
+        text-indent: 5px;
+        width: 55vw;
+        height: 160px;
+        font-family: inherit;
+        border: 2px solid black;
+    }
+
+    input {
+        width: 55vw;
+        height: 30px;
+        text-indent: 3px;
+        border: 1px solid black;
+    }
+
+    .block-with-radio_payment {
+        margin: 1em auto;
+        width: 55vw;
+    }
+
+    .radio_payment {
+        width: 5vw;
+        height: 18px;
+    }
+
+    #input_order-form {
+        width: 80%;
+        height: 57px;
+        background-color: #ff3672;
+        color: white;
+        border-radius: 6px;
+        border: 0px;
+        position: relative;
+        font-family: "Roboto", normal, sans-serif;
+        font-size: 18px;
+    }
+
+    .order-form_div-with-error {
+        width: 55vw;
+        margin: 2em auto;
+    }
+
+}
