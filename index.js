@@ -276,22 +276,47 @@ window.addEventListener('click', function(event) {
 
 
                 cardsArray.push(cardInfo);
-
+                // запись выбранных букетов в localStorage
                 localStorage.setItem('name', JSON.stringify(cardsArray));
 
 
-                 // запись выбранных букетов в localStorage
+                 
                 /*let cardsArrayString = JSON.stringify(cardsArray);
                 localStorage.setItem ('name', cardsArrayString);*/
-              
-       
-
+    
                 //let cartItems = JSON.parse(localStorage.name);
                 //console.log(cartItems);
                 //console.log(cartItems.length);
                 
         }
-    }) 
+    });
+
+
+    // Scroll indicator
+window.onscroll = function() {myFunction()};
+ 
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+    //должен выводиться процент прокрутки
+    element.innerHTML = Math.floor(scrolled)+ '%';
+}
+
+$(function(){
+	$('.repeat').click(function(){
+    	var classes =  $(this).parent().attr('class');
+        $(this).parent().attr('class', 'animate');
+        var indicator = $(this);
+        setTimeout(function(){ 
+        	$(indicator).parent().addClass(classes);
+        }, 20);
+    });
+});
+
+
+
 
 
 /*function app() {
