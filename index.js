@@ -274,7 +274,11 @@ window.addEventListener('click', function(event) {
                 imgSrc: card.querySelector('.flowers_photo').getAttribute('src'),
             };
 
-            cardsArray.push(cardInfo);
+            for (let i=0; i<1; i++) {
+                cardsArray.push(cardInfo);
+            }
+
+           
 
         // запись выбранных букетов в localStorage
             localStorage.setItem('name', JSON.stringify(cardsArray));
