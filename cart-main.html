@@ -8,27 +8,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/styles/cart-main.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
     <link rel="stylesheet" href="./assets/styles/index.css">
 
 </head>
 
 <body>
     <header class="header" id="top">
-        <p class="header__phrase">Букеты на любой вкус</p>
+        <div class="anime_container">
+    
+    
+            <div class="animate seven">
+    
+                <span >&#10048;</span><span>&nbsp;</span><span>F</span><span>l</span><span>o</span><span>w</span><span>e</span><span>r</span><span>s</span> &nbsp;
+                <span>f</span><span>o</span><span>r</span> &nbsp;
+                <span>e</span><span>v</span><span>e</span><span>r</span><span>y</span><span>o</span><span>n</span><span>e</span>
+                </div>
+            </div>
+    
+        <!--<p class="header__phrase">Букеты на любой вкус</p>-->
+    
         <div class="header__items">
             <a class="header__item_delivery" href="#delivery">Доставка</a>
             <a class="header__item_payment" href="#payment">Оплата</a>
             <a class="header__item_contact" href="#contact">Контакты</a>
-            <a class="header__item_basket" id="to-basket" href="cart.html">Корзина
-            <img class="header__item_logo-basket" src="assets/images/basket.png" alt="logo"/></a>
+            <a class="header__item_basket" id="to-basket" href="cart-main.html">Корзина
+            <img class="header__item_logo-basket" src="assets/images/basket.png" alt="logo" /></a>
         </div>
-        <div class="header__logo">
-            <img class="header__logo-img" id="logo" onclick="this.style.left='5px'" src="assets/images/logobutterfly.png" alt="logo"/>
-            <img class="header__logo-img" src="assets/images/Flower Shop.png" alt="logo"/>
+    
         </div>
-    </header>
-    <main>
+        </header>
+        <main>
         <div class="base">
             <!-- вывод содержимого  -->
                 <div id="block_items" class="block_items">
@@ -67,8 +78,10 @@
 <!--  кнопки перехода на другие страницы  -->
         <div class="block_submit">
             <div class="block_submit_align">
-                <button type="button" id="to-main-page" class="block_submit_button"> &larr;&nbsp; Вернуться в каталог</button>
-                <button type="submit" id="to-order-page" class="block_submit_button">Оформить заказ &nbsp;&rarr;</button>
+                <button type="button" id="to-main-page" class="block_submit_button"> &larr;&nbsp; Вернуться в
+                    каталог</button>
+                <button type="submit" id="to-order-page" class="block_submit_button">Оформить заказ
+                    &nbsp;&rarr;</button>
             </div>
         </div>
 
@@ -76,39 +89,45 @@
     <footer>
         <div class="footer" id="end">
             <div class="footer__logo">
-            <div><img class="footer__logo_img" src="assets/images/logobutterfly.png" alt="logo"/> </div>
-            <div><img class="footer__logo_img" src="assets/images/Flower Shop.png" alt="logo"/></div>
-        </div>
+                <div><img class="footer__logo_img" src="assets/images/logobutterfly.png" alt="logo" /> </div>
+                <div class="footer__logo-name">Flowers for everyone</div>
     
-        <div class="footer__menu" >
-            <div class="footer__menu_name">Меню </div><br>
-            <div class="footer__menu_buketi" href="#buketi">Букеты</div>
-            <div class="footer__menu_korzini" href="#korzini">Корзины с цветами</div> 
-            <div class="footer__menu_rosi" href="#rosi">Розы</div> 
-            <div class="footer__menu_oplata" href="#oplata">Оплата</div> 
-            <div class="footer__menu_dostavka" href="#dostavka">Доставка</div>
-        </div> <br>
+            </div>
+            <div class="footer__menu">
+                <div class="footer__menu_name ">Меню </div><br>
+                <div class="footer__menu_buketi" href="#buketi">Букеты</div>
+                <div class="footer__menu_korzini" href="#korzini">Корзины с цветами</div>
+                <div class="footer__menu_rosi" href="#rosi">Розы</div>
+                <div class="footer__menu_oplata" href="#oplata">Оплата</div>
+                <div class="footer__menu_dostavka" href="#dostavka">Доставка</div>
     
-        <div class="footer__contact">
-            <div class="footer__contact_name" href="#contact">Контакты</div><br>
-            <div class="footer__contact_adres">Адрес:г.Прага,ул.Центральная,64</div>
-            <div class="footer__contact_time">Время работы: пн.-вс. с 9.00 до 18.00</div> <br>
-            <div class="footer__contact_tel">Телефон:+42 5845050</div>
-            <div class="footer__contact_email">email:flowershop@gmail.com</div> 
-        </div><br>
+            </div> 
     
-        <div class="footer__social">
-            <div class="footer__social_tofind">Можете нас найти</div><br>
-            <div> <img class="footer__social-img" src="assets/images/iconinstagram.png" alt="logo"/>
-            <img class="footer__social-img" src="assets/images/iconfacebook.png" alt="logo"/>
-            <img class="footer__social-img" src="assets/images/iconswhatsapp.png" alt="logo"/>
-            <img class="footer__social-img" src="assets/images/iconviber.png" alt="logo"/> </div><br> 
-            <div class="footer__copyright"> Copyright &copy; 2022 Flower Shop - All rights reserved</div> </div>
-        </div> 
-    </footer>
-
+    
+            <div class="footer__contact">
+                <div class="footer__contact_name" href="#contact">Контакты</div><br>
+                <div class="footer__contact_adres">Адрес:г.Прага,ул.Центральная,64</div>
+                <div class="footer__contact_time">Время работы: пн.-вс. с 9.00 до 18.00</div> <br>
+                <div class="footer__contact_tel">Телефон:+42 5845050</div>
+                <div class="footer__contact_email">email:flowershop@gmail.com</div>
+    
+            </div>
+    
+    
+            <div class="footer__social">
+                <div class="footer__social_tofind">Можете нас найти</div><br>
+                <div> <img class="footer__social-img" src="assets/images/iconinstagram.png" alt="logo" />
+                <img class="footer__social-img" src="assets/images/iconfacebook.png" alt="logo" />
+                <img class="footer__social-img" src="assets/images/iconswhatsapp.png" alt="logo" />
+                <img class="footer__social-img" src="assets/images/iconviber.png" alt="logo" /> </div><br>
+                <div class="footer__copyright"> Copyright &copy; 2022 Flower Shop - All rights reserved</div>
+            </div>
+            </div>
+        </footer>
+    
     <script src="assets/add-decor.js"></script>
     <script src="assets/decor-script-main.js"></script>
 
 </body>
+
 </html>

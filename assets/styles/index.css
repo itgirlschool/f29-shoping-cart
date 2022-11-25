@@ -43,7 +43,6 @@ body {
 }
 
 body {
-  max-width: 1920px;
   margin: 0;
 }
 
@@ -59,40 +58,214 @@ footer {
   margin: 0;
 }
 
+.anime_container {
+  height: 80px;
+  grid-row: 1/2;
+  width: 100vw;
+  font-weight: 600;
+  font-family: "Pacifico", cursive;
+  color: rgb(255, 255, 255);
+  word-wrap: break-word;
+  margin-top: 30px;
+  display: flex;
+}
+
+.animate {
+  font-size: 3rem;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 576px) {
+  .animate {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animate {
+    font-size: 42px;
+    margin-bottom: 2em;
+    margin-left: 20px;
+  }
+}
+
+.animate span {
+  display: inline-block;
+}
+
+a.repeat:hover {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.animate span:nth-of-type(2) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.animate span:nth-of-type(3) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.animate span:nth-of-type(4) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.animate span:nth-of-type(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.animate span:nth-of-type(6) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.animate span:nth-of-type(7) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.animate span:nth-of-type(8) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+.animate span:nth-of-type(9) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.animate span:nth-of-type(10) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.animate span:nth-of-type(11) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.animate span:nth-of-type(12) {
+  -webkit-animation-delay: 0.55s;
+          animation-delay: 0.55s;
+}
+
+.animate span:nth-of-type(13) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.animate span:nth-of-type(14) {
+  -webkit-animation-delay: 0.65s;
+          animation-delay: 0.65s;
+}
+
+.animate span:nth-of-type(15) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.animate span:nth-of-type(16) {
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.animate span:nth-of-type(17) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.animate span:nth-of-type(18) {
+  -webkit-animation-delay: 0.85s;
+          animation-delay: 0.85s;
+}
+
+.animate span:nth-of-type(19) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+.animate span:nth-of-type(20) {
+  -webkit-animation-delay: 0.95s;
+          animation-delay: 0.95s;
+}
+
+.seven span {
+  color: #0093a2;
+  opacity: 0;
+  transform: translate(-150px, 0) scale(0.3);
+  -webkit-animation: leftRight 0.5s forwards;
+          animation: leftRight 0.5s forwards;
+}
+
+@-webkit-keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+    color: #0093a2;
+  }
+  60% {
+    color: #0f40ba;
+  }
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes leftRight {
+  40% {
+    transform: translate(50px, 0) scale(0.7);
+    opacity: 1;
+    color: #0093a2;
+  }
+  60% {
+    color: #0f40ba;
+  }
+  80% {
+    transform: translate(0) scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0) scale(1);
+    opacity: 1;
+  }
+}
 /* styles for блок-хедер START*/
 .header {
   width: 100vw;
   height: 180px;
   background: rgb(255, 255, 255);
   color: black;
-  display: flex;
+  display: grid;
+  grid-template-rows: 50% 50%;
   position: relative;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-right: 20px;
-}
-.header__logo {
-  display: grid;
-  margin-right: 30px;
-}
-.header__logo-img {
-  width: 110px;
-}
-.header__phrase {
-  font-family: "Pacifico", cursive;
-  padding-left: 30px;
-  font-size: 3rem;
+  font-size: large;
 }
 .header__items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 50vw;
+  display: grid;
+  width: 90vw;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   font-family: "Prata", normal;
   font-size: medium;
   color: black;
+  margin-bottom: 10px;
 }
 .header__item_delivery, .header__item_payment, .header__item_contact, .header__item_basket {
+  justify-self: center;
+  width: 120px;
   color: black;
   font-family: "Prata", normal;
   font-size: larger;
@@ -102,13 +275,12 @@ footer {
   text-align: center;
 }
 .header__item_delivery:hover, .header__item_payment:hover, .header__item_contact:hover, .header__item_basket:hover {
-  background: rgb(245, 194, 164);
+  background: rgb(243, 220, 206);
 }
 .header__item_basket {
-  border: 2px solid rgb(245, 194, 164);
+  border: 2px solid rgb(243, 220, 206);
   border-radius: 5px;
   padding: 8px 12px;
-  text-align: start;
 }
 .header__item_logo-basket {
   width: 25px;
@@ -116,24 +288,25 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .header {
-    justify-content: start;
+    /*&__phrase {
+        width:80px;
+        font-size: 1.5rem;
+        padding-right: 30px;
+      }
+      &__logo-img {
+        padding-left: 40px;
+        padding-bottom: 10px;
+        width: 70px;
+
+       }*/
   }
   .header__items {
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-    width: 20%;
+    width: 80%;
     font-size: small;
+    justify-self: center;
   }
-  .header__phrase {
-    width: 80px;
-    font-size: 1.5rem;
-    padding-right: 30px;
-  }
-  .header__logo-img {
-    padding-left: 40px;
-    padding-bottom: 10px;
-    width: 70px;
+  .header__item_delivery, .header__item_payment, .header__item_contact, .header__item_basket {
+    width: 60%;
   }
   .header__item_basket {
     display: flex;
@@ -146,26 +319,13 @@ footer {
 }
 @media screen and (max-width: 576px) {
   .header {
+
     width: 100%;
+
   }
   .header__items {
-    display: flex;
     width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
     font-size: small;
-    margin-left: 60px;
-  }
-  .header__phrase {
-    padding-left: 25px;
-    font-size: 1.4rem;
-  }
-  .header__logo-img {
-    margin-left: 100px;
-    margin-top: 10px;
-    width: 50px;
   }
   .header__item_logo-basket {
     width: 15px;
@@ -204,6 +364,7 @@ footer {
     font-size: 14px;
     width: 18vw;
     height: 8vh;
+    margin-left: 17px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -211,6 +372,7 @@ footer {
     font-size: 13px;
     width: 18vw;
     height: 8vh;
+    margin-left: 17px;
   }
 }
 .catalog__all-flowers:hover, .catalog__bouquets:hover, .catalog__baskets:hover, .catalog__roses:hover {
@@ -238,15 +400,42 @@ footer {
 }
 
 .categoryNameContainer {
-  width: 100%;
-  margin: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
+  border: solid 1px white;
+  width: 99vw;
+  padding: 10px;
 }
 
 #category_name {
   font-size: 36px;
   font-family: "Pacifico", cursive;
   font-weight: 800;
+  color: #ff3672;
+}
+
+@media screen and (max-width: 768px) {
+  .scroll-indicator {
+    width: 0;
+    height: 4px;
+    background: #0093a2;
+    position: fixed;
+    top: 0;
+    transition: width 0.3s ease;
+    z-index: 99999;
+  }
+}
+@media screen and (max-width: 576px) {
+  .scroll-indicator {
+    width: 0;
+    height: 4px;
+    background: #0093a2;
+    position: fixed;
+    top: 0;
+    transition: width 0.3s ease;
+    z-index: 99999;
+  }
 }
 
 .flowersContainer {
@@ -267,6 +456,7 @@ footer {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 17px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -275,6 +465,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    justify-content: center;
   }
 }
 
@@ -306,7 +497,7 @@ footer {
   margin-left: 20px;
   align-items: center;
   width: 21vw;
-  font-family: "Prata", normal;
+  font-family: "Roboto", normal;
   font-size: medium;
   position: relative;
   font-family: "Roboto", normal, sans-serif;
@@ -380,28 +571,53 @@ footer {
 
 /* styles for блок-футер START*/
 .footer {
-  background: rgb(243, 220, 206);
-  width: 100vw;
-  height: 160px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr 0.7r;
+  align-items: stretch;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 170px;
   color: black;
-  display: flex;
-  flex-direction: row;
+  /*display: flex;
+  flex-direction: row;*/
   font-family: "Prata", normal;
   font-size: larger;
+  /*&__logo,
+  &__menu,
+  &__contact,
+  &__social
+   {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    background: $background-color;
+    padding-top: 20px;
+  } */
 }
-.footer__logo, .footer__menu, .footer__contact, .footer__social {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-self: center;
-  height: 100%;
-  background: rgb(255, 255, 255);
-  padding-top: 20px;
+.footer__logo {
+  grid-column: 1/2;
+}
+.footer__menu {
+  grid-column: 2/3;
+}
+.footer__contact {
+  grid-column: 3/4;
+}
+.footer__social {
+  grid-column: 4/5;
 }
 .footer__logo_img {
   width: 100px;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-top: 10px;
+}
+.footer__logo-name {
+  font-family: "Pacifico", cursive;
+  font-size: normal;
+  color: #0093a2;
+  margin-left: 10px;
 }
 .footer__menu_name, .footer__menu_buketi, .footer__menu_korzini, .footer__menu_dostavka, .footer__menu_oplata, .footer__menu_rosi {
   cursor: pointer;
@@ -416,6 +632,8 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .footer {
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    align-items: center;
     width: 100vw;
     height: 150px;
     font-size: 16px;
@@ -431,6 +649,8 @@ footer {
 }
 @media screen and (max-width: 576px) {
   .footer {
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    align-items: center;
     height: 130px;
     font-size: small;
   }
@@ -444,7 +664,7 @@ footer {
   }
   .footer__logo_img {
     width: 60px;
-    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 10px;
   }
 }/*# sourceMappingURL=index.css.map */
