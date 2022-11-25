@@ -104,9 +104,10 @@ footer {
 
 //анимация заголовка START
 .anime_container {
+  height: 80px;
   grid-row: 1/2;
-	width: 100%;
-	margin-left: 20px;
+	width: 100vw;
+	//margin-left: 20px;
 	font-weight: 600;
 	//text-transform: uppercase;
 	//text-align: center;
@@ -115,16 +116,32 @@ footer {
 	//font-size: 8px;
 	color: $background-color;
 	word-wrap:break-word;
+ margin-top: 30px;
+ //align-content: center;
+ //text-align: center;
+ display: flex;
+ //justify-content: center;
+
 }
 
 
 .animate {
 	font-size: 3rem;
   text-align: center;
-	//margin: 100px 0 0;
+	margin-left: 30px;
+  margin-top: 5px;
 	//border-bottom: 2px solid #ccc;
+
   @media screen and (max-width: $grid-breakpoint-sm) {
-    font-size: 42px;
+    font-size: 24px;
+    //margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width: $grid-breakpoint-md) {
+  font-size: 42px;
+  margin-bottom: 2em;
+  margin-left: 20px;
 
 }
 
@@ -233,8 +250,8 @@ a.repeat:hover {
  /* styles for блок-хедер START*/
 
  .header {
-    //max-width: 100%;
-    width: 100vw;
+   
+   width: 100vw;
     height: 180px;
     background:$background-color;
     color:$text-color;
@@ -246,25 +263,8 @@ a.repeat:hover {
     justify-content: space-around;
     padding-right: 20px;
     font-size: large;
-
-   /*&__logo{
-   display:grid;
-   margin-right: 30px;
-   margin-bottom: 50px;
-   }
- 
-  &__logo-img {
-    width: 110px;
-    margin-bottom: 20px;
-   
-  }*/
-  /*&__phrase {
-    font-family: "Pacifico", cursive;
-    padding-left: 30px;
-    font-size: 3rem;
-    color: #ff3672;
-    font-weight: bolder;
-  }*/
+  
+  
   &__items {
     display: grid;
     width: 90vw;
@@ -316,17 +316,7 @@ a.repeat:hover {
         font-size: small;
         justify-self:center;
       }
-    /*&__phrase {
-        width:80px;
-        font-size: 1.5rem;
-        padding-right: 30px;
-      }
-      &__logo-img {
-        padding-left: 40px;
-        padding-bottom: 10px;
-        width: 70px;
-        
-       }*/
+  
        &__item_delivery,
        &__item_payment,
        &__item_contact,
@@ -354,18 +344,6 @@ a.repeat:hover {
       // margin-left: 60px;
         
       }
-      /*&__phrase {
-        padding-left: 25px;
-        font-size: 1.4rem;
-      }
-
-      &__logo-img {
-       
-        //margin-left: 100px;
-        //margin-top: 10px;
-        width: 50px;
-      
-      }*/
 
       &__item_logo-basket{
         width: 15px;
@@ -449,9 +427,13 @@ a.repeat:hover {
             }}     
 
 .categoryNameContainer {
-   width: 100%;
-   margin: 50px;
+   //width: 100%;
+   margin-top: 50px;
+   margin-bottom: 50px;
    text-align: center;
+   border: solid 1px white;
+   width: 99vw;
+   padding:10px;
   
 }
 
@@ -459,8 +441,12 @@ a.repeat:hover {
     font-size: $font-size-section-titles;
     font-family: $font-family-titles;
     font-weight: 800;
+    color: $button-color-pink;
+   
+
 }
 
+//индикатор прокрутки START
 .scroll-indicator {
 
   @media screen and (max-width: $grid-breakpoint-md) {
@@ -489,6 +475,8 @@ a.repeat:hover {
     }
 }
 
+//индикатор прокрутки END
+
 .flowersContainer {
     font-family: $font-family-titles;
     font-size: 1.8rem;
@@ -514,9 +502,6 @@ a.repeat:hover {
 
     @media screen and (max-width: $grid-breakpoint-sm) {
         width: 100vw;
-        //display: flex;
-        //flex-direction: column;
-       // margin-right: 20px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -557,7 +542,7 @@ a.repeat:hover {
     margin-left: 20px;
     align-items: center;
     width: 21vw;
-    font-family:'Prata', normal;
+    font-family:'Roboto', normal;
     font-size: medium;
     position: relative;
     font-family: $font-family-sans-serif;
@@ -584,7 +569,7 @@ a.repeat:hover {
         height: 9vh;
 
     @media screen and (max-width: $grid-breakpoint-md) {
-        height: 12vh;
+        height: 10vh;
     }
   
 }
