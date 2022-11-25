@@ -253,26 +253,19 @@ a.repeat:hover {
   padding-right: 20px;
   font-size: large;
 }
-.header__logo {
-  display: grid;
-  margin-right: 30px;
-  margin-bottom: 50px;
-}
-.header__logo-img {
-  width: 110px;
-  margin-bottom: 20px;
-}
 .header__items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 96vw;
+  display: grid;
+  width: 90vw;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
   font-family: "Prata", normal;
   font-size: medium;
   color: black;
   margin-bottom: 10px;
 }
 .header__item_delivery, .header__item_payment, .header__item_contact, .header__item_basket {
+  justify-self: center;
+  width: 120px;
   color: black;
   font-family: "Prata", normal;
   font-size: larger;
@@ -288,7 +281,6 @@ a.repeat:hover {
   border: 2px solid rgb(243, 220, 206);
   border-radius: 5px;
   padding: 8px 12px;
-  text-align: start;
 }
 .header__item_logo-basket {
   width: 25px;
@@ -296,24 +288,25 @@ a.repeat:hover {
 }
 @media screen and (max-width: 768px) {
   .header {
-    justify-content: start;
+    /*&__phrase {
+        width:80px;
+        font-size: 1.5rem;
+        padding-right: 30px;
+      }
+      &__logo-img {
+        padding-left: 40px;
+        padding-bottom: 10px;
+        width: 70px;
+
+       }*/
   }
   .header__items {
-    display: flex;
-    align-items: center;
-    padding-left: 60px;
-    width: 20%;
+    width: 80%;
     font-size: small;
+    justify-self: center;
   }
-  .header__phrase {
-    width: 80px;
-    font-size: 1.5rem;
-    padding-right: 30px;
-  }
-  .header__logo-img {
-    padding-left: 40px;
-    padding-bottom: 10px;
-    width: 70px;
+  .header__item_delivery, .header__item_payment, .header__item_contact, .header__item_basket {
+    width: 60%;
   }
   .header__item_basket {
     display: flex;
@@ -326,19 +319,13 @@ a.repeat:hover {
 }
 @media screen and (max-width: 576px) {
   .header {
+
     width: 100%;
+
   }
   .header__items {
-    display: flex;
     width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-content: space-between;
-    flex-wrap: wrap;
     font-size: small;
-  }
-  .header__logo-img {
-    width: 50px;
   }
   .header__item_logo-basket {
     width: 15px;
@@ -377,6 +364,7 @@ a.repeat:hover {
     font-size: 14px;
     width: 18vw;
     height: 8vh;
+    margin-left: 17px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -384,6 +372,7 @@ a.repeat:hover {
     font-size: 13px;
     width: 18vw;
     height: 8vh;
+    margin-left: 17px;
   }
 }
 .catalog__all-flowers:hover, .catalog__bouquets:hover, .catalog__baskets:hover, .catalog__roses:hover {
@@ -467,6 +456,7 @@ a.repeat:hover {
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 17px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -475,6 +465,7 @@ a.repeat:hover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    justify-content: center;
   }
 }
 
@@ -580,28 +571,53 @@ a.repeat:hover {
 
 /* styles for блок-футер START*/
 .footer {
-  background: rgb(243, 220, 206);
-  width: 100vw;
-  height: 160px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr 0.7r;
+  align-items: stretch;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  height: 170px;
   color: black;
-  display: flex;
-  flex-direction: row;
+  /*display: flex;
+  flex-direction: row;*/
   font-family: "Prata", normal;
   font-size: larger;
+  /*&__logo,
+  &__menu,
+  &__contact,
+  &__social
+   {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: center;
+    height: 100%;
+    background: $background-color;
+    padding-top: 20px;
+  } */
 }
-.footer__logo, .footer__menu, .footer__contact, .footer__social {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-self: center;
-  height: 100%;
-  background: rgb(255, 255, 255);
-  padding-top: 20px;
+.footer__logo {
+  grid-column: 1/2;
+}
+.footer__menu {
+  grid-column: 2/3;
+}
+.footer__contact {
+  grid-column: 3/4;
+}
+.footer__social {
+  grid-column: 4/5;
 }
 .footer__logo_img {
   width: 100px;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-top: 10px;
+}
+.footer__logo-name {
+  font-family: "Pacifico", cursive;
+  font-size: normal;
+  color: #0093a2;
+  margin-left: 10px;
 }
 .footer__menu_name, .footer__menu_buketi, .footer__menu_korzini, .footer__menu_dostavka, .footer__menu_oplata, .footer__menu_rosi {
   cursor: pointer;
@@ -616,6 +632,8 @@ a.repeat:hover {
 }
 @media screen and (max-width: 768px) {
   .footer {
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    align-items: center;
     width: 100vw;
     height: 150px;
     font-size: 16px;
@@ -631,6 +649,8 @@ a.repeat:hover {
 }
 @media screen and (max-width: 576px) {
   .footer {
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    align-items: center;
     height: 130px;
     font-size: small;
   }
@@ -644,7 +664,7 @@ a.repeat:hover {
   }
   .footer__logo_img {
     width: 60px;
-    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 10px;
   }
 }/*# sourceMappingURL=index.css.map */
