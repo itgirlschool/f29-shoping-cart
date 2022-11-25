@@ -7,10 +7,32 @@
 
 .base {
     display: grid;
+    width: 100vw;
     grid-template-columns: 400px 1fr;
     grid-template-rows: 1fr;
     margin-top: 20px;
     margin-right: 20px;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .base {
+    width:60%;
+    grid-template-columns: 1.5fr 1fr; 
+
+}
+.picture {
+    width: 150px;
+    margin-top: 40px;
+}
+}
+@media screen and (max-width: 576px) {
+
+    .base {
+    grid-template-columns: 200px 1fr; 
+
+}
 }
 
 .block_picture {
