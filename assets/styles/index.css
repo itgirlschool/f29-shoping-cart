@@ -411,15 +411,19 @@ a.repeat:hover {
 }
 
 .categoryNameContainer {
-  width: 100%;
-  margin: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
+  border: solid 1px white;
+  width: 99vw;
+  padding: 10px;
 }
 
 #category_name {
   font-size: 36px;
   font-family: "Pacifico", cursive;
   font-weight: 800;
+  color: #ff3672;
 }
 
 @media screen and (max-width: 768px) {
