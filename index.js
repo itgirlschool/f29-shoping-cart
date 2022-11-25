@@ -231,7 +231,7 @@ function myFunction() {
     //должен выводиться процент прокрутки
     //element.innerHTML = Math.floor(scrolled)+ '%';
 }
-$(function(){
+/*$(function(){
     $('.repeat').click(function(){
         var classes =  $(this).parent().attr('class');
         $(this).parent().attr('class', 'animate');
@@ -240,7 +240,7 @@ $(function(){
             $(indicator).parent().addClass(classes);
         }, 20);
     });
-});
+});*/
 
 /*function app() {
     const buttons = document.querySelectorAll('.button_')
