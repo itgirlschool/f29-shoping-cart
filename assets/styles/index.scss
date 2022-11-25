@@ -407,6 +407,7 @@ a.repeat:hover {
             font-size: 14px;
             width: 18vw;
             height: 8vh;
+            margin-left: 17px;
   
         }
   
@@ -414,6 +415,7 @@ a.repeat:hover {
               font-size: 13px;
               width: 18vw;
               height: 8vh;
+              margin-left: 17px;
   
           }
       }
@@ -506,6 +508,7 @@ a.repeat:hover {
         width: 100vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        margin-left: 17px;
         //grid-template-rows: auto;
     } 
 
@@ -517,6 +520,8 @@ a.repeat:hover {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        justify-content: center;
+    
         
     }
 }
@@ -631,17 +636,35 @@ a.repeat:hover {
 
 /* styles for блок-футер START*/
 .footer {
-    background:$color-main;
+    display:grid;
+    grid-template-columns: 1fr 0.5fr 1fr 0.7r;
+    align-items: stretch;
+    background:$background-color;
     //max-width: 100%;
-    width: 100vw;
-    height: 160px;
+    width: 100%;
+    height: 170px;
     color:$text-color;
-    display: flex;
-    flex-direction: row;
+   
+    /*display: flex;
+    flex-direction: row;*/
     font-family: "Prata", normal;
     font-size: larger;
   
-  &__logo,
+    &__logo{
+      grid-column:1/2 ;
+    }
+    &__menu{
+      grid-column:2/3 ;
+
+    }
+    &__contact{
+      grid-column:3/4;
+    }
+
+    &__social{
+      grid-column:4/5
+    }
+   /*&__logo,
   &__menu,
   &__contact,
   &__social
@@ -653,7 +676,7 @@ a.repeat:hover {
     height: 100%;
     background: $background-color;
     padding-top: 20px;
-  }
+  } */
   &__logo_img {
     width: 100px;
     margin-left:50px;
@@ -685,6 +708,7 @@ a.repeat:hover {
 
 
   @media screen and (max-width: $grid-breakpoint-md) {
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
     width: 100vw;
     height: 150px;
     font-size: 16px;
@@ -699,6 +723,8 @@ a.repeat:hover {
       }
 } 
 @media screen and (max-width: $grid-breakpoint-sm) {
+   grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+ 
     height: 130px;
     font-size:small;
     &__menu {
