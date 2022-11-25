@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/styles/cart.css">
+    <link rel="stylesheet" href="assets/styles/cart-main.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/normalize.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
     <link rel="stylesheet" href="./assets/styles/index.css">
@@ -30,42 +30,41 @@
     </header>
     <main>
         <div class="base">
-            <div class="block_picture" id="item-image">
-                <!--<img class="picture" src="assets/images/rose.jpg">-->
-            </div>
-            <div class="block_info">
-                <div id="item-name" class="fonts"></div>
-                <div id="item-price" class="fonts"></div>
-
+            <!-- вывод содержимого  -->
+                <div id="block_items" class="block_items">
+                    <!--<div id="item-image"></div>
+                        <div id="item-name" class="fonts"></div>
+                        <div id="item-price" class="fonts"></!--div>-->
+                </div>
                 
-<!--    добавление упаковки    -->
-                <div class="block_pack">
-                    <div class="fonts">Добавить упаковку</div>
-                        <select id="add-option-list" name="decor-option-list">
-                            <option selected disabled value="">Выберите из списка</option>
-                            <option value="0">Без упаковки</option>
-                            <option value="10">Классическая + $10</option>
-                            <option value="15">Подарочная + $15</option>
-                            <option value="20">Крафтовая + $20</option>
-                        </select>
-                    </div>
-
 <!--  START - дополнительное оформление, подарки  -->
-                    <section class="add_decor">
-                    <!--<input type="checkbox" id="misc" class="add-out"><span class="fonts"> Добавить подарок</span>-->
-                        <input type="checkbox" id="misc" class="add-out"><label for="misc" class="fonts"> Добавить подарок</label>
-                    </section>
-                    <div class="add-image-out" id="add-image-out"></div>
-                    <div class="block_submit">
-                        <div class="block_total_align">
-                            <span class="fonts" id="total-out"></span>
-                                <button type="button" id="delete" class="delete_button">Удалить букет</button>
-                                <div id="delete-info"></div>
-                        </div>
+<!--    добавление упаковки    -->
+                <div class="decoration">
+                            <!--    добавление подарка    -->
+                            <div class="add_decor">
+                                <input type="checkbox" id="misc" class="add-out"><label for="misc" class="fonts"> Добавить подарок</label>
+                                <div class="add-image-out" id="add-image-out"></div>
+                            </div>
+                            <div class="block_pack">
+                                <div class="fonts">Добавить упаковку</div>
+                                    <select id="add-option-list" name="decor-option-list">
+                                        <option selected disabled value="">Выберите из списка</option>
+                                        <option value="0">Без упаковки</option>
+                                        <option value="10">Классическая + $10</option>
+                                        <option value="15">Подарочная + $15</option>
+                                        <option value="20">Крафтовая + $20</option>
+                                    </select>
+                            </div>
+                </div>
+                <div class="block_submit_total">
+                    <div class="block_total_align">
+                        <span class="fonts" id="total-out"></span>
+                        <button type="button" id="order" class="order_button">Подтвердить заказ</button>
+                        <button type="button" id="delete" class="delete_button">Очистить корзину</button>
                     </div>
-            </div>
+                </div>
         </div>
-<!--  кнопки  -->
+<!--  кнопки перехода на другие страницы  -->
         <div class="block_submit">
             <div class="block_submit_align">
                 <button type="button" id="to-main-page" class="block_submit_button"> &larr;&nbsp; Вернуться в каталог</button>
@@ -109,7 +108,7 @@
     </footer>
 
     <script src="assets/add-decor.js"></script>
-    <script src="assets/decor-script.js"></script>
+    <script src="assets/decor-script-main.js"></script>
 
 </body>
 </html>
