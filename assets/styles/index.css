@@ -289,7 +289,7 @@ a.repeat:hover {
 }
 @media screen and (max-width: 768px) {
   .header__items {
-    width: 80%;
+    width: 100vw;
     font-size: small;
     justify-self: center;
   }

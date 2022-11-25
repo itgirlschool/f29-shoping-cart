@@ -318,7 +318,8 @@ a.repeat:hover {
 @media screen and (max-width: $grid-breakpoint-md) {
 
     &__items {
-        width:80%;
+        //width:80%;
+        width:100vw;
         font-size: small;
         justify-self:center;
       }
