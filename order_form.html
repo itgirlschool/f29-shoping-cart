@@ -14,22 +14,20 @@
 </head>
 
 <body>
-     <!--блок-хедер START-->
+  <!--блок-хедер START-->
   <header class="header" id="top">
     <div class="anime_container">
-
-
       <div class="animate seven">
-
-           <span >&#10048;</span><span>&nbsp;</span><span>F</span><span>l</span><span>o</span><span>w</span><span>e</span><span>r</span><span>s</span> &nbsp;
-          <span>f</span><span>o</span><span>r</span> &nbsp;
-          <span>e</span><span>v</span><span>e</span><span>r</span><span>y</span><span>o</span><span>n</span><span>e</span>
-            </div>
-        </div>
+        <span >&#10048;</span><span>&nbsp;</span><span>F</span><span>l</span><span>o</span><span>w</span><span>e</span><span>r</span><span>s</span> &nbsp;
+        <span>f</span><span>o</span><span>r</span> &nbsp;
+        <span>e</span><span>v</span><span>e</span><span>r</span><span>y</span><span>o</span><span>n</span><span>e</span>
+      </div>
+    </div>
 
     <!--<p class="header__phrase">Букеты на любой вкус</p>-->
 
     <div class="header__items">
+
       <a class="header__item_delivery" href="order_form.html">Доставка</a>
       <a class="header__item_payment" href="cart-main.html">Оплата</a>
       <a class="header__item_contact" href="index.html#bottom">Контакты</a>
@@ -41,68 +39,66 @@
   </header>
   <!--блок-хедер END-->
 
-    <form class="form_order-form">
-        <div id="order-form_grid_1">
-            <h2 class="h">Оформление заказа</h2>
-        </div>
-        <div id="order-form_grid_2">
-            <div>
-                <label for="input_name">Имя:<span class="red">*</span></label>
-                <p><input id="input_name" type="text" placeholder="Введите ваше имя"></p>
-                <div class="order-form_div-with-error">Пожалуйста, заполните это поле, указав корректные
-                    данные.
-                    содержать цифры</div>
-            </div>
-            <div>
-                <label for="input_tel">Телефон:<span class="red">*</span></label>
-                <p><input id="input_tel" type="tel" placeholder="Введите ваш телефон"></p>
-                <div class="order-form_div-with-error">Пожалуйста, заполните это поле, указав корректные
-                    данные.</div>
-            </div>
-            <div>
-                <label for="input_email">Почта:<span class="red">*</span></label>
-                <p><input id="input_email" type="email" placeholder="Введите вашу почту"></p>
-                <div class="order-form_div-with-error">Пожалуйста, заполните это поле, указав корректные
-                    данные.</div>
-            </div>
-            <div>
-                <label for="input_street">Адрес:<span class=" red">*</span></label>
-                <p><input id="input_street" type="text" placeholder="Улица"></p>
-                <p><input id="input_houseNumber" type="text" placeholder="Дом"></p>
-                <p><input id="input_building" type="text" placeholder="Корпус"></p>
-                <p><input id="input_apartmentNumber" type="text" placeholder="Квартира"></p>
+  <form class="form_order-form">
+    <div id="order-form_grid_1">
+      <h2 class="h">Оформление заказа</h2>
+    </div>
 
-                <div class="order-form_div-with-error">Пожалуйста, впишите адрес доставки, указав
-                    корректные
-                    данные.</div>
-            </div>
-        </div>
-        <div id="order-form_grid_3">
-            <div>
-                <label for="textarea_comment">Комментарий к заказу:</label>
-                <p><textarea id="textarea_comment" placeholder="Есть ли комментарии к заказу?"></textarea>
-                </p>
-            </div>
-            <div>
-                <p>Способ оплаты:<span class="red">*</span> </p>
-                <p class="block-with-radio_payment"><input id="bankCard" class="radio_payment" type="radio"
+    <div id="order-form_grid_2">
+      <div class="order-div_block">
+        <label for="input_name">Имя:<span class="red">*</span></label>
+        <input id="input_name" type="text" placeholder="Введите ваше имя">
+        <div class="order-form_div-with-error"></div>
+      </div>
+
+      <div class="order-div_block">
+          <label for="input_tel">Телефон:<span class="red">*</span></label>
+          <input id="input_tel" type="tel" placeholder="Введите ваш телефон">
+          <div class="order-form_div-with-error"></div>
+      </div>
+
+      <div class="order-div_block">
+        <label for="input_email">Почта:<span class="red">*</span></label>
+          <input id="input_email" type="email" placeholder="Введите вашу почту">
+          <div class="order-form_div-with-error"></div>
+      </div>
+
+      <div class="order-div_block">
+        <label for="input_street">Адрес:<span class=" red">*</span></label>
+        <input id="input_street" type="text" placeholder="Улица">
+        <input id="input_houseNumber" type="text" placeholder="Дом">
+        <input id="input_building" type="text" placeholder="Корпус">
+        <input id="input_apartmentNumber" type="text" placeholder="Квартира">
+        <div class="order-form_div-with-error"></div>
+      </div>
+    </div>
+
+    <div id="order-form_grid_3">
+      <div class="order-div_block">
+        <p>Способ оплаты:<span class="red">*</span></p>
+        <span class="block-with-radio_payment"><input id="bankCard" class="radio_payment" type="radio"
                         name="payment" value="1"> Банковская
-                    карта</p>
-                <p class="block-with-radio_payment"><input id="cash" class="radio_payment" type="radio" name="payment"
-                        value="2"> Наличный расчет</p>
-                <div class="order-form_div-with-error">Пожалуйста, укажите способ оплаты.</div>
-            </div>
-        </div>
-        <div id="order-form_grid_4">
-            <div>
-                <input id="input_order-form" type="button" value="Оформить заказ">
-            </div>
-        </div>
+                    карта</span>
+        <span class="block-with-radio_payment"><input id="cash" class="radio_payment" type="radio" name="payment"
+                        value="2"> Наличный расчет</span>
+        <div class="order-form_div-with-error"></div>
+      </div>
 
+      <div>
+        <label for="textarea_comment">Комментарий к заказу:</label>
+        <p><textarea id="textarea_comment" placeholder="Есть ли комментарии к заказу?"></textarea></p>
+      </div>
+    </div>
+
+    <div id="order-form_grid_4">
+      <div>
+        <input id="input_order-form" type="button" value="Оформить заказ">
+      </div>
+    </div>
 
     </form>
 
-     <!--блок-футер START-->
+  <!--блок-футер START-->
   <footer>
     <div class="footer" id="end">
       <div class="footer__logo">
