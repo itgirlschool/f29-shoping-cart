@@ -528,7 +528,7 @@ a.repeat:hover {
 }
 @media screen and (max-width: 768px) {
   .flowers_name_container {
-    height: 16vh;
+    height: 10vh;
   }
 }
 
