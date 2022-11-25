@@ -709,6 +709,7 @@ a.repeat:hover {
 
   @media screen and (max-width: $grid-breakpoint-md) {
     grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    align-items: center;
     width: 100vw;
     height: 150px;
     font-size: 16px;
@@ -724,7 +725,7 @@ a.repeat:hover {
 } 
 @media screen and (max-width: $grid-breakpoint-sm) {
    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
- 
+   align-items: center; 
     height: 130px;
     font-size:small;
     &__menu {
