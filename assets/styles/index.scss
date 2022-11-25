@@ -135,11 +135,11 @@ footer {
   @media screen and (max-width: $grid-breakpoint-sm) {
     font-size: 24px;
     //margin-bottom: 30px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 @media screen and (max-width: $grid-breakpoint-md) {
-  font-size: 42px;
+  font-size: 30px;
   margin-bottom: 2em;
   margin-left: 20px;
 
@@ -680,7 +680,7 @@ a.repeat:hover {
   &__menu_oplata,
   &__menu_rosi {
     cursor:pointer;
-
+  
   }
   
   &__social-img{
