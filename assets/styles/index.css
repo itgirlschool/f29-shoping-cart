@@ -59,22 +59,34 @@ footer {
 }
 
 .anime_container {
+  height: 80px;
   grid-row: 1/2;
-  width: 100%;
-  margin-left: 20px;
+  width: 100vw;
   font-weight: 600;
   font-family: "Pacifico", cursive;
   color: rgb(255, 255, 255);
   word-wrap: break-word;
+  margin-top: 30px;
+  display: flex;
 }
 
 .animate {
   font-size: 3rem;
   text-align: center;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 @media screen and (max-width: 576px) {
   .animate {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .animate {
     font-size: 42px;
+    margin-bottom: 2em;
+    margin-left: 20px;
   }
 }
 
@@ -240,13 +252,6 @@ a.repeat:hover {
   justify-content: space-around;
   padding-right: 20px;
   font-size: large;
-  /*&__phrase {
-    font-family: "Pacifico", cursive;
-    padding-left: 30px;
-    font-size: 3rem;
-    color: #ff3672;
-    font-weight: bolder;
-  }*/
 }
 .header__logo {
   display: grid;
@@ -322,10 +327,6 @@ a.repeat:hover {
 @media screen and (max-width: 576px) {
   .header {
     width: 100%;
-    /*&__phrase {
-      padding-left: 25px;
-      font-size: 1.4rem;
-    }*/
   }
   .header__items {
     display: flex;
@@ -501,7 +502,7 @@ a.repeat:hover {
   margin-left: 20px;
   align-items: center;
   width: 21vw;
-  font-family: "Prata", normal;
+  font-family: "Roboto", normal;
   font-size: medium;
   position: relative;
   font-family: "Roboto", normal, sans-serif;
@@ -527,7 +528,7 @@ a.repeat:hover {
 }
 @media screen and (max-width: 768px) {
   .flowers_name_container {
-    height: 12vh;
+    height: 16vh;
   }
 }
 
