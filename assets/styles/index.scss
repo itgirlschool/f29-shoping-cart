@@ -455,9 +455,13 @@ a.repeat:hover {
             }}     
 
 .categoryNameContainer {
-   width: 100%;
-   margin: 50px;
+   //width: 100%;
+   margin-top: 50px;
+   margin-bottom: 50px;
    text-align: center;
+   border: solid 1px white;
+   width: 99vw;
+   padding:10px;
   
 }
 
@@ -465,6 +469,9 @@ a.repeat:hover {
     font-size: $font-size-section-titles;
     font-family: $font-family-titles;
     font-weight: 800;
+    color: $button-color-pink;
+   
+
 }
 
 //индикатор прокрутки START
