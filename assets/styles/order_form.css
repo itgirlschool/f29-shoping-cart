@@ -59,7 +59,7 @@ form {
     height: 25px;
 }
 
-.order-div_block{
+.order-div_block {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,25 +107,6 @@ input:focus {
     outline: 0;
 }
 
-::-webkit-input-placeholder {
-    /* Цвет плейсхолдера в WebKit browsers */
-    color: gray;
-}
-
-:-moz-placeholder {
-    /*Цвет плейсхолдера в Mozilla Firefox 4 to 18 */
-    color: gray;
-}
-
-::-moz-placeholder {
-    /*Цвет плейсхолдера в Mozilla Firefox 19+ */
-    color: gray;
-}
-
-:-ms-input-placeholder {
-    /*Цвет плейсхолдера в Internet Explorer 10+ */
-    color: gray;
-}
 
 #textarea_comment {
     resize: none;
