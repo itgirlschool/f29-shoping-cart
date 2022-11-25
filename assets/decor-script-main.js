@@ -46,6 +46,7 @@ if (cartItems.length === 0){
     } // end of FOR
 
 console.log ('Готово к отправке: ' + orderArray);
+localStorage.setItem('order', JSON.stringify(orderArray)); // отправка в заказа в localStorage
 
 orderSum = bukietTotal;
 document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // ввывод общей стоимости букетов (без оформления)
