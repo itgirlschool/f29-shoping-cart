@@ -46,21 +46,21 @@ if (cartItems.length === 0){
     } // end of FOR
 
 //console.log ('Готово к отправке: ' + orderArray);
-localStorage.setItem('order', JSON.stringify(orderArray)); // отправка названий букетов из заказа в localStorage
+//localStorage.setItem('order', JSON.stringify(orderArray)); // отправка названий букетов из заказа в localStorage
 
 orderSum = bukietTotal;
 document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // ввывод общей стоимости букетов (без оформления)
 
 addDecorOption.onchange = getOptionCost;   // добавление стоимости упаковки к общей стоимости
 addOut.addEventListener('click', showAdd); // вывод доп оформления по клику checkbox
-orderRequest.onclick = getOrderRequest;   // добавление стоимости упаковки к общей стоимости
-//console.log('Total: ' + orderSum);
-localStorage.setItem('total-order-cost', orderSum); // отправка стоимости заказа в localStorage
 
+orderRequest.onclick = getOrderRequest;   // добавление стоимости упаковки к общей стоимости
 
 // функция записи заказа в localStorage для передачи на страницу оформления заказа
 function getOrderRequest (){
     localStorage.setItem('order', JSON.stringify(orderArray));
+    localStorage.setItem('total-order-cost', orderSum); // отправка стоимости заказа в localStorage
+
 }
 
 
