@@ -22,6 +22,9 @@ let item=0;
 // кнопка очистить корзину
 document.getElementById('delete').onclick = deleteItem;
 
+// массив для отправки на страницу оформления заказа
+let orderArray = [];
+
 
 // извлекаем элементы из localStorage
 let cartItems = JSON.parse(localStorage.name);
@@ -29,7 +32,7 @@ console.log(cartItems);
 
 
 if (cartItems.length === 0){
-    document.getElementById('block_items').innerHTML = '&#10048;&nbsp; Cart is empty &nbsp;&#10048;';
+    document.getElementById('block_items').innerHTML = `<img src="./assets/images/empty-cart.png" width="100px"><br>` + '&#10048;&nbsp; Ваша корзина пуста &nbsp;&#10048;';
 } else {
     let i=0;
     let bukietTotal = 0;
@@ -38,8 +41,12 @@ if (cartItems.length === 0){
         let itemCost = 0;
         itemCost = +cartItems[j].price;
         bukietTotal += itemCost; // стоимость букетов (без оформления)
+        orderArray.push(cartItems[j].title);
         i++;
     } // end of FOR
+
+console.log ('Готово к отправке: ' + orderArray);
+localStorage.setItem('order', JSON.stringify(orderArray)); // отправка в заказа в localStorage
 
 orderSum = bukietTotal;
 document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // ввывод общей стоимости букетов (без оформления)
@@ -120,10 +127,11 @@ cartItems = [];
 
 // функция очистки корзины
 function deleteItem(){
-    document.getElementById('block_items').innerHTML = '&#10048;&nbsp; Cart is empty &nbsp;&#10048;';
+    document.getElementById('block_items').innerHTML = `<img src="./assets/images/empty-cart.png" width="100px"><br>` + '&#10048;&nbsp; Ваша корзина пуста &nbsp;&#10048;';
     orderSum = 0;
     decorOptionCost = 0;
+    orderArray = [];
     document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
-    document.getElementById('add-image-out').innerHTML = '';
+    document.getElementById('decoration').innerHTML = '';
     localStorage.clear();
 }
