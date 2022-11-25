@@ -149,7 +149,7 @@ let request = new XMLHttpRequest();
 
 // переход на страницу оформления заказа при нажатии соответствующей кнопки 
     document.getElementById('to-order-page').addEventListener('click', () => {
-        window.location.href = '';
+        window.location.href = 'order_form.html';
     });
 
 /*
