@@ -547,6 +547,10 @@ a.repeat:hover {
 }
 
 .button_basket:active {
+  background-color: #ff3672;
+}
+
+.button_basket:active {
   bottom: -2px;
 }
 
@@ -557,7 +561,7 @@ a.repeat:hover {
 /* styles for блок-футер START*/
 .footer {
   display: grid;
-  grid-template-columns: 0.7fr 0.5fr 0.8fr 0.5fr 0.7fr;
+  grid-template-columns: 0.7fr 0.6fr 0.8fr 0.7fr 0.7fr;
   align-items: stretch;
   background: rgb(255, 255, 255);
   width: 100%;
@@ -593,7 +597,8 @@ a.repeat:hover {
 }
 .footer__v-korzinu {
   grid-column: 5/6;
-  align-self: center;
+  align-self: start;
+  text-decoration: underline;
 }
 .footer__social {
   grid-column: 4/5;
