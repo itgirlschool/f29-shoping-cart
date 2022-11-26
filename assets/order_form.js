@@ -201,3 +201,13 @@ function validatePayment(radio){
         return true;
     }
 }
+
+// переход на страницу каталога при нажатии соответствующей кнопки 
+document.getElementById('to-main-page').addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
+
+// переход на страницу корзины при нажатии соответствующей кнопки 
+document.getElementById('to-cart-page').addEventListener('click', () => {
+    window.location.href = 'cart-main.html';
+});
