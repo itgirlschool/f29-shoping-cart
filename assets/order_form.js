@@ -1,6 +1,6 @@
   //Класс данных о закакзе из формы
 class Customer {
-    constructor(name, telephon, email, street, houseNumber, building, apartmentNumber, comment, payment) {
+    constructor(name, telephon, email, street, houseNumber, building, apartmentNumber, comment, payment, order) {
         this.name = name;
         this.telephon = telephon;
         this.email = email;
@@ -10,6 +10,7 @@ class Customer {
         this.apartmentNumber = apartmentNumber;
         this.comment = comment;
         this.payment = payment;
+        this.order = order;
     }
 }
 
@@ -37,6 +38,10 @@ document.querySelector("#input_order-form").addEventListener('click', function (
         }
 
         );
+        let cost= localStorage.total-order-cost;
+        let order = localStorage.order;
+        console.log(order);
+        console.log(cost);
         //сбор данных из инпутов в переменную
         let name = input_nameID.value;
         let telephon = input_telID.value;
@@ -47,19 +52,20 @@ document.querySelector("#input_order-form").addEventListener('click', function (
         let apartmentNumber = appID.value;
         let comment = document.getElementById('textarea_comment').value;
         let payment;
-        if (document.radio_paymentID.checked) {
+        if (document.getElementById('bankCard').checked) {
             payment = "банковская карта"
         } else {
             payment = "наличные"
         };
         let newCustomer = new Customer(name, telephon, email, street, houseNumber, building,
             apartmentNumber,
-            comment, payment);
+            comment, payment, order);
         console.log(newCustomer);
     }
 
 });
 
+//Валидация
 function validateInput(){
     let name = validateName(input_nameID.value);
     let tel = validatePhone(input_telID.value);
@@ -211,3 +217,4 @@ document.getElementById('to-main-page').addEventListener('click', () => {
 document.getElementById('to-cart-page').addEventListener('click', () => {
     window.location.href = 'cart-main.html';
 });
+
