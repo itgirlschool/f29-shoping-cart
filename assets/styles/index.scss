@@ -629,7 +629,7 @@ a.repeat:hover {
 /* styles for блок-футер START*/
 .footer {
     display:grid;
-    grid-template-columns: 0.7fr 0.5fr 0.8fr 0.7fr;
+    grid-template-columns: 0.7fr 0.5fr 0.8fr 0.5fr 0.7fr;
     align-items: stretch;
     background:$background-color;
    //max-width: 100%;
@@ -653,7 +653,10 @@ a.repeat:hover {
     &__contact{
       grid-column:3/4;
     }
-
+    &__v-korzinu{
+      grid-column:5/6;
+      align-self: center;
+    }
     &__social{
       grid-column:4/5
     }
