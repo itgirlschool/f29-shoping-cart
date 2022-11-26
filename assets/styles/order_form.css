@@ -41,24 +41,36 @@ form {
 
 #order-form_grid_2 {
     grid-area: left;
-
+    font-size: x-large;
 }
 
 #order-form_grid_3 {
     grid-area: right;
+    font-size: x-large;
 }
 
 #order-form_grid_4 {
-    grid-area: bottom;
+    grid-area: bottom;    
+    font-size: x-large;
 }
 
+.div_address {
+    display: flex;
+    width: 25.85vw;
+}
 
+.input_address{
+    width: 30%;
+    margin: auto;
+    margin-top: 10px;
+}
 
 .order-form_div-with-error {
     color: red;
-    margin: 1em;
+    margin-bottom: 1.5em;
     width: 25vw;
-    height: 25px;
+    height: 0.5vw;
+    font-size: smaller;
 }
 
 .order-div_block {
@@ -88,15 +100,15 @@ form {
 
 /*Стили кнопок оформления начало*/
 .input_order-form {
-    width: 100%;
-    height: 46px;
+    width: 50%;
+    height: 56px;
     background-color: #ff3672;
     color: white;
     border-radius: 6px;
     border: 0px;
     position: relative;
     font-family: "Roboto", normal, sans-serif;
-    font-size: 18px;
+    font-size: x-large;
     cursor: pointer;
 }
 
@@ -140,6 +152,7 @@ input {
     border: 2px solid black;
     width: 25vw;
     margin-top: 10px;
+    border-radius: 5px;
 }
 
 input:hover {
@@ -151,15 +164,19 @@ input:focus {
     outline: 0;
 }
 
+.div_comment{
+    margin-top: 10px;
+}
 
 #textarea_comment {
     resize: none;
     overflow: auto;
     text-indent: 5px;
     width: 25vw;
-    height: 25vh;
+    height: 17vh;
     font-family: inherit;
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 #textarea_comment:hover {
@@ -171,9 +188,15 @@ input:focus {
     outline: 0;
 }
 
-.block-with-radio_payment {
-
+.div_block-payment{
+    display: flex;
+    justify-content: center;
     width: 25vw;
+}
+
+.block-with-radio_payment {
+    margin: auto;
+    width: 100%;
 }
 
 .radio_payment {
@@ -236,6 +259,11 @@ input:focus {
         font-size: 18px;
     }
 
+    .div_address {
+        display: flex;
+        width: 60vw;
+    }
+
     .order-form_div-with-error {
         width: 65vw;
         margin: 1.5em auto;
@@ -294,8 +322,12 @@ input:focus {
         border: 1px solid black;
     }
 
-    .block-with-radio_payment {
-        margin: 1em auto;
+    .div_block-payment{
+        width: 55vw;
+    }
+
+    .div_address {
+        display: flex;
         width: 55vw;
     }
 
