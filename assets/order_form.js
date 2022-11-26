@@ -38,10 +38,10 @@ document.querySelector("#input_order-form").addEventListener('click', function (
         }
 
         );
-        let cost= localStorage.total-order-cost;
+       // let cost= localStorage.total-order-cost;
         let order = localStorage.order;
         console.log(order);
-        console.log(cost);
+      //  console.log(cost);
         //сбор данных из инпутов в переменную
         let name = input_nameID.value;
         let telephon = input_telID.value;
