@@ -1,4 +1,7 @@
 let cartItems;
+
+// если в каталоге ничего не выбрано и переходим в пустую корзину try,
+// если корзина непустая, то распарсиваем JSON из localStorage
 try {
     if (localStorage.getItem('name') == null) {
         document.getElementById('block_items').innerHTML = `<img src="./assets/images/empty-cart.png" width="100px"><br>` + '&#10048;&nbsp; Ваша корзина пуста &nbsp;&#10048;';
@@ -14,21 +17,18 @@ try {
     console.log(error);
 }
 
-// извлекаем элементы из localStorage
-//let cartItems = JSON.parse(localStorage.name);
-//console.log(cartItems);
-
 // переход на страницу каталога при нажатии соответствующей кнопки 
 document.getElementById('to-main-page').addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
-// переход на страницу оформления заказа при нажатии соответствующей кнопки 
-document.getElementById('to-order-page').addEventListener('click', () => {
+// переход на страницу оформления заказа при нажатии соответствующей кнопки, 
+// при условии, если в корзине что-то есть
     if (cartItems.length !== 0){
-        window.location.href = 'order_form.html';
-    }
-});
+        document.getElementById('to-order-page').addEventListener('click', () => {
+                window.location.href = 'order_form.html';
+        });
+}
 
 
 const addOut = document.querySelector('.add-out');
@@ -150,5 +150,6 @@ function deleteItem(){
     orderArray = [];
     document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // обновление общей суммы заказа
     document.getElementById('decoration').innerHTML = '';
+    document.getElementById('to-order-page').disabled = true; // блокировка кнопки перехода на страницу оформления заказа
     localStorage.clear();
 }
