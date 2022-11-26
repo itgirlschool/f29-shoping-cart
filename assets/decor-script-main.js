@@ -26,7 +26,8 @@ document.getElementById('to-main-page').addEventListener('click', () => {
 // при условии, если в корзине что-то есть
     if (cartItems.length !== 0){
         document.getElementById('to-order-page').addEventListener('click', () => {
-                window.location.href = 'order_form.html';
+            getOrderRequest(); // формированиe заказа и отправка его в localStorage
+            window.location.href = 'order_form.html';
         });
 }
 
@@ -70,7 +71,8 @@ document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // 
 addDecorOption.onchange = getOptionCost;   // добавление стоимости упаковки к общей стоимости
 addOut.addEventListener('click', showAdd); // вывод доп оформления по клику checkbox
 
-orderRequest.onclick = getOrderRequest;   // добавление стоимости упаковки к общей стоимости
+// формированиe заказа и отправка его в localStorage при нажатии на кнопку 'Подтвердить заказ'
+orderRequest.onclick = getOrderRequest;
 
 
 // функция записи заказа в localStorage для передачи на страницу оформления заказа
