@@ -624,7 +624,7 @@ a.repeat:hover {
 }
 @media screen and (max-width: 768px) {
   .footer {
-    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr 0.5fr;
     align-items: center;
     width: 100vw;
     height: 150px;
@@ -635,13 +635,13 @@ a.repeat:hover {
   }
   .footer__logo_img {
     width: 90px;
-    margin-right: 20px;
+    margin-left: 20px;
     margin-top: 10px;
   }
 }
 @media screen and (max-width: 576px) {
   .footer {
-    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr;
+    grid-template-columns: 0.7fr 0.2fr 1.5fr 0.7fr 0.5fr;
     align-items: center;
     height: 130px;
     font-size: small;
@@ -656,7 +656,7 @@ a.repeat:hover {
   }
   .footer__logo_img {
     width: 60px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 10px;
   }
 }/*# sourceMappingURL=index.css.map */
