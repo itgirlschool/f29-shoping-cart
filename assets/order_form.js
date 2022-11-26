@@ -203,7 +203,7 @@ function validatePayment(radio){
     }
     
     if (!result){
-        errors[4].textContent = "Пожалуйста, выберите способо оплаты.";
+        errors[4].textContent = "Пожалуйста, выберите способ оплаты.";
         return false
     }
     else{
