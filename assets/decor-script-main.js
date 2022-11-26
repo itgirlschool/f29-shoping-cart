@@ -61,6 +61,7 @@ localStorage.setItem('total-order-cost', orderSum); // отправка стои
 // функция записи заказа в localStorage для передачи на страницу оформления заказа
 function getOrderRequest (){
     localStorage.setItem('order', JSON.stringify(orderArray));
+   
 }
 
 
