@@ -39,13 +39,12 @@ document.querySelector("#input_order-form").addEventListener('click', function (
     if (validated) {
         swal({
             title: 'Ваш заказ оформлен!',
-            text: 'Мы свяжемся с вами для его подтверждения.',
+            text: `Мы свяжемся с вами для его подтверждения. Сумма к оплате ${cost}.`,
             type: 'success',
             confirmButtonColor: '#0093a2'
         }
-
         );
-   
+ 
 
         //сбор данных из инпутов в переменную
         let name = input_nameID.value;
