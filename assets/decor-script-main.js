@@ -60,7 +60,6 @@ orderRequest.onclick = getOrderRequest;   // добавление стоимос
 function getOrderRequest (){
     localStorage.setItem('order', JSON.stringify(orderArray));
     localStorage.setItem('total-order-cost', orderSum); // отправка стоимости заказа в localStorage
-
 }
 
 

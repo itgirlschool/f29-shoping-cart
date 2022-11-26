@@ -14,25 +14,6 @@
 
 }
 
-@media screen and (max-width: 768px) {
-
-    .base {
-    width:60%;
-    grid-template-columns: 1.5fr 1fr; 
-
-}
-.picture {
-    width: 150px;
-    margin-top: 40px;
-}
-}
-@media screen and (max-width: 576px) {
-
-    .base {
-    grid-template-columns: 200px 1fr; 
-
-}
-}
 .block_items {
     display: grid;
     grid-template-rows: 1fr;
