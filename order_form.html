@@ -67,9 +67,11 @@
       <div class="order-div_block">
         <label for="input_street">Адрес:<span class=" red">*</span></label>
         <input id="input_street" type="text" placeholder="Улица">
-        <input id="input_houseNumber" type="text" placeholder="Дом">
-        <input id="input_building" type="text" placeholder="Корпус">
-        <input id="input_apartmentNumber" type="text" placeholder="Квартира">
+        <div class = "div_address">
+          <input id="input_houseNumber" class="input_address" type="text" placeholder="Дом">
+          <input id="input_building" class="input_address" type="text" placeholder="Корпус">
+          <input id="input_apartmentNumber" class="input_address" type="text" placeholder="Квартира">
+        </div>
         <div class="order-form_div-with-error"></div>
       </div>
     </div>
@@ -77,15 +79,17 @@
     <div id="order-form_grid_3">
       <div class="order-div_block">
         <p>Способ оплаты:<span class="red">*</span></p>
-        <span class="block-with-radio_payment"><input id="bankCard" class="radio_payment" type="radio" name="payment"
-            value="1"> Банковская
-          карта</span>
-        <span class="block-with-radio_payment"><input id="cash" class="radio_payment" type="radio" name="payment"
-            value="2"> Наличный расчет</span>
+        <div class="div_block-payment">
+          <span class="block-with-radio_payment"><input id="bankCard" class="radio_payment" type="radio" name="payment"
+              value="1"> Банковская
+            карта</span>
+          <span class="block-with-radio_payment"><input id="cash" class="radio_payment" type="radio" name="payment"
+              value="2"> Наличный расчет</span>
+        </div>
         <div class="order-form_div-with-error"></div>
       </div>
 
-      <div>
+      <div class="div_comment">
         <label for="textarea_comment">Комментарий к заказу:</label>
         <p><textarea id="textarea_comment" placeholder="Есть ли комментарии к заказу?"></textarea></p>
       </div>
