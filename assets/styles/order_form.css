@@ -52,6 +52,8 @@ form {
     grid-area: bottom;
 }
 
+
+
 .order-form_div-with-error {
     color: red;
     margin: 1em;
@@ -65,8 +67,27 @@ form {
     align-items: center;
 }
 
-/*Стили кнопки оформления начало*/
-#input_order-form {
+.block_submit {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.block_submit_align {
+    display: grid;
+    gap: 50px;
+    grid-template-rows: 50px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: auto;
+}
+
+
+/*Стили кнопок оформления начало*/
+.input_order-form {
     width: 100%;
     height: 46px;
     background-color: #ff3672;
@@ -79,12 +100,35 @@ form {
     cursor: pointer;
 }
 
-#input_order-form:hover {
+.input_order-form:hover {
     border: 4px solid #0093a2;
 }
 
-#input_order-form:active {
+.input_order-form:active {
     bottom: -2px;
+}
+
+.block_submit_button {
+    width: 300px;
+    height: 40px;
+    font-family: inherit;
+    font-size: 1rem;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #0093A2;
+    color: #fff;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.block_submit_button:hover {
+    background: #017b89;
+}
+
+.block_submit_button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #cbd6ee;
 }
 
 /*Стили кнопки оформления конец*/
@@ -196,6 +240,27 @@ input:focus {
         width: 65vw;
         margin: 1.5em auto;
     }
+
+    .block_submit {
+        grid-template-rows: 50px;
+        grid-template-columns: 1fr;
+        height: 110px;
+
+    }
+
+
+    .block_submit_align {
+        gap: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+    }
+
+    .block_submit_button {
+        width: 80%;
+        height: 47px;
+        margin: auto;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 1199px) {
@@ -256,4 +321,25 @@ input:focus {
         margin: 2em auto;
     }
 
+    .block_submit {
+        grid-template-rows: 50px;
+        grid-template-columns: 1fr;
+        height: 110px;
+
+    }
+
+
+    .block_submit_align {
+        gap: 1em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+    }
+
+    .block_submit_button {
+        width: 66%;
+        height: 47px;
+        margin: auto;
+        padding: 0;
+    }
 }
