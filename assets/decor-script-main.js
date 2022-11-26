@@ -1,3 +1,23 @@
+let cartItems;
+try {
+    if (localStorage.getItem('name') == null) {
+        document.getElementById('block_items').innerHTML = `<img src="./assets/images/empty-cart.png" width="100px"><br>` + '&#10048;&nbsp; Ваша корзина пуста &nbsp;&#10048;';
+        document.getElementById('total-out').innerHTML = 'Сумма: $0'; // ввывод общей стоимости букетов (без оформления)
+        document.getElementById('decoration').innerHTML = '';
+        cartItems = [];
+    } else {
+        // извлекаем элементы из localStorage
+        cartItems = JSON.parse(localStorage.name);
+        console.log(cartItems);
+    }
+} catch (error) {
+    console.log(error);
+}
+
+// извлекаем элементы из localStorage
+//let cartItems = JSON.parse(localStorage.name);
+//console.log(cartItems);
+
 // переход на страницу каталога при нажатии соответствующей кнопки 
 document.getElementById('to-main-page').addEventListener('click', () => {
     window.location.href = 'index.html';
@@ -5,7 +25,9 @@ document.getElementById('to-main-page').addEventListener('click', () => {
 
 // переход на страницу оформления заказа при нажатии соответствующей кнопки 
 document.getElementById('to-order-page').addEventListener('click', () => {
-    window.location.href = 'order_form.html';
+    if (cartItems.length !== 0){
+        window.location.href = 'order_form.html';
+    }
 });
 
 
@@ -26,11 +48,6 @@ document.getElementById('delete').onclick = deleteItem;
 let orderArray = [];
 
 
-// извлекаем элементы из localStorage
-let cartItems = JSON.parse(localStorage.name);
-console.log(cartItems);
-
-
 if (cartItems.length === 0){
     document.getElementById('block_items').innerHTML = `<img src="./assets/images/empty-cart.png" width="100px"><br>` + '&#10048;&nbsp; Ваша корзина пуста &nbsp;&#10048;';
 } else {
@@ -45,8 +62,6 @@ if (cartItems.length === 0){
         i++;
     } // end of FOR
 
-//console.log ('Готово к отправке: ' + orderArray);
-//localStorage.setItem('order', JSON.stringify(orderArray)); // отправка названий букетов из заказа в localStorage
 
 orderSum = bukietTotal;
 document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // ввывод общей стоимости букетов (без оформления)
