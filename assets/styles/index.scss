@@ -621,6 +621,10 @@ a.repeat:hover {
 }
 
 .button_basket:active {
+  background-color: $pink-hover;
+}
+
+.button_basket:active {
     bottom: -2px;
 }
 

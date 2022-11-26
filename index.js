@@ -159,15 +159,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
         </div>
         <br>
         <div class="button_basket_container">
-        <button data-catalog class="button_basket">Добавить в корзину</button>
+        <button data-catalog class="button_basket" id="wow">Добавить в корзину</button>
+        <div id="button_check"></div>
         </div>
         <br>
         <br>
         </div>`;
         document.getElementById("flowersContainer").innerHTML = flowersContent;
     }
+
+
 //получаем доступ к дата-фильтрам
 const buttons = document.querySelectorAll('.button_')
+//console.log(buttons);
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         const currentCategory = button.dataset.filter
@@ -190,22 +194,30 @@ items.forEach((item) => {
     }
     else {item.classList.remove('hide')}
 })}
+
 });
+
+
 const buttons = document.querySelectorAll('.button_')
+console.log(buttons);
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        document.getElementById("category_name").innerText = button.value; })
-    })
+        document.getElementById("category_name").innerText = button.value;
+ })
+    });
+
+
 //добавляем товары в корзину
 let cardsArray = [];
 window.addEventListener('click', function(event) {
         //проверяем, что клик был совершен по кнопке в корзину
         if(event.target.hasAttribute('data-catalog')) {
+           
             //console.log('я из корзины!');
         //находим карточку с товаром, внутри которой был совершен клик
             const card = event.target.closest('.flowers_card');
              //console.log(card);
-        //собираем данные с этого товара и записываем их в единый объект choiceInfo:
+        //собираем данные с этого товара и записываем их в единый объект cardInfo:
             const cardInfo = {
                 title: card.querySelector('.flower_name').innerText,
                 price: card.querySelector('.price_number').innerText,

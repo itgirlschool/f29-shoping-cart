@@ -547,6 +547,10 @@ a.repeat:hover {
 }
 
 .button_basket:active {
+  background-color: #ff3672;
+}
+
+.button_basket:active {
   bottom: -2px;
 }
 
