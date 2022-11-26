@@ -555,7 +555,7 @@ a.repeat:hover {
 /* styles for блок-футер START*/
 .footer {
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr 0.7r;
+  grid-template-columns: 0.7fr 0.5fr 0.8fr 0.7fr;
   align-items: stretch;
   background: rgb(255, 255, 255);
   width: 100%;
