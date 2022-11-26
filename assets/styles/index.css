@@ -592,6 +592,10 @@ a.repeat:hover {
 .footer__social {
   grid-column: 4/5;
 }
+.footer a:hover {
+  background: #ff3672;
+  text-decoration: none;
+}
 .footer__logo_img {
   width: 100px;
   margin-left: 60px;

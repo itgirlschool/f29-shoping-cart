@@ -657,6 +657,12 @@ a.repeat:hover {
     &__social{
       grid-column:4/5
     }
+  
+    a:hover{
+        background: $pink-hover;
+        text-decoration: none;
+    }
+
    /*&__logo,
   &__menu,
   &__contact,
