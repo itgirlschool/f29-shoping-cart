@@ -1,6 +1,6 @@
   //Класс данных о закакзе из формы
 class Customer {
-    constructor(name, telephon, email, street, houseNumber, building, apartmentNumber, comment, payment, order) {
+    constructor(name, telephon, email, street, houseNumber, building, apartmentNumber, comment, payment, order, cost) {
         this.name = name;
         this.telephon = telephon;
         this.email = email;
@@ -11,6 +11,8 @@ class Customer {
         this.comment = comment;
         this.payment = payment;
         this.order = order;
+        this.cost = cost;
+        
     }
 }
 
@@ -27,6 +29,11 @@ const errors = document.querySelectorAll('.order-form_div-with-error');
 let validated;
 
 
+let order = localStorage.order;
+let cost = localStorage.totalOrderCost;
+console.log(order);
+console.log(cost);
+
 document.querySelector("#input_order-form").addEventListener('click', function () {
     validated = validateInput();
     if (validated) {
@@ -38,10 +45,8 @@ document.querySelector("#input_order-form").addEventListener('click', function (
         }
 
         );
-       // let cost= localStorage.total-order-cost;
-        let order = localStorage.order;
-        console.log(order);
-      //  console.log(cost);
+   
+
         //сбор данных из инпутов в переменную
         let name = input_nameID.value;
         let telephon = input_telID.value;
@@ -59,7 +64,7 @@ document.querySelector("#input_order-form").addEventListener('click', function (
         };
         let newCustomer = new Customer(name, telephon, email, street, houseNumber, building,
             apartmentNumber,
-            comment, payment, order);
+            comment, payment, order, cost);
         console.log(newCustomer);
     }
 

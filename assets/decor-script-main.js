@@ -59,7 +59,7 @@ orderRequest.onclick = getOrderRequest;   // добавление стоимос
 // функция записи заказа в localStorage для передачи на страницу оформления заказа
 function getOrderRequest (){
     localStorage.setItem('order', JSON.stringify(orderArray));
-    localStorage.setItem('total-order-cost', orderSum); // отправка стоимости заказа в localStorage
+    localStorage.setItem('totalOrderCost', orderSum); // отправка стоимости заказа в localStorage
 }
 
 
