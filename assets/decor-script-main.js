@@ -42,7 +42,8 @@ let orderSum; // общая стоимость заказа
 let item=0;
 
 // кнопка очистить корзину
-document.getElementById('delete').onclick = deleteItem;
+document.getElementById('delete').onclick = clearCart;
+
 
 // массив для отправки на страницу оформления заказа
 let orderArray = [];
@@ -64,15 +65,17 @@ if (cartItems.length === 0){
 
 
 orderSum = bukietTotal;
-document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // ввывод общей стоимости букетов (без оформления)
+document.getElementById('total-out').innerHTML = 'Сумма: $' + orderSum; // вывод общей стоимости букетов (без оформления)
 
 addDecorOption.onchange = getOptionCost;   // добавление стоимости упаковки к общей стоимости
 addOut.addEventListener('click', showAdd); // вывод доп оформления по клику checkbox
 
 orderRequest.onclick = getOrderRequest;   // добавление стоимости упаковки к общей стоимости
 
+
 // функция записи заказа в localStorage для передачи на страницу оформления заказа
 function getOrderRequest (){
+    console.log(orderArray);
     localStorage.setItem('order', JSON.stringify(orderArray));
     localStorage.setItem('totalOrderCost', orderSum); // отправка стоимости заказа в localStorage
 }
@@ -83,7 +86,7 @@ function itemOut(cart,k){
     document.getElementById('block_items').innerHTML += `<img src="${cartItems[k].imgSrc}" width="200px"">
             <div class="fonts"><span class="item-descript">&#10048;&nbsp Букет: </span>${cartItems[k].title}</div>
             <div class="fonts"><span class="item-descript">&#10048;&nbsp Цена букета: $</span>${cartItems[k].price}</div>
-            <div class="fonts-add"><input type="checkbox" id="${delete[k]}"> delete</div>`
+            <div class="fonts-add"><input type="checkbox" class="checkboxDelete" id="${k}"> delete</div>`;
         }
 
 // функция добавления упаковки
@@ -140,10 +143,22 @@ function pickAddImage(event){
     }
 cartItems = [];
 
+/*
+// функция удаления букета их корзины, если нажать checkbox этого букета
+function deleteCartItem(k){
+        let itemCheckbox = document.getElementsByClassName('checkboxDelete');
+        if(itemCheckbox.checked) {
+            //const card = event.target.closest('.block_items');
+            document.getElementById('block_items').remove(cartItems[k]);
+            
+        }
+}
+*/
+
 } //end of ELSE
 
 // функция очистки корзины
-function deleteItem(){
+function clearCart(){
     document.getElementById('block_items').innerHTML = `<img src="./assets/images/empty-cart.png" width="100px"><br>` + '&#10048;&nbsp; Ваша корзина пуста &nbsp;&#10048;';
     orderSum = 0;
     decorOptionCost = 0;
