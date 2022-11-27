@@ -180,6 +180,7 @@
     background: #FF3672;
 }
 
+/* кнопка заказа */
 .order_button {
     min-width: 80px;
     height: 35px;
@@ -188,7 +189,7 @@
     appearance: none;
     border: 0;
     border-radius: 5px;
-    background: red;
+    background: #ff3672;
     color: white;
     padding: 8px 16px;
     cursor: pointer;
