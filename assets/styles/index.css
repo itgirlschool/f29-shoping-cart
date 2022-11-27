@@ -345,6 +345,11 @@ a.repeat:hover {
   color: black;
   cursor: pointer;
 }
+@media screen and (max-width: 1088px) {
+  .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
+    font-size: 17px;
+  }
+}
 @media screen and (max-width: 768px) {
   .catalog__all-flowers, .catalog__bouquets, .catalog__baskets, .catalog__roses {
     font-size: 14px;
@@ -629,6 +634,16 @@ a.repeat:hover {
 }
 .footer__social-img:hover {
   background: #ff3672;
+}
+@media screen and (max-width: 1088px) {
+  .footer {
+    font-size: 16px;
+  }
+  .footer__logo_img {
+    width: 90px;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 768px) {
   .footer {

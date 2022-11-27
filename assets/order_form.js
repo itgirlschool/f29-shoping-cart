@@ -65,6 +65,20 @@ document.querySelector("#input_order-form").addEventListener('click', function (
             apartmentNumber,
             comment, payment, order, cost);
         console.log(newCustomer);
+        const json = {
+            "name" : name,
+            "telephon" : telephon,
+            "email" : email,
+           "street" : street,
+            "houseNumber" : houseNumber,
+            "building" : building,
+            "apartmentNumber" : apartmentNumber,
+           "comment" : comment,
+        "payment" : payment,
+            "order" : order,
+            "cost" : cost,
+};
+console.log(json);
     }
 
 });
